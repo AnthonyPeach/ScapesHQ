@@ -1,0 +1,8 @@
+# Local Netlify CLI link state — machine-specific, not source
+.netlify/
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp

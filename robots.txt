@@ -1,0 +1,10 @@
+# https://scapeshq.com/robots.txt
+User-agent: *
+Allow: /
+
+# thank-you.html is intentionally NOT disallowed here. It carries a
+# <meta name="robots" content="noindex,nofollow"> tag, and blocking the path
+# would stop crawlers reading that tag — leaving the URL eligible to appear in
+# results. Crawlable + noindex is the combination that actually keeps it out.
+
+Sitemap: https://scapeshq.com/sitemap.xml

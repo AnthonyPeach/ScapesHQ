@@ -1,0 +1,442 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NSFZ2WC6');</script>
+<!-- End Google Tag Manager -->
+<!-- First-touch campaign capture (session-scoped; feeds the walkthrough form) -->
+<script>
+(function(){
+  try{
+    var ss=window.sessionStorage,p=new URLSearchParams(location.search),
+        k=['utm_source','utm_medium','utm_campaign','utm_content','utm_term'],i,v;
+    if(!ss.getItem('sq_landing')){
+      ss.setItem('sq_landing',location.pathname);
+      ss.setItem('sq_referrer',document.referrer||'direct');
+    }
+    for(i=0;i<k.length;i++){
+      v=p.get(k[i]);
+      if(v&&!ss.getItem('sq_'+k[i])) ss.setItem('sq_'+k[i],v);
+    }
+  }catch(e){}
+})();
+</script>
+<title>Features — ScapesHQ</title>
+<meta name="description" content="Everything inside ScapesHQ: lead intake, customer relationships, projects and jobs, estimates and quotes, proposals and signing, activity, notifications, team roles and data controls.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://scapeshq.com/features">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Sora:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NSFZ2WC6"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<header class="site-head">
+  <div class="wrap">
+    <nav class="nav" aria-label="Main">
+      <a class="brand" href="index.html">
+        <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true">
+          <rect x="0.75" y="0.75" width="24.5" height="24.5" rx="7" fill="none" stroke="#3ddbb4" stroke-width="1.4"></rect>
+          <path d="M6 16.5c3.9 0 3.9-3.6 7-3.6s3.4 3.3 7 3.3" stroke="#3ddbb4" stroke-width="1.7" fill="none" stroke-linecap="round"></path>
+          <path d="M6 11c3.9 0 3.9-3.6 7-3.6s3.4 3.3 7 3.3" stroke="#3ddbb4" stroke-width="1.7" fill="none" stroke-linecap="round" opacity=".45"></path>
+        </svg>
+        <span class="name">Scapes<em>HQ</em></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <div class="nav-links" id="nav-links">
+        <a href="features.html" aria-current="page">Features</a>
+        <a href="how-it-works.html">How it works</a>
+        <a href="who-its-for.html">Who it's for</a>
+        <a href="integrations.html">Integrations</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="/blog">Blog</a>
+        <a href="about.html">About</a>
+        <a class="btn" href="demo.html" data-cta="nav">Book a walkthrough</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="page-head">
+  <div class="wrap">
+    <span class="eyebrow lbl"><i></i>The platform</span>
+    <h1>Everything in ScapesHQ, in one place.</h1>
+    <p class="lede">One connected operating system instead of a CRM, a spreadsheet, a proposal tool, a shared inbox and a whiteboard that all disagree with each other.</p>
+  </div>
+</section>
+
+<section class="tight">
+  <div class="wrap">
+    <div class="grid-4">
+      <a class="fstep" style="text-decoration:none" href="#leads"><span class="s">01</span><h3>Leads &amp; intake</h3><p>Automatic Meta lead capture, manual entry, follow-ups.</p></a>
+      <a class="fstep" style="text-decoration:none" href="#customers"><span class="s">02</span><h3>Customers &amp; properties</h3><p>Clients, contacts, companies and addresses, properly linked.</p></a>
+      <a class="fstep" style="text-decoration:none" href="#projects"><span class="s">03</span><h3>Projects &amp; jobs</h3><p>Pipeline stages, stage history, job details and cost items.</p></a>
+      <a class="fstep" style="text-decoration:none" href="#estimates"><span class="s">04</span><h3>Estimates &amp; quotes</h3><p>Sections, line items, templates, totals and scope.</p></a>
+      <a class="fstep" style="text-decoration:none" href="#proposals"><span class="s">05</span><h3>Proposals &amp; signing</h3><p>Options, attachments, homeowner review, signature evidence.</p></a>
+      <a class="fstep" style="text-decoration:none" href="#activity"><span class="s">06</span><h3>Activity &amp; alerts</h3><p>A permanent timeline plus notifications where the team already is.</p></a>
+      <a class="fstep" style="text-decoration:none" href="#team"><span class="s">07</span><h3>Team &amp; workspace</h3><p>Roles, invites, settings and workspace isolation.</p></a>
+      <a class="fstep" style="text-decoration:none" href="#data"><span class="s">08</span><h3>Data &amp; controls</h3><p>Exports, safeguards, account and workspace closure.</p></a>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section id="leads">
+  <div class="wrap">
+    <div class="grid-2" style="gap:44px;align-items:start">
+      <div>
+        <span class="lbl teal">01 · Leads &amp; intake</span>
+        <h2 class="mt-s">Every inquiry lands in the same place</h2>
+        <p class="mt-s muted">Facebook Lead Ads flow in automatically and route to the correct workspace by connected Page. Phone calls, referrals and yard signs get entered once, with their source recorded, so you can tell later what actually produced work.</p>
+        <ul class="speclist">
+          <li>Automatic Facebook Lead Ads intake, routed by Page</li>
+          <li>Manual lead entry with source, contact details and intake notes</li>
+          <li>Lead status and stage, defined by your business</li>
+          <li>Follow-ups and next actions attached to the lead</li>
+          <li>Full activity history on every lead record</li>
+          <li>Intake state tracked: received, processing, created, failed, rejected</li>
+          <li>Failed intake can be retried or replayed instead of lost</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <span class="lbl">Example · lead record</span>
+        <div class="rec" style="margin-top:14px">
+          <div class="badges"><span class="bdg lead">Lead</span><span class="bdg src">facebook</span></div>
+          <span class="ttl">1408 Ridgeview Ct</span>
+          <span class="sub">Rear yard drainage · standing water after rain</span>
+          <div class="foot"><span class="st">Follow-up set</span><span class="dt">Today 8:12a</span></div>
+        </div>
+        <ul class="speclist plain" style="margin-top:18px">
+          <li>Source: Facebook Lead Ad — "Yard Drainage — Metro"</li>
+          <li>Routed to workspace: Ridgeline Outdoor Co.</li>
+          <li>Assigned to: Garrett M.</li>
+          <li>Next action: call back before 5:00p</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section id="customers">
+  <div class="wrap">
+    <div class="grid-2" style="gap:44px;align-items:start">
+      <div>
+        <span class="lbl teal">02 · Customers &amp; properties</span>
+        <h2 class="mt-s">A customer is a structure, not a row</h2>
+        <p class="mt-s muted">Most CRMs flatten a household or a property manager into one contact line. ScapesHQ keeps clients, contacts, companies and properties as separate records that link together, so the real relationship survives contact with reality.</p>
+        <ul class="speclist">
+          <li>Clients, contacts, companies and properties as connected records</li>
+          <li>Multiple contacts on one client — the caller and the signer</li>
+          <li>Multiple properties under one client or company</li>
+          <li>Property-level history that outlives a name change</li>
+          <li>Relationships between records, not duplicated rows</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <span class="lbl">Example · relationship</span>
+        <ul class="speclist plain" style="margin-top:14px">
+          <li><span><strong>Company</strong> — Ridgeview Property Group</span></li>
+          <li><span><strong>Client</strong> — Whitfield household</span></li>
+          <li><span><strong>Contacts</strong> — Dana Whitfield (calls), Marcus Whitfield (signs)</span></li>
+          <li><span><strong>Properties</strong> — 1408 Ridgeview Ct · 22 Cedar Bend · 905 Fern Hollow</span></li>
+          <li><span><strong>History</strong> — 3 projects, 5 proposals, 1 open job</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section id="projects">
+  <div class="wrap">
+    <div class="grid-2" style="gap:44px;align-items:start">
+      <div>
+        <span class="lbl teal">03 · Projects &amp; jobs</span>
+        <h2 class="mt-s">The pipeline is your pipeline</h2>
+        <p class="mt-s muted">Projects are opportunities moving through stages you define. Jobs are the work being performed. Both stay tied to the customer and property they came from, and stage changes are kept as history rather than overwritten.</p>
+        <ul class="speclist">
+          <li>Business-defined pipeline stages</li>
+          <li>Stage history recorded on every project</li>
+          <li>Projects linked to the client, contacts and property</li>
+          <li>Jobs with job details and job cost items</li>
+          <li>Board, table and detail views of the same records</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <span class="lbl">Example · project</span>
+        <div class="pillrow" style="margin-top:14px"><span class="on"><i></i>Stage 4 of 6</span><span>Residential drainage</span></div>
+        <ul class="speclist plain" style="margin-top:16px">
+          <li><span>New lead → Site visit → Estimating → <strong>Proposal out</strong> → Won → Complete</span></li>
+          <li>Stage changed by Garrett M. · Sep 2, 9:41a</li>
+          <li>Job cost items: 148 LF trench drain, 2 catch basins, haul-off</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section id="estimates">
+  <div class="wrap">
+    <div class="grid-2" style="gap:44px;align-items:start">
+      <div>
+        <span class="lbl teal">04 · Estimates &amp; quotes</span>
+        <h2 class="mt-s">Price it once, reuse it forever</h2>
+        <p class="mt-s muted">Estimates are built from sections and line items, and saved templates mean the fifteenth trench drain doesn't get rebuilt from a blank page. Totals and scope carry straight into the proposal.</p>
+        <ul class="speclist">
+          <li>Estimate sections and line items</li>
+          <li>Reusable estimate templates</li>
+          <li>Pricing totals calculated on the estimate</li>
+          <li>Scope information carried into the proposal</li>
+          <li>Quotes tracked alongside the project they belong to</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <span class="lbl">Example · estimate</span>
+        <div class="rec" style="margin-top:14px">
+          <div class="badges"><span class="bdg est">Estimate</span><span class="amt num">$14,280</span></div>
+          <span class="ttl">SHQ-2026-0061</span>
+          <span class="sub">1408 Ridgeview Ct — rear yard drainage + regrade</span>
+          <div class="foot"><span class="st">Ready to send</span><span class="dt">Sep 2</span></div>
+        </div>
+        <ul class="speclist plain" style="margin-top:16px">
+          <li>Section A — Excavation &amp; grading</li>
+          <li>Section B — Drain line, 148 LF at 1% fall</li>
+          <li>Section C — Catch basins and outlet</li>
+          <li>Section D — Restoration and sod</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section id="proposals">
+  <div class="wrap">
+    <div class="grid-2" style="gap:44px;align-items:start">
+      <div>
+        <span class="lbl teal">05 · Proposals &amp; signing</span>
+        <h2 class="mt-s">Sent, opened, signed — and you can prove it</h2>
+        <p class="mt-s muted">A proposal goes out with options and attachments to a review page built for a homeowner on a phone. Delivery is tracked, so an ambiguous or failed send gets reconciled instead of firing a second email at your customer.</p>
+        <ul class="speclist">
+          <li>Proposal options the customer can choose between</li>
+          <li>Proposal templates and attachments</li>
+          <li>Customer-facing review page for homeowners</li>
+          <li>Acceptance and signature evidence stored on the record</li>
+          <li>Send history tracked per proposal</li>
+          <li>Failed or ambiguous delivery reconciled, never blind-resent</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <span class="lbl">Example · proposal</span>
+        <div class="rec" style="margin-top:14px">
+          <div class="badges"><span class="bdg prop">Proposal</span><span class="amt num">$14,280</span></div>
+          <span class="ttl">1408 Ridgeview Ct</span>
+          <span class="sub">2 options · opened 2h ago</span>
+          <div class="foot"><span class="st">Awaiting signature</span><span class="dt">Sep 2</span></div>
+        </div>
+        <ul class="speclist plain" style="margin-top:16px">
+          <li>Option 1 — Full system with regrade</li>
+          <li>Option 2 — Drain line only, phase two deferred</li>
+          <li>Attachments: site photos, scope sheet, material spec</li>
+          <li>Delivered via Postmark · opened Sep 2, 4:18p</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section id="activity">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="lbl teal">06 · Activity &amp; notifications</span>
+      <h2>A record you can settle an argument with</h2>
+      <p>Lead events, status changes, proposal actions, operational events and system automations all write to one central timeline. When somebody asks what happened on a job, you look instead of guess.</p>
+    </div>
+    <div class="grid-3">
+      <div class="fcard"><h3>Central activity timeline</h3><p>Permanent records of the actions that matter, across leads, customers, projects and proposals.</p></div>
+      <div class="fcard"><h3>Automatic event capture</h3><p>Important user actions and system automations generate activity records without anybody remembering to log them.</p></div>
+      <div class="fcard"><h3>Team notifications</h3><p>Notification rules and delivery so the right people hear about the events that need a response — including through Slack.</p></div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section id="team">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="lbl teal">07 · Team &amp; workspace</span>
+      <h2>Four seats, one set of records</h2>
+      <p>Every company runs inside its own isolated workspace, with roles that decide what each person can reach.</p>
+    </div>
+    <div class="roles">
+      <div class="role"><span class="bar"></span><h3>Owner</h3><p>Workspace, team, integrations, business settings and account lifecycle.</p></div>
+      <div class="role r2"><span class="bar"></span><h3>Admin / Manager</h3><p>Leads, customers, jobs, proposals, integrations and team workflow.</p></div>
+      <div class="role r3"><span class="bar"></span><h3>Sales</h3><p>Leads, follow-ups, estimates, quotes and proposals.</p></div>
+      <div class="role r4"><span class="bar"></span><h3>Office</h3><p>Customer records, documents, scheduling-related workflow and operations.</p></div>
+    </div>
+    <div class="grid-3 mt-l">
+      <div class="fcard"><h3>Team invites</h3><p>Invite staff into the workspace and set their role; membership can be made active or inactive.</p></div>
+      <div class="fcard"><h3>Business settings</h3><p>Workspace identity, currency, and estimate and proposal settings live with the business.</p></div>
+      <div class="fcard"><h3>Workspace isolation</h3><p>Each company's data stays in its own workspace, with safeguards against any cross-workspace action.</p></div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section id="data">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="lbl teal">08 · Data &amp; controls</span>
+      <h2>Your data, and a door that opens outward</h2>
+      <p>Safeguards run underneath the product, and the controls that matter belong to the owner rather than a support queue.</p>
+    </div>
+    <div class="grid-2">
+      <div class="panel">
+        <h3>Operational safeguards</h3>
+        <ul class="speclist">
+          <li>Protection against duplicate processing</li>
+          <li>Protection against conflicting operations</li>
+          <li>Protection against unsafe retries</li>
+          <li>Protection against cross-workspace actions</li>
+          <li>Encrypted storage of integration credentials</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <h3>Owner controls</h3>
+        <ul class="speclist">
+          <li>Data export</li>
+          <li>Personal account closure</li>
+          <li>Workspace closure, which blocks future activity</li>
+          <li>Automatic shutdown of connected integrations on closure</li>
+          <li>Facebook Page disconnect and connection cleanup</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="lbl teal">Full list</span>
+      <h2>Built vs. reserved</h2>
+      <p>An as-built, not a rendering. Reserved means the database structure exists but there is no feature to show you yet — we would rather you know that now than find out after signing.</p>
+    </div>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th scope="col">System</th><th scope="col">What it covers</th><th scope="col">Status</th></tr></thead>
+        <tbody>
+          <tr><td class="k">Workspaces &amp; teams</td><td class="d">Multi-business workspaces, roles, invites, active/inactive membership, ownership</td><td><span class="st built">Built</span></td></tr>
+          <tr><td class="k">Leads</td><td class="d">Intake, source, status/stage, follow-ups, activity history</td><td><span class="st built">Built</span></td></tr>
+          <tr><td class="k">Customers &amp; relationships</td><td class="d">Clients, contacts, companies, properties and the links between them</td><td><span class="st built">Built</span></td></tr>
+          <tr><td class="k">Projects</td><td class="d">Pipeline stages, stage history, related activity</td><td><span class="st built">Built</span></td></tr>
+          <tr><td class="k">Jobs</td><td class="d">Job details, project and customer association, job cost items</td><td><span class="st built">Built</span></td></tr>
+          <tr><td class="k">Estimates &amp; quotes</td><td class="d">Sections, line items, templates, pricing totals, scope</td><td><span class="st built">Built</span></td></tr>
+          <tr><td class="k">Proposals</td><td class="d">Options, templates, attachments, send history, homeowner review, signature evidence</td><td><span class="st built">Built</span></td></tr>
+          <tr><td class="k">Activity events</td><td class="d">Central timeline of lead, status, proposal, operational and automation events</td><td><span class="st built">Built</span></td></tr>
+          <tr><td class="k">Notifications</td><td class="d">Notification rules and delivery, including Slack</td><td><span class="st built">Built</span></td></tr>
+          <tr><td class="k">Facebook Lead Ads</td><td class="d">Page connect, selection, routing, health monitoring, disconnect, lifecycle</td><td><span class="st built">Built</span></td></tr>
+          <tr><td class="k">Data controls</td><td class="d">Export, account closure, workspace closure, integration shutdown</td><td><span class="st built">Built</span></td></tr>
+          <tr><td class="k">Invoicing</td><td class="d">Structure reserved; no feature shipped</td><td><span class="st later">Reserved</span></td></tr>
+          <tr><td class="k">Payments</td><td class="d">Structure reserved; no feature shipped</td><td><span class="st later">Reserved</span></td></tr>
+          <tr><td class="k">Time tracking</td><td class="d">Structure reserved; no feature shipped</td><td><span class="st later">Reserved</span></td></tr>
+          <tr><td class="k">Job actuals</td><td class="d">Structure reserved; no feature shipped</td><td><span class="st later">Reserved</span></td></tr>
+          <tr><td class="k">Pricing rules</td><td class="d">Structure reserved; no feature shipped</td><td><span class="st later">Reserved</span></td></tr>
+          <tr><td class="k">Custom fields</td><td class="d">Structure reserved; no feature shipped</td><td><span class="st later">Reserved</span></td></tr>
+          <tr><td class="k">Playbooks</td><td class="d">Structure reserved; no feature shipped</td><td><span class="st later">Reserved</span></td></tr>
+          <tr><td class="k">SMS &amp; communications</td><td class="d">Planned</td><td><span class="st later">Reserved</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="tight">
+  <div class="wrap">
+    <div class="cta">
+      <div>
+        <h2>Bring a live lead to the walkthrough</h2>
+        <p>Connect your Page, take one real inquiry from intake to a sent proposal, and look at the activity record it leaves behind. Twenty minutes, no slides.</p>
+      </div>
+      <a class="btn btn-lg" href="demo.html" data-cta="page_end">Book a walkthrough</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="index.html">
+          <svg width="24" height="24" viewBox="0 0 26 26" aria-hidden="true">
+            <rect x="0.75" y="0.75" width="24.5" height="24.5" rx="7" fill="none" stroke="#3ddbb4" stroke-width="1.4"></rect>
+            <path d="M6 16.5c3.9 0 3.9-3.6 7-3.6s3.4 3.3 7 3.3" stroke="#3ddbb4" stroke-width="1.7" fill="none" stroke-linecap="round"></path>
+          </svg>
+          <span class="name">Scapes<em>HQ</em></span>
+        </a>
+        <p>Operations and CRM for landscape, hardscape and drainage contractors. Built in the field, not in a boardroom.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Product</h4>
+        <ul>
+          <li><a href="features.html">Features</a></li>
+          <li><a href="how-it-works.html">How it works</a></li>
+          <li><a href="integrations.html">Integrations</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="who-its-for.html">Who it's for</a></li>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="demo.html" data-cta="footer">Book a walkthrough</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Trades</h4>
+        <ul>
+          <li><a href="who-its-for.html">Drainage</a></li>
+          <li><a href="who-its-for.html">Hardscape</a></li>
+          <li><a href="who-its-for.html">Landscape</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bar">
+      <span>&copy; 2026 ScapesHQ. All rights reserved.</span>
+      <span>Live in production with a connected business.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/nav.js"></script>
+</body>
+</html>

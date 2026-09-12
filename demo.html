@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NSFZ2WC6');</script>
+<!-- End Google Tag Manager -->
+<!-- First-touch campaign capture (session-scoped; feeds the walkthrough form) -->
+<script>
+(function(){
+  try{
+    var ss=window.sessionStorage,p=new URLSearchParams(location.search),
+        k=['utm_source','utm_medium','utm_campaign','utm_content','utm_term'],i,v;
+    if(!ss.getItem('sq_landing')){
+      ss.setItem('sq_landing',location.pathname);
+      ss.setItem('sq_referrer',document.referrer||'direct');
+    }
+    for(i=0;i<k.length;i++){
+      v=p.get(k[i]);
+      if(v&&!ss.getItem('sq_'+k[i])) ss.setItem('sq_'+k[i],v);
+    }
+  }catch(e){}
+})();
+</script>
+<title>Book a walkthrough — ScapesHQ</title>
+<meta name="description" content="Twenty minutes, one real lead, and a proposal built end to end. Book a ScapesHQ walkthrough.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://scapeshq.com/demo">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Sora:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NSFZ2WC6"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<header class="site-head">
+  <div class="wrap">
+    <nav class="nav" aria-label="Main">
+      <a class="brand" href="index.html">
+        <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true">
+          <rect x="0.75" y="0.75" width="24.5" height="24.5" rx="7" fill="none" stroke="#3ddbb4" stroke-width="1.4"></rect>
+          <path d="M6 16.5c3.9 0 3.9-3.6 7-3.6s3.4 3.3 7 3.3" stroke="#3ddbb4" stroke-width="1.7" fill="none" stroke-linecap="round"></path>
+          <path d="M6 11c3.9 0 3.9-3.6 7-3.6s3.4 3.3 7 3.3" stroke="#3ddbb4" stroke-width="1.7" fill="none" stroke-linecap="round" opacity=".45"></path>
+        </svg>
+        <span class="name">Scapes<em>HQ</em></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <div class="nav-links" id="nav-links">
+        <a href="features.html">Features</a>
+        <a href="how-it-works.html">How it works</a>
+        <a href="who-its-for.html">Who it's for</a>
+        <a href="integrations.html">Integrations</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="/blog">Blog</a>
+        <a href="about.html">About</a>
+        <a class="btn" href="demo.html" data-cta="nav">Book a walkthrough</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="page-head">
+  <div class="wrap">
+    <span class="eyebrow lbl"><i></i>Book a walkthrough</span>
+    <h1>Bring a live lead. We'll take it to a sent proposal.</h1>
+    <p class="lede">Twenty minutes, no slide deck. We connect a Page, run one real inquiry through intake, build the estimate, send the proposal, and look at the activity record it leaves behind.</p>
+  </div>
+</section>
+
+<section class="tight">
+  <div class="wrap">
+    <div class="grid-2" style="gap:36px;align-items:start">
+      <div class="panel">
+        <h3>Tell us about the business</h3>
+        <p class="mt-s" style="font-size:.94rem">We'll come back within one business day with a time.</p>
+        <!-- Netlify Forms: this posts to Netlify with no backend needed.
+             Remove data-netlify and the form-name field if you wire up your own handler. -->
+        <form class="form mt-m" name="walkthrough" method="POST" action="/thank-you" data-netlify="true" netlify-honeypot="company-website">
+          <input type="hidden" name="form-name" value="walkthrough">
+          <input type="hidden" name="utm_source">
+          <input type="hidden" name="utm_medium">
+          <input type="hidden" name="utm_campaign">
+          <input type="hidden" name="utm_content">
+          <input type="hidden" name="utm_term">
+          <input type="hidden" name="referrer">
+          <input type="hidden" name="landing_page">
+          <p hidden><label>Leave this empty: <input name="company-website"></label></p>
+          <div class="field">
+            <label for="name">Your name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required placeholder="First and last">
+          </div>
+          <div class="field">
+            <label for="company">Company</label>
+            <input id="company" name="company" type="text" autocomplete="organization" required placeholder="Business name">
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required placeholder="you@company.com">
+          </div>
+          <div class="field">
+            <label for="phone">Phone</label>
+            <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="(555) 555-5555">
+          </div>
+          <div class="field">
+            <label for="trade">Primary work</label>
+            <select id="trade" name="trade">
+              <option>Drainage</option>
+              <option>Hardscape</option>
+              <option>Landscape</option>
+              <option>Mixed / all of the above</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="crew">Team size</label>
+            <select id="crew" name="crew">
+              <option>Just me</option>
+              <option>2–5</option>
+              <option>6–15</option>
+              <option>16+</option>
+            </select>
+          </div>
+          <div class="field full">
+            <label for="notes">What's breaking right now</label>
+            <textarea id="notes" name="notes" placeholder="Where leads go, how you price, what falls through — whatever you'd want fixed first."></textarea>
+          </div>
+          <div class="field full">
+            <button class="btn btn-lg" type="submit">Request a walkthrough</button>
+            <p class="form-note mt-s">No card, no trial countdown. We'll tell you honestly if it isn't a fit yet.</p>
+          </div>
+        </form>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:16px">
+        <div class="panel">
+          <h3>What happens on the call</h3>
+          <ul class="speclist">
+            <li>Connect a Facebook Page and watch a lead route into the workspace</li>
+            <li>Turn that lead into a client, contact and property</li>
+            <li>Build an estimate with sections and line items</li>
+            <li>Send a proposal with two options and open the homeowner review page</li>
+            <li>Walk the activity timeline the whole thing generated</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <h3>What we'll ask you</h3>
+          <ul class="speclist plain">
+            <li>How leads reach you today, and where they get stuck</li>
+            <li>How you price work and what you rebuild every time</li>
+            <li>Who in the business needs to see what</li>
+            <li>Whether anything on the reserved list is a dealbreaker</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <h3>Prefer to look first?</h3>
+          <p class="mt-s">The <a href="features.html" style="color:var(--teal)">features page</a> lists everything in the platform, and marks what's built versus reserved. The <a href="how-it-works.html" style="color:var(--teal)">workflow page</a> walks the eight stages end to end.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="index.html">
+          <svg width="24" height="24" viewBox="0 0 26 26" aria-hidden="true">
+            <rect x="0.75" y="0.75" width="24.5" height="24.5" rx="7" fill="none" stroke="#3ddbb4" stroke-width="1.4"></rect>
+            <path d="M6 16.5c3.9 0 3.9-3.6 7-3.6s3.4 3.3 7 3.3" stroke="#3ddbb4" stroke-width="1.7" fill="none" stroke-linecap="round"></path>
+          </svg>
+          <span class="name">Scapes<em>HQ</em></span>
+        </a>
+        <p>Operations and CRM for landscape, hardscape and drainage contractors. Built in the field, not in a boardroom.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Product</h4>
+        <ul>
+          <li><a href="features.html">Features</a></li>
+          <li><a href="how-it-works.html">How it works</a></li>
+          <li><a href="integrations.html">Integrations</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="who-its-for.html">Who it's for</a></li>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="demo.html" data-cta="footer">Book a walkthrough</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Trades</h4>
+        <ul>
+          <li><a href="who-its-for.html">Drainage</a></li>
+          <li><a href="who-its-for.html">Hardscape</a></li>
+          <li><a href="who-its-for.html">Landscape</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bar">
+      <span>&copy; 2026 ScapesHQ. All rights reserved.</span>
+      <span>Live in production with a connected business.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  try{
+    var f=document.querySelector('form[name="walkthrough"]');
+    if(!f) return;
+    var ss=window.sessionStorage,
+        map={utm_source:'sq_utm_source',utm_medium:'sq_utm_medium',utm_campaign:'sq_utm_campaign',
+             utm_content:'sq_utm_content',utm_term:'sq_utm_term',referrer:'sq_referrer',landing_page:'sq_landing'};
+    for(var n in map){
+      var el=f.querySelector('input[name="'+n+'"]');
+      if(el) el.value=ss.getItem(map[n])||'';
+    }
+    var started=false;
+    f.addEventListener('input',function(){
+      if(started) return; started=true;
+      (window.dataLayer=window.dataLayer||[]).push({event:'demo_form_start',form_name:'walkthrough'});
+    });
+  }catch(e){}
+})();
+</script>
+<script src="assets/nav.js"></script>
+</body>
+</html>

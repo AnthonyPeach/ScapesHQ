@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NSFZ2WC6');</script>
+<!-- End Google Tag Manager -->
+<!-- First-touch campaign capture (session-scoped; feeds the walkthrough form) -->
+<script>
+(function(){
+  try{
+    var ss=window.sessionStorage,p=new URLSearchParams(location.search),
+        k=['utm_source','utm_medium','utm_campaign','utm_content','utm_term'],i,v;
+    if(!ss.getItem('sq_landing')){
+      ss.setItem('sq_landing',location.pathname);
+      ss.setItem('sq_referrer',document.referrer||'direct');
+    }
+    for(i=0;i<k.length;i++){
+      v=p.get(k[i]);
+      if(v&&!ss.getItem('sq_'+k[i])) ss.setItem('sq_'+k[i],v);
+    }
+  }catch(e){}
+})();
+</script>
+<title>About — ScapesHQ</title>
+<meta name="description" content="ScapesHQ was built inside a working drainage company in the Southeast, because the software for running outdoor contracting work didn't fit the way the work actually happens.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://scapeshq.com/about">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Sora:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NSFZ2WC6"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<header class="site-head">
+  <div class="wrap">
+    <nav class="nav" aria-label="Main">
+      <a class="brand" href="index.html">
+        <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true">
+          <rect x="0.75" y="0.75" width="24.5" height="24.5" rx="7" fill="none" stroke="#3ddbb4" stroke-width="1.4"></rect>
+          <path d="M6 16.5c3.9 0 3.9-3.6 7-3.6s3.4 3.3 7 3.3" stroke="#3ddbb4" stroke-width="1.7" fill="none" stroke-linecap="round"></path>
+          <path d="M6 11c3.9 0 3.9-3.6 7-3.6s3.4 3.3 7 3.3" stroke="#3ddbb4" stroke-width="1.7" fill="none" stroke-linecap="round" opacity=".45"></path>
+        </svg>
+        <span class="name">Scapes<em>HQ</em></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <div class="nav-links" id="nav-links">
+        <a href="features.html">Features</a>
+        <a href="how-it-works.html">How it works</a>
+        <a href="who-its-for.html">Who it's for</a>
+        <a href="integrations.html">Integrations</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="/blog">Blog</a>
+        <a href="about.html" aria-current="page">About</a>
+        <a class="btn" href="demo.html" data-cta="nav">Book a walkthrough</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="page-head">
+  <div class="wrap">
+    <span class="eyebrow lbl"><i></i>About</span>
+    <h1>Built in a truck, not in a boardroom.</h1>
+    <p class="lede">ScapesHQ started because a working drainage company in the Southeast was running its whole operation on a spreadsheet, a shared inbox, a proposal PDF and a whiteboard — and losing jobs in the seams between them.</p>
+  </div>
+</section>
+
+<section class="tight">
+  <div class="wrap">
+    <div class="grid-2" style="gap:44px;align-items:start">
+      <div class="panel">
+        <h3>Where it came from</h3>
+        <p class="mt-s">We ran Facebook lead ads and watched leads sit in a form inbox nobody had time to check. We priced jobs twice because the first estimate lived on somebody else's laptop. We sent a homeowner the same proposal twice and had to apologize for it. We looked at the CRMs built for software salespeople and could not make a yard, a homeowner and a crew fit into a single contact row.</p>
+        <p class="mt-s">So we built the thing we needed, in the business that needed it. The Facebook integration went live in production against real leads before it was ever offered to anybody else.</p>
+      </div>
+      <div class="panel">
+        <h3>What we believe</h3>
+        <ul class="speclist">
+          <li><span><strong>Record the work.</strong> If it happened, it should be on a timeline you can look at later.</span></li>
+          <li><span><strong>Don't lose leads quietly.</strong> A failed intake should surface and be recoverable, not vanish.</span></li>
+          <li><span><strong>The customer isn't a row.</strong> People, companies and properties are different things.</span></li>
+          <li><span><strong>Say what's built.</strong> Reserved is not the same as shipped, and we label it that way.</span></li>
+          <li><span><strong>Your data is yours.</strong> Export and closure are buttons, not negotiations.</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="lbl teal">Where it stands</span>
+      <h2>A working platform, still being extended</h2>
+      <p>ScapesHQ is a functioning operational CRM running a real business today. Development continues toward a broader contractor operating system — and we'll keep telling you which is which.</p>
+    </div>
+    <div class="grid-2">
+      <div class="panel">
+        <h3>Running today</h3>
+        <div class="chips">
+          <span>Workspaces</span><span>Users &amp; roles</span><span>Team invites</span><span>Leads</span>
+          <span>Customers &amp; relationships</span><span>Properties</span><span>Projects</span><span>Jobs</span>
+          <span>Estimates</span><span>Quotes</span><span>Proposals</span><span>Homeowner review</span>
+          <span>Activity timeline</span><span>Notifications</span><span>Facebook Lead Ads</span><span>Data export</span>
+        </div>
+      </div>
+      <div class="panel">
+        <h3>Being worked on</h3>
+        <ul class="speclist plain">
+          <li>Onboarding and UX refinement</li>
+          <li>Remaining data-governance and storage cleanup</li>
+          <li>Additional contractor workflows</li>
+          <li>Future: invoicing, payments, time tracking and job actuals</li>
+          <li>Future: pricing rules, custom fields, playbooks and SMS</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="tight">
+  <div class="wrap">
+    <div class="cta">
+      <div>
+        <h2>Bring a live lead to the walkthrough</h2>
+        <p>Connect your Page, take one real inquiry from intake to a sent proposal, and look at the activity record it leaves behind. Twenty minutes, no slides.</p>
+      </div>
+      <a class="btn btn-lg" href="demo.html" data-cta="page_end">Book a walkthrough</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="index.html">
+          <svg width="24" height="24" viewBox="0 0 26 26" aria-hidden="true">
+            <rect x="0.75" y="0.75" width="24.5" height="24.5" rx="7" fill="none" stroke="#3ddbb4" stroke-width="1.4"></rect>
+            <path d="M6 16.5c3.9 0 3.9-3.6 7-3.6s3.4 3.3 7 3.3" stroke="#3ddbb4" stroke-width="1.7" fill="none" stroke-linecap="round"></path>
+          </svg>
+          <span class="name">Scapes<em>HQ</em></span>
+        </a>
+        <p>Operations and CRM for landscape, hardscape and drainage contractors. Built in the field, not in a boardroom.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Product</h4>
+        <ul>
+          <li><a href="features.html">Features</a></li>
+          <li><a href="how-it-works.html">How it works</a></li>
+          <li><a href="integrations.html">Integrations</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="who-its-for.html">Who it's for</a></li>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="demo.html" data-cta="footer">Book a walkthrough</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Trades</h4>
+        <ul>
+          <li><a href="who-its-for.html">Drainage</a></li>
+          <li><a href="who-its-for.html">Hardscape</a></li>
+          <li><a href="who-its-for.html">Landscape</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bar">
+      <span>&copy; 2026 ScapesHQ. All rights reserved.</span>
+      <span>Live in production with a connected business.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/nav.js"></script>
+</body>
+</html>

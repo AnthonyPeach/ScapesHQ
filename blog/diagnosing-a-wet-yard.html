@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NSFZ2WC6');</script>
+<!-- End Google Tag Manager -->
+<!-- First-touch campaign capture (session-scoped; feeds the walkthrough form) -->
+<script>
+(function(){
+  try{
+    var ss=window.sessionStorage,p=new URLSearchParams(location.search),
+        k=['utm_source','utm_medium','utm_campaign','utm_content','utm_term'],i,v;
+    if(!ss.getItem('sq_landing')){
+      ss.setItem('sq_landing',location.pathname);
+      ss.setItem('sq_referrer',document.referrer||'direct');
+    }
+    for(i=0;i<k.length;i++){
+      v=p.get(k[i]);
+      if(v&&!ss.getItem('sq_'+k[i])) ss.setItem('sq_'+k[i],v);
+    }
+  }catch(e){}
+})();
+</script>
+<title>Diagnosing a Wet Yard in One Site Visit: A Field Guide — ScapesHQ</title>
+<meta name="description" content="A repeatable five-source diagnostic for drainage contractors: grade, roof water, soil, water table and off-site runoff, all in one site visit.">
+<link rel="canonical" href="https://scapeshq.com/blog/diagnosing-a-wet-yard">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Sora:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="/assets/styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Diagnosing a Wet Yard in One Site Visit: A Field Guide",
+      "description": "A repeatable five-source diagnostic for drainage contractors: grade, roof water, soil, water table and off-site runoff, all in one site visit.",
+      "datePublished": "2026-08-21",
+      "dateModified": "2026-08-21",
+      "author": {
+        "@type": "Organization",
+        "name": "ScapesHQ"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "ScapesHQ"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://scapeshq.com/blog/diagnosing-a-wet-yard"
+      },
+      "articleSection": "Drainage authority"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How long should a drainage site visit take?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Forty minutes to an hour for a typical residential lot if you're working a sequence. Less than twenty minutes and you're guessing; more than ninety and you're probably looking at a job that needs a real survey."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need to charge for a diagnostic visit?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "If your visit includes augering, a perc check and a sketched plan, you're delivering engineering value and many contractors charge for it, often crediting the fee toward the job. On a simple grade problem in a competitive market, a free look may still make sense."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if the homeowner insists they need a French drain?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Show them the diagnosis. A homeowner who watches you auger a plug and explain what the mottling means will usually accept the correct fix. Installing the wrong system because it's what they asked for makes the callback yours."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I know if the water table is the problem?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Grey or blue-grey soil with rust-colored mottling at a consistent depth is the field indicator, and persistent wetness unrelated to recent rain supports it. If your planned trench bottom is at or below that elevation, design for a wet trench."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NSFZ2WC6"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<header class="site-head">
+  <div class="wrap">
+    <nav class="nav" aria-label="Main">
+      <a class="brand" href="/">
+        <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true">
+          <rect x="0.75" y="0.75" width="24.5" height="24.5" rx="7" fill="none" stroke="#3ddbb4" stroke-width="1.4"></rect>
+          <path d="M6 16.5c3.9 0 3.9-3.6 7-3.6s3.4 3.3 7 3.3" stroke="#3ddbb4" stroke-width="1.7" fill="none" stroke-linecap="round"></path>
+          <path d="M6 11c3.9 0 3.9-3.6 7-3.6s3.4 3.3 7 3.3" stroke="#3ddbb4" stroke-width="1.7" fill="none" stroke-linecap="round" opacity=".45"></path>
+        </svg>
+        <span class="name">Scapes<em>HQ</em></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <div class="nav-links" id="nav-links">
+        <a href="/features">Features</a>
+        <a href="/how-it-works">How it works</a>
+        <a href="/who-its-for">Who it's for</a>
+        <a href="/integrations">Integrations</a>
+        <a href="/pricing">Pricing</a>
+        <a href="/blog" aria-current="page">Blog</a>
+        <a href="/about">About</a>
+        <a class="btn" href="/demo" data-cta="nav">Book a walkthrough</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<article class="post">
+  <section class="page-head">
+    <div class="wrap-narrow">
+      <span class="eyebrow lbl"><i></i>Drainage authority</span>
+      <h1>Diagnosing a Wet Yard in One Site Visit: A Field Guide</h1>
+      <p class="lede">A repeatable five-source diagnostic for drainage contractors: grade, roof water, soil, water table and off-site runoff, all in one site visit.</p>
+      <p class="post-meta"><time datetime="2026-08-21">August 21, 2026</time> &middot; 9 min read</p>
+    </div>
+  </section>
+
+  <section class="tight">
+    <div class="wrap-narrow article">
+<p>Most drainage callbacks aren't installation failures. They're diagnosis failures. The trench was dug well, the stone was clean, the fall was right — and the yard is still wet, because the water was never coming from where the contractor assumed.</p>
+<p>A wet yard has five possible sources. You can rule each one in or out in about forty minutes if you go in the same order every time. This is that order.</p>
+<h2>Before you get out of the truck</h2>
+<p>Two minutes of prep that changes what you see:</p>
+<p><strong>Check the last rain.</strong> Was it 36 hours ago or nine days? Standing water three days after a half-inch rain means something very different from standing water an hour after two inches. Ask the homeowner when it rained last and how much, then verify — the answer is often wrong.</p>
+<p><strong>Look at the lot on satellite view.</strong> Where does this parcel sit relative to its neighbors? A house at the bottom of a bowl is receiving water; a house on a ridge is generating it. You can see grade patterns from above that are invisible standing in the yard.</p>
+<p><strong>Note the roof.</strong> Square footage of roof, number of downspouts, where they discharge. An inch of rain on a 2,400-square-foot roof produces roughly 1,500 gallons. That has to go somewhere, and on most houses it goes four feet from the foundation.</p>
+<h2>The five sources, in order</h2>
+<p>Work them in this sequence. Each one you rule out narrows the next.</p>
+<h3>1. Surface grade</h3>
+<p>Start here because it's the most common and the cheapest to fix.</p>
+<p>Walk the property line to the house and back, watching for the direction of fall. You're looking for:</p>
+<ul class="speclist"><li><span><strong>Negative slope toward the structure.</strong> The industry rule of thumb is roughly six inches of fall in the first ten feet away from the foundation. Plenty of houses have zero, or negative.</span></li><li><span><strong>Flat spots and birdbaths.</strong> Low areas with no outlet. Look for silt lines, matted grass, algae, and the ring of finer sediment that marks where standing water dried.</span></li><li><span><strong>Interrupted flow paths.</strong> A patio, a wall, a raised bed or a compacted path acting as a dam across the yard's natural drainage.</span></li></ul>
+<p><strong>The tell:</strong> water that stands in a defined low spot and is gone within a day or two of rain is usually a grade problem, not a subsurface one. A regrade or a shallow swale fixes it, and a French drain is the wrong sale.</p>
+<h3>2. Roof and hardscape water</h3>
+<p>The second most common, and the one homeowners never suspect.</p>
+<p>Follow every downspout. Where does it end? A splash block four feet from the house is not drainage, it's relocation. Check whether downspouts are:</p>
+<ul class="speclist"><li><span>Discharging at the foundation</span></li><li><span>Tied into a buried line that may or may not still flow</span></li><li><span>Dumping into a bed that drains back toward the house</span></li></ul>
+<p>Then look at hardscape. Driveways, patios and walks are impervious, and a driveway sloping toward the back yard delivers a surprising volume of water at the exact point everyone assumes is a soil problem.</p>
+<p><strong>The tell:</strong> wet zones that align with downspout discharge points or the low edge of a hard surface. If the wet area is a fan spreading out from one point, follow it upstream — you'll find a pipe or an edge.</p>
+<h3>3. Soil and infiltration</h3>
+<p>Now dig. A hand auger or a post-hole digger and ten minutes tells you more than an hour of looking.</p>
+<p>Pull a plug 12 to 18 inches deep in the wet area and one in a dry area for comparison. What you're reading:</p>
+<ul class="speclist"><li><span><strong>Texture.</strong> Clay ribbons when you roll it and holds a fingerprint. Sandy soil crumbles. Southeast red clay drains at a fraction of the rate of a sandy loam, and a system designed for one will fail in the other.</span></li><li><span><strong>Compaction.</strong> A hardpan layer — often construction traffic from when the house was built — perches water on top of otherwise decent soil. You'll feel it as a distinct resistance at a consistent depth.</span></li><li><span><strong>Color and mottling.</strong> Grey or blue-grey soil with rust-colored mottles means water sits there regularly. That's a seasonal high water table telling you its elevation.</span></li></ul>
+<p><strong>A simple percolation check:</strong> fill the hole with water, let it drain, fill it again, and time the drop. If the second fill drops less than an inch an hour, you're in soil that will not infiltrate its way out of the problem no matter what you install.</p>
+<h3>4. Subsurface and water table</h3>
+<p>If grade is fine, roof water is controlled, and the soil isn't the whole story, look lower.</p>
+<ul class="speclist"><li><span><strong>Seasonal high water table.</strong> The mottling above tells you where it sits. If it's within a foot of your planned trench bottom, your system will run wet and you need to design for it.</span></li><li><span><strong>Springs and seeps.</strong> A wet area that never fully dries, even in a drought week, and that runs clear rather than muddy. Follow the slope uphill to find the emergence point.</span></li><li><span><strong>Subsurface flow from uphill.</strong> Water moving laterally through a permeable layer over a dense one. Classic on sloped lots with fill.</span></li></ul>
+<p><strong>The tell:</strong> persistent wetness unrelated to recent rain. This is the case where an interceptor drain uphill of the problem beats a collection system in the middle of it.</p>
+<h3>5. Off-site water</h3>
+<p>The one nobody wants to discuss.</p>
+<p>Stand at the property line and figure out how much of the watershed you're actually looking at. If three neighboring lots grade toward this yard, no system inside the property line is going to keep up unless it's sized for the whole contributing area.</p>
+<p>This is a scoping conversation, not just a technical one. A homeowner expecting a $6,000 fix to a $30,000 watershed problem is a callback, a bad review, and an argument, no matter how well you install.</p>
+<h2>What the diagnosis changes</h2>
+<p>The point of the sequence isn't to be thorough for its own sake. Each source implies a different fix and a different price:</p>
+<div class="tablewrap"><table><thead><tr><th>Primary source</th><th>Typical fix</th><th>What it isn't</th></tr></thead><tbody><tr><td>Surface grade</td><td>Regrade, swale, low-spot correction</td><td>Not a French drain</td></tr><tr><td>Roof and hardscape</td><td>Downspout collection, solid pipe to outlet</td><td>Not a subsurface system</td></tr><tr><td>Soil infiltration</td><td>Subsurface collection with adequate stone, outlet to daylight</td><td>Not a regrade alone</td></tr><tr><td>Water table or seep</td><td>Interceptor drain uphill, deeper system, designed outlet</td><td>Not a shallow trench</td></tr><tr><td>Off-site water</td><td>Sized conveyance, possibly civil design and permits</td><td>Not a residential drain job</td></tr></tbody></table></div>
+<p>Selling the wrong one of these is how contractors end up eating a system.</p>
+<h2>Document it while you're standing there</h2>
+<p>Whatever you diagnose, capture it before you leave: photos of the wet area with something for scale, photos of every downspout discharge, a photo of your soil plug, and a rough sketch of the flow direction with the proposed run.</p>
+<p>Two reasons. The obvious one is that you'll build the estimate from it. The less obvious one is that eight months later when a homeowner says the yard is still wet at the far corner you never scoped, the photo of the marked plan ends the conversation in about thirty seconds.</p>
+<p>Keeping those photos attached to the property record — not on somebody's phone — is the difference between having evidence and having had evidence. In ScapesHQ they live on the property and the job, alongside the estimate and the proposal, so anyone in the office can pull them up.</p>
+<h2>The field checklist</h2>
+<p>Print this or keep it on your phone:</p>
+<ul class="speclist"><li><span>When did it last rain, and how much?</span></li><li><span>Satellite view: where does this lot sit in the watershed?</span></li><li><span>Walk the perimeter: fall toward or away from the structure?</span></li><li><span>Mark every low spot and silt line</span></li><li><span>Follow every downspout to its discharge</span></li><li><span>Check hardscape slope direction</span></li><li><span>Auger a plug in the wet zone and a dry zone</span></li><li><span>Texture, compaction depth, mottling</span></li><li><span>Perc check if soil is questionable</span></li><li><span>Any wet area that never dries? Look uphill for a seep</span></li><li><span>Count contributing lots at the property line</span></li><li><span>Photograph everything, sketch the flow, mark the proposed run</span></li></ul>
+<h2>FAQ</h2>
+<h3>How long should a drainage site visit take?</h3>
+<p>Forty minutes to an hour for a typical residential lot if you're working a sequence. Less than twenty minutes and you're guessing; more than ninety and you're probably looking at a job that needs a real survey.</p>
+<h3>Do I need to charge for a diagnostic visit?</h3>
+<p>If your visit includes augering, a perc check and a sketched plan, you're delivering engineering value and many contractors charge for it, often crediting the fee toward the job. On a simple grade problem in a competitive market, a free look may still make sense.</p>
+<h3>What if the homeowner insists they need a French drain?</h3>
+<p>Show them the diagnosis. A homeowner who watches you auger a plug and explain what the mottling means will usually accept the correct fix. Installing the wrong system because it's what they asked for makes the callback yours.</p>
+<h3>How do I know if the water table is the problem?</h3>
+<p>Grey or blue-grey soil with rust-colored mottling at a consistent depth is the field indicator, and persistent wetness unrelated to recent rain supports it. If your planned trench bottom is at or below that elevation, design for a wet trench.</p>
+<h2>The short version</h2>
+<p>Five sources, one order: grade, roof and hardscape, soil, subsurface, off-site. Rule each one out before you sell a system, because the fix that's right for one is wasted money on another. Then photograph everything and keep it on the property record, not in a camera roll.</p>
+<p><a href="/demo">Book a walkthrough</a> and we'll take one of your real site visits from photos to a sent proposal.</p>
+    </div>
+  </section>
+</article>
+
+<section class="tight">
+  <div class="wrap-narrow">
+    <div class="panel post-cta">
+      <h3>See this run on a real job</h3>
+      <p>ScapesHQ takes a lead from a Facebook form to a signed proposal without retyping it once. Bring a job you're quoting this week.</p>
+      <a class="btn btn-lg mt-m" href="/demo" data-cta="blog_post_end">Book a walkthrough</a>
+    </div>
+  </div>
+</section>
+
+<section class="tight">
+  <div class="wrap-narrow">
+    <h2>Keep reading</h2>
+    <div class="grid-2 mt-m">
+      <a class="panel post-card" href="/blog/how-to-price-a-french-drain-job">
+        <span class="lbl teal">Pricing &amp; estimating</span>
+        <h3>How to Price a French Drain Job: A Contractor's Breakdown</h3>
+        <p>Every cost bucket in a French drain bid, a real 148-foot job priced line by line, and the math that keeps a $13,130 job profitable. Written for contractors.</p>
+        <span class="post-more">Read it &rarr;</span>
+      </a>
+      <a class="panel post-card" href="/blog/drainage-estimate-template">
+        <span class="lbl teal">Pricing &amp; estimating</span>
+        <h3>Drainage Estimate Template: Every Line Item Explained</h3>
+        <p>Every line item in a drainage estimate, what each one should say, and the four lines contractors forget until the job is already losing money.</p>
+        <span class="post-more">Read it &rarr;</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="/">
+          <svg width="24" height="24" viewBox="0 0 26 26" aria-hidden="true">
+            <rect x="0.75" y="0.75" width="24.5" height="24.5" rx="7" fill="none" stroke="#3ddbb4" stroke-width="1.4"></rect>
+            <path d="M6 16.5c3.9 0 3.9-3.6 7-3.6s3.4 3.3 7 3.3" stroke="#3ddbb4" stroke-width="1.7" fill="none" stroke-linecap="round"></path>
+          </svg>
+          <span class="name">Scapes<em>HQ</em></span>
+        </a>
+        <p>Operations and CRM for landscape, hardscape and drainage contractors. Built in the field, not in a boardroom.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Product</h4>
+        <ul>
+          <li><a href="/features">Features</a></li>
+          <li><a href="/how-it-works">How it works</a></li>
+          <li><a href="/integrations">Integrations</a></li>
+          <li><a href="/pricing">Pricing</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/about">About</a></li>
+          <li><a href="/who-its-for">Who it's for</a></li>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/demo" data-cta="footer">Book a walkthrough</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Trades</h4>
+        <ul>
+          <li><a href="/who-its-for">Drainage</a></li>
+          <li><a href="/who-its-for">Hardscape</a></li>
+          <li><a href="/who-its-for">Landscape</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bar">
+      <span>&copy; 2026 ScapesHQ. All rights reserved.</span>
+      <span>Live in production with a connected business.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/nav.js"></script>
+</body>
+</html>

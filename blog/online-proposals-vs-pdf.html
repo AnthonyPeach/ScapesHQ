@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NSFZ2WC6');</script>
+<!-- End Google Tag Manager -->
+<!-- First-touch campaign capture (session-scoped; feeds the walkthrough form) -->
+<script>
+(function(){
+  try{
+    var ss=window.sessionStorage,p=new URLSearchParams(location.search),
+        k=['utm_source','utm_medium','utm_campaign','utm_content','utm_term'],i,v;
+    if(!ss.getItem('sq_landing')){
+      ss.setItem('sq_landing',location.pathname);
+      ss.setItem('sq_referrer',document.referrer||'direct');
+    }
+    for(i=0;i<k.length;i++){
+      v=p.get(k[i]);
+      if(v&&!ss.getItem('sq_'+k[i])) ss.setItem('sq_'+k[i],v);
+    }
+  }catch(e){}
+})();
+</script>
+<title>Stop Sending PDFs: Why Online Proposals Close Faster — ScapesHQ</title>
+<meta name="description" content="The PDF proposal costs contractors jobs invisibly: seven steps to sign, no delivery confirmation, no record of what was agreed. What to send instead.">
+<link rel="canonical" href="https://scapeshq.com/blog/online-proposals-vs-pdf">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Sora:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="/assets/styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Stop Sending PDFs: Why Online Proposals Close Faster",
+      "description": "The PDF proposal costs contractors jobs invisibly: seven steps to sign, no delivery confirmation, no record of what was agreed. What to send instead.",
+      "datePublished": "2026-09-04",
+      "dateModified": "2026-09-04",
+      "author": {
+        "@type": "Organization",
+        "name": "ScapesHQ"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "ScapesHQ"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://scapeshq.com/blog/online-proposals-vs-pdf"
+      },
+      "articleSection": "Proposals & closing"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Are electronic signatures legally valid for contractor agreements?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "In the US, electronic signatures are broadly enforceable for this kind of work under federal E-SIGN and state UETA statutes. Confirm the specifics for your state and contract type with an attorney — this isn't legal advice — but the practical question is usually evidence quality, and a recorded electronic acceptance generally beats a scanned page."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if the customer wants a paper copy?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Send one. An online proposal doesn't prevent printing — it just stops requiring it in order to say yes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Won't a proposal link get lost in email the same way a PDF does?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A link is lighter and less spam-triggering than an attachment, and delivery tracking tells you whether it landed. That's the part that changes: you stop guessing."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I still need a written contract?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Your terms, exclusions, warranty and payment schedule should all be part of the proposal the customer accepts. Accepting it electronically is what makes it an agreement — the content still has to be right."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NSFZ2WC6"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<header class="site-head">
+  <div class="wrap">
+    <nav class="nav" aria-label="Main">
+      <a class="brand" href="/">
+        <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true">
+          <rect x="0.75" y="0.75" width="24.5" height="24.5" rx="7" fill="none" stroke="#3ddbb4" stroke-width="1.4"></rect>
+          <path d="M6 16.5c3.9 0 3.9-3.6 7-3.6s3.4 3.3 7 3.3" stroke="#3ddbb4" stroke-width="1.7" fill="none" stroke-linecap="round"></path>
+          <path d="M6 11c3.9 0 3.9-3.6 7-3.6s3.4 3.3 7 3.3" stroke="#3ddbb4" stroke-width="1.7" fill="none" stroke-linecap="round" opacity=".45"></path>
+        </svg>
+        <span class="name">Scapes<em>HQ</em></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <div class="nav-links" id="nav-links">
+        <a href="/features">Features</a>
+        <a href="/how-it-works">How it works</a>
+        <a href="/who-its-for">Who it's for</a>
+        <a href="/integrations">Integrations</a>
+        <a href="/pricing">Pricing</a>
+        <a href="/blog" aria-current="page">Blog</a>
+        <a href="/about">About</a>
+        <a class="btn" href="/demo" data-cta="nav">Book a walkthrough</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<article class="post">
+  <section class="page-head">
+    <div class="wrap-narrow">
+      <span class="eyebrow lbl"><i></i>Proposals &amp; closing</span>
+      <h1>Stop Sending PDFs: Why Online Proposals Close Faster</h1>
+      <p class="lede">The PDF proposal costs contractors jobs invisibly: seven steps to sign, no delivery confirmation, no record of what was agreed. What to send instead.</p>
+      <p class="post-meta"><time datetime="2026-09-04">September 4, 2026</time> &middot; 6 min read</p>
+    </div>
+  </section>
+
+  <section class="tight">
+    <div class="wrap-narrow article">
+<p>The PDF proposal isn't bad because it looks unprofessional. Plenty of them look great. It's bad because of what it asks the customer to do, and what it fails to tell you.</p>
+<h2>What you're actually asking for</h2>
+<p>Here's the full path from your send button to a signed job with a PDF:</p>
+<ol class="speclist"><li><span>Homeowner gets an email with an attachment</span></li><li><span>Opens it on a phone, where it renders at 40% and requires pinch-zooming</span></li><li><span>Decides to "look at it properly later on the computer"</span></li><li><span>Later arrives. Finds the email. Opens the PDF.</span></li><li><span>Prints it, or hunts for a way to sign digitally</span></li><li><span>Signs, scans or photographs it</span></li><li><span>Finds your email again, attaches, sends</span></li></ol>
+<p>Seven steps, at least two of which happen on a different device than the one where they first read it. Every step is a place to stop.</p>
+<p>Compare that with: tap link, read on phone, choose option, sign, done. Same proposal. Same price. The difference is entirely in the friction, and friction is not a small effect — the jobs you lose here don't announce themselves as losses. They just go quiet.</p>
+<h2>The three things a PDF can't tell you</h2>
+<p>Friction is the obvious problem. The invisible ones cost more.</p>
+<p><strong>You don't know if it arrived.</strong> Contractor proposals are attachment-heavy emails from an address the recipient has never corresponded with. That's a spam-filter profile. When a homeowner goes quiet, you genuinely cannot distinguish "thinking about it" from "never received it," so you either pester someone who's deciding or ignore someone who never saw it.</p>
+<p><strong>You don't know if it was opened.</strong> Which means your follow-up is blind. "Did you get a chance to look at it?" is a question you shouldn't have to ask.</p>
+<p><strong>You don't know what version they have.</strong> You revised the scope after the phone call on Thursday and sent v2. They signed v1, which was still sitting in their inbox. Now you have a signed agreement for work you don't intend to do, at a price you no longer quoted.</p>
+<p>That last one is not hypothetical. It's the reason "final_v3_REVISED.pdf" exists as a filename on every contractor's desktop.</p>
+<h2>What breaks on the sending side</h2>
+<p>There's a failure mode on your end too, and it's worse than it sounds.</p>
+<p>An email that fails to deliver often fails quietly, or bounces into a mailbox nobody checks. The natural reaction is to send it again. And again. So the homeowner either receives nothing at all, or receives the same proposal three times, which reads as either desperation or disorganization.</p>
+<p>What you want instead is a record of every send attempt and its outcome, so an ambiguous delivery gets <em>reconciled</em> rather than blindly repeated. That's the difference between knowing what happened and guessing.</p>
+<h2>What an online proposal changes</h2>
+<p><strong>Signing takes ten seconds.</strong> Open on the phone where they're already reading, choose an option, sign with a finger. No printer, no scanner, no second device.</p>
+<p><strong>Options become selectable.</strong> A PDF with three options asks the customer to write back and tell you which one. An online proposal lets them pick, and the pick is recorded. This alone changes how well tiered pricing works.</p>
+<p><strong>Delivery and opens are tracked.</strong> You know it arrived. You know it was opened. Your follow-up stops being a guess about whether they've seen it.</p>
+<p><strong>Everyone is on the same version.</strong> One live document, one URL, no v3 problem. Revise and the customer sees the current scope.</p>
+<p><strong>The acceptance is attached to what they accepted.</strong> Signature evidence stored against the specific proposal and option — not a signature page floating free of the document it approved. Eight months later, when there's a disagreement about whether the side yard was included, the record shows exactly what they signed.</p>
+<p><strong>It looks like a company.</strong> Fairly or not, a homeowner comparing three bids reads a phone-native proposal with selectable options as a bigger operation than an emailed PDF, even when the PDF is better work.</p>
+<h2>The objections</h2>
+<p><strong>"My customers are older and don't want tech."</strong> They're signing for packages, banking on a phone, and doing telehealth visits. Signing with a fingertip is easier than finding a printer. In practice, older homeowners tend to prefer it once they've done it.</p>
+<p><strong>"I want a real signature for legal reasons."</strong> Electronic signatures are broadly enforceable for residential contract work in the US under E-SIGN and state UETA adoptions — with the usual caveats that a lawyer in your state should confirm your specific agreement and any local requirements. What matters practically is evidence: what was signed, by whom, when, from where. A well-recorded electronic acceptance carries more of that than a scanned photo of a page.</p>
+<p><strong>"I don't want to pay for another tool."</strong> Fair. But price it against one lost job a quarter, which is roughly what a seven-step signing process costs a contractor doing meaningful volume.</p>
+<p><strong>"I already use a generic e-sign service."</strong> That solves signing. It doesn't connect the proposal to the estimate that produced it, the property it's for, or the job that follows. You'll still be retyping scope between systems, which is where version drift starts.</p>
+<h2>What to look for</h2>
+<p>Whatever you use, it should:</p>
+<ul class="speclist"><li><span>Render properly on a phone without zooming</span></li><li><span>Present options the customer can select, not describe</span></li><li><span>Capture the signature and store it with the specific version accepted</span></li><li><span>Track sends and delivery so you can tell silence from non-receipt</span></li><li><span>Reconcile a failed or ambiguous send instead of firing duplicates</span></li><li><span>Connect back to the estimate, the customer and the property</span></li></ul>
+<p>Proposals in ScapesHQ do this end to end: options and attachments go out to a homeowner review page, acceptance and signature evidence are stored on the proposal, and send history is tracked so nobody gets the same proposal twice. See <a href="/features">how proposals work</a>.</p>
+<h2>FAQ</h2>
+<h3>Are electronic signatures legally valid for contractor agreements?</h3>
+<p>In the US, electronic signatures are broadly enforceable for this kind of work under federal E-SIGN and state UETA statutes. Confirm the specifics for your state and contract type with an attorney — this isn't legal advice — but the practical question is usually evidence quality, and a recorded electronic acceptance generally beats a scanned page.</p>
+<h3>What if the customer wants a paper copy?</h3>
+<p>Send one. An online proposal doesn't prevent printing — it just stops requiring it in order to say yes.</p>
+<h3>Won't a proposal link get lost in email the same way a PDF does?</h3>
+<p>A link is lighter and less spam-triggering than an attachment, and delivery tracking tells you whether it landed. That's the part that changes: you stop guessing.</p>
+<h3>Do I still need a written contract?</h3>
+<p>Your terms, exclusions, warranty and payment schedule should all be part of the proposal the customer accepts. Accepting it electronically is what makes it an agreement — the content still has to be right.</p>
+<h2>The short version</h2>
+<p>The PDF costs you jobs in ways that never appear as a lost bid: seven steps to sign, no delivery confirmation, no open signal, and no certainty about which version was accepted. An online proposal collapses it to a tap, records what was chosen, and tells you it arrived. Same document, materially better close rate.</p>
+<p>For what goes inside the proposal, see <a href="/blog/drainage-proposal-anatomy">the anatomy of a drainage proposal that gets signed</a>. Or <a href="/demo">book a walkthrough</a> and we'll send one to your own phone so you can see the customer's side of it.</p>
+    </div>
+  </section>
+</article>
+
+<section class="tight">
+  <div class="wrap-narrow">
+    <div class="panel post-cta">
+      <h3>See this run on a real job</h3>
+      <p>ScapesHQ takes a lead from a Facebook form to a signed proposal without retyping it once. Bring a job you're quoting this week.</p>
+      <a class="btn btn-lg mt-m" href="/demo" data-cta="blog_post_end">Book a walkthrough</a>
+    </div>
+  </div>
+</section>
+
+<section class="tight">
+  <div class="wrap-narrow">
+    <h2>Keep reading</h2>
+    <div class="grid-2 mt-m">
+      <a class="panel post-card" href="/blog/drainage-proposal-anatomy">
+        <span class="lbl teal">Proposals &amp; closing</span>
+        <h3>The Drainage Proposal That Gets Signed the Same Week</h3>
+        <p>What goes on page one, how to structure options, the scope language that prevents arguments, and why signing has to take ten seconds.</p>
+        <span class="post-more">Read it &rarr;</span>
+      </a>
+      <a class="panel post-card" href="/blog/drainage-estimate-template">
+        <span class="lbl teal">Pricing &amp; estimating</span>
+        <h3>Drainage Estimate Template: Every Line Item Explained</h3>
+        <p>Every line item in a drainage estimate, what each one should say, and the four lines contractors forget until the job is already losing money.</p>
+        <span class="post-more">Read it &rarr;</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="/">
+          <svg width="24" height="24" viewBox="0 0 26 26" aria-hidden="true">
+            <rect x="0.75" y="0.75" width="24.5" height="24.5" rx="7" fill="none" stroke="#3ddbb4" stroke-width="1.4"></rect>
+            <path d="M6 16.5c3.9 0 3.9-3.6 7-3.6s3.4 3.3 7 3.3" stroke="#3ddbb4" stroke-width="1.7" fill="none" stroke-linecap="round"></path>
+          </svg>
+          <span class="name">Scapes<em>HQ</em></span>
+        </a>
+        <p>Operations and CRM for landscape, hardscape and drainage contractors. Built in the field, not in a boardroom.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Product</h4>
+        <ul>
+          <li><a href="/features">Features</a></li>
+          <li><a href="/how-it-works">How it works</a></li>
+          <li><a href="/integrations">Integrations</a></li>
+          <li><a href="/pricing">Pricing</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/about">About</a></li>
+          <li><a href="/who-its-for">Who it's for</a></li>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/demo" data-cta="footer">Book a walkthrough</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Trades</h4>
+        <ul>
+          <li><a href="/who-its-for">Drainage</a></li>
+          <li><a href="/who-its-for">Hardscape</a></li>
+          <li><a href="/who-its-for">Landscape</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bar">
+      <span>&copy; 2026 ScapesHQ. All rights reserved.</span>
+      <span>Live in production with a connected business.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/nav.js"></script>
+</body>
+</html>

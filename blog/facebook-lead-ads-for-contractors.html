@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NSFZ2WC6');</script>
+<!-- End Google Tag Manager -->
+<!-- First-touch campaign capture (session-scoped; feeds the walkthrough form) -->
+<script>
+(function(){
+  try{
+    var ss=window.sessionStorage,p=new URLSearchParams(location.search),
+        k=['utm_source','utm_medium','utm_campaign','utm_content','utm_term'],i,v;
+    if(!ss.getItem('sq_landing')){
+      ss.setItem('sq_landing',location.pathname);
+      ss.setItem('sq_referrer',document.referrer||'direct');
+    }
+    for(i=0;i<k.length;i++){
+      v=p.get(k[i]);
+      if(v&&!ss.getItem('sq_'+k[i])) ss.setItem('sq_'+k[i],v);
+    }
+  }catch(e){}
+})();
+</script>
+<title>Facebook Lead Ads for Contractors: The Real Setup — ScapesHQ</title>
+<meta name="description" content="How contractors should actually run Meta lead ads: campaign structure, form questions that filter tire-kickers, and where the leads really end up.">
+<link rel="canonical" href="https://scapeshq.com/blog/facebook-lead-ads-for-contractors">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Sora:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="/assets/styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Facebook Lead Ads for Contractors: The Real Setup",
+      "description": "How contractors should actually run Meta lead ads: campaign structure, form questions that filter tire-kickers, and where the leads really end up.",
+      "datePublished": "2026-08-25",
+      "dateModified": "2026-08-25",
+      "author": {
+        "@type": "Organization",
+        "name": "ScapesHQ"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "ScapesHQ"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://scapeshq.com/blog/facebook-lead-ads-for-contractors"
+      },
+      "articleSection": "Lead gen & Meta ads"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Are Facebook lead ads better than Google for contractors?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "They're different. Google captures existing demand — someone already searching for a fix. Meta creates it, showing the problem to someone who's been tolerating a wet yard for two years. Meta typically produces more, softer leads at lower cost; Google fewer, hotter, more expensive ones. Most established contractors eventually run both."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why is my lead quality so bad?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Usually one of three things: no qualifying questions on the form, a service radius drawn wider than you'd actually drive, or ad copy that implies a price you don't charge. Fix the form first — it's the fastest change with the biggest effect."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much should I spend to start?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Enough to produce meaningful volume for two uninterrupted weeks in one campaign, rather than a smaller amount spread across several. Work backward from your own revenue-per-lead math rather than from a benchmark number."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "My leads stopped coming in. What happened?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Check the Page connection before you touch the campaign. Access tokens expire and permissions get revoked — often after someone changes Page roles or a password. If ad spend is still being delivered but leads have gone quiet, it's almost always the connection, not the ad."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NSFZ2WC6"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<header class="site-head">
+  <div class="wrap">
+    <nav class="nav" aria-label="Main">
+      <a class="brand" href="/">
+        <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true">
+          <rect x="0.75" y="0.75" width="24.5" height="24.5" rx="7" fill="none" stroke="#3ddbb4" stroke-width="1.4"></rect>
+          <path d="M6 16.5c3.9 0 3.9-3.6 7-3.6s3.4 3.3 7 3.3" stroke="#3ddbb4" stroke-width="1.7" fill="none" stroke-linecap="round"></path>
+          <path d="M6 11c3.9 0 3.9-3.6 7-3.6s3.4 3.3 7 3.3" stroke="#3ddbb4" stroke-width="1.7" fill="none" stroke-linecap="round" opacity=".45"></path>
+        </svg>
+        <span class="name">Scapes<em>HQ</em></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <div class="nav-links" id="nav-links">
+        <a href="/features">Features</a>
+        <a href="/how-it-works">How it works</a>
+        <a href="/who-its-for">Who it's for</a>
+        <a href="/integrations">Integrations</a>
+        <a href="/pricing">Pricing</a>
+        <a href="/blog" aria-current="page">Blog</a>
+        <a href="/about">About</a>
+        <a class="btn" href="/demo" data-cta="nav">Book a walkthrough</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<article class="post">
+  <section class="page-head">
+    <div class="wrap-narrow">
+      <span class="eyebrow lbl"><i></i>Lead gen &amp; Meta ads</span>
+      <h1>Facebook Lead Ads for Contractors: The Real Setup</h1>
+      <p class="lede">How contractors should actually run Meta lead ads: campaign structure, form questions that filter tire-kickers, and where the leads really end up.</p>
+      <p class="post-meta"><time datetime="2026-08-25">August 25, 2026</time> &middot; 8 min read</p>
+    </div>
+  </section>
+
+  <section class="tight">
+    <div class="wrap-narrow article">
+<p>Every agency pitch deck for contractor Facebook ads looks the same, and most of them are selling you the wrong half of the problem. The ad is not where contractors lose money on Meta. The form and what happens in the ninety seconds after it's submitted are where contractors lose money on Meta.</p>
+<p>This is the setup that works for drainage, hardscape and landscape work, written from running it rather than from selling it.</p>
+<h2>Lead ads vs. sending traffic to your site</h2>
+<p>Meta gives you two options: a lead form that opens inside Facebook or Instagram, or a link that sends people to a landing page on your site.</p>
+<p>For contract work, the in-platform lead form usually wins, for one boring reason. The form pre-fills name, email and phone from the person's profile, so submitting takes two taps. A landing page asks a homeowner standing in their kitchen to type all of it on a phone.</p>
+<p>The tradeoff is real: an easier form means more leads and a lower quality bar. Pre-filled contact info means someone can submit without really deciding anything. You solve that with the questions, not by making the form harder.</p>
+<p>Use a landing page instead when you're selling something that genuinely needs explanation before someone raises a hand, or when you have a strong page that already converts.</p>
+<h2>Campaign structure</h2>
+<p>Keep it simpler than the agencies do. For a contractor spending a few thousand a month:</p>
+<p><strong>One campaign per service line.</strong> Drainage and hardscape are different buyers with different urgency. Mixing them means Meta optimizes toward whichever converts easier and starves the other.</p>
+<p><strong>One ad set per geography you actually serve.</strong> Not a 50-mile radius around the office. Draw the area your crews will actually drive, and cut the parts you'd resent servicing. Every lead outside that ring costs the same as one inside it.</p>
+<p><strong>Three to five ads per ad set.</strong> Different hooks, same offer. Let them run long enough to say something before you judge them.</p>
+<p>Resist the urge to build fifteen ad sets to test audiences. On a contractor budget the algorithm needs volume in one place more than you need granularity.</p>
+<h2>What the ads should actually say</h2>
+<p>The winning angle for drainage work is almost never the product. It's the symptom.</p>
+<p>Homeowners don't search their memory for "French drain." They think about the corner of the yard the dog tracks mud out of, the mosquitoes, the soggy patch that kills the grass every spring, the water that got into the crawlspace once and might again.</p>
+<p>Lead with that. Use your own photos — a real trench, a real machine, a real before-and-after of a yard that looks like theirs. Stock imagery of a pristine lawn reads as an ad; a muddy jobsite reads as a neighbor who does this work.</p>
+<p>Say where you work. "Serving [county] and [county]" filters better than any targeting setting and improves lead quality on its own.</p>
+<h2>The form questions that matter</h2>
+<p>This is the highest-leverage part of the whole setup, and most contractors skip it because Meta warns that extra questions reduce volume. They do. That's the point — you're trading raw lead count for leads worth calling.</p>
+<p>Three or four questions, no more:</p>
+<ol class="speclist"><li><span><strong>What's the property address?</strong> The single best qualifier. It confirms service area, tells you the lot before you call, and someone unwilling to give an address was never going to book a site visit.</span></li><li><span><strong>What's happening?</strong> Multiple choice: standing water in the yard, water near the foundation or crawlspace, downspout or gutter runoff, erosion or washout, not sure. This tells you which of the five diagnostic paths you're on before you dial.</span></li><li><span><strong>When are you looking to have this done?</strong> Options like as soon as possible, next 30 days, next few months, just getting pricing. Not a disqualifier — a routing signal for how hard you push.</span></li><li><span><strong>Are you the homeowner?</strong> Renters and curious neighbors submit forms.</span></li></ol>
+<p>Add Meta's higher-intent form type if it's offered in your account — the extra confirmation step measurably improves quality. Fewer leads, more of them real.</p>
+<p><strong>What not to ask.</strong> Budget questions on a lead form get abandoned or answered dishonestly. Save it for the call.</p>
+<h2>Where the money actually leaks</h2>
+<p>Here's the part the agency deck won't cover.</p>
+<p>A Meta lead form submission does not email you by default. It lands in Meta's Leads Center or in whatever integration you've set up. Contractors discover this in one of three unpleasant ways:</p>
+<ul class="speclist"><li><span>Leads pile up in a Facebook interface nobody in the office has permission to open.</span></li><li><span>Leads forward to a shared inbox where they compete with vendor mail and get read the next morning.</span></li><li><span>An integration was set up once, the Page access token later expired or was revoked, and the leads silently stopped arriving — while the ad spend kept going out.</span></li></ul>
+<p>That third one is the expensive one. A connection can go inactive, expired, revoked or error without anyone getting a notification, and a contractor can burn a month of budget before someone notices the phone got quiet. If nothing in your stack monitors connection health, nothing is monitoring connection health.</p>
+<p>This is exactly why ScapesHQ handles the Page connection itself: leads route into the right workspace automatically, the connection reports its own health, and an intake that fails can be retried or replayed instead of disappearing. See <a href="/integrations">how the Meta integration works</a>.</p>
+<h2>Budget and what to expect</h2>
+<p>Set a budget you can leave alone for at least two weeks. Contractors who move budgets every three days never get out of the learning phase, and the algorithm never finds the people who convert.</p>
+<p>On cost per lead: it varies enormously by market, season and service line, and anyone quoting you a national number is guessing. What matters is the arithmetic on your side of it. Work out what a lead can cost you and still work:</p>
+<ul class="speclist"><li><span>Your average job value</span></li><li><span>Your lead-to-site-visit rate</span></li><li><span>Your site-visit-to-signed rate</span></li><li><span>Therefore your revenue per lead</span></li><li><span>Therefore what you can pay for one and still hit margin</span></li></ul>
+<p>A contractor closing high-ticket drainage work can absorb a far higher cost per lead than one selling mow accounts. Run your own numbers before you accept anyone's benchmark, including this article's.</p>
+<h2>Judging performance honestly</h2>
+<p>Cost per lead is the wrong headline metric. It rewards cheap leads that never book.</p>
+<p>Track cost per <em>booked site visit</em> and cost per <em>signed job</em>. That means capturing the source on every lead and following it through to the proposal — which is a records problem more than an ads problem. If lead source lives in a spreadsheet somebody updates on Fridays, you will never know which campaign actually produced revenue.</p>
+<p>Give a campaign at least a few weeks and enough volume to say something. Killing an ad set after four leads is superstition, not optimization.</p>
+<h2>The order of operations</h2>
+<p>If you're starting from zero, do it in this sequence:</p>
+<ol class="speclist"><li><span>Fix where leads land first. Get them routing somewhere a human sees within minutes.</span></li><li><span>Build one campaign, one service line, your real service area.</span></li><li><span>Write three ads from symptoms, using your own jobsite photos.</span></li><li><span>Add the four form questions.</span></li><li><span>Leave it alone for two weeks.</span></li><li><span>Judge on booked visits, not on lead count.</span></li></ol>
+<p>Most contractors do these in reverse order and wonder why Facebook doesn't work for them.</p>
+<h2>FAQ</h2>
+<h3>Are Facebook lead ads better than Google for contractors?</h3>
+<p>They're different. Google captures existing demand — someone already searching for a fix. Meta creates it, showing the problem to someone who's been tolerating a wet yard for two years. Meta typically produces more, softer leads at lower cost; Google fewer, hotter, more expensive ones. Most established contractors eventually run both.</p>
+<h3>Why is my lead quality so bad?</h3>
+<p>Usually one of three things: no qualifying questions on the form, a service radius drawn wider than you'd actually drive, or ad copy that implies a price you don't charge. Fix the form first — it's the fastest change with the biggest effect.</p>
+<h3>How much should I spend to start?</h3>
+<p>Enough to produce meaningful volume for two uninterrupted weeks in one campaign, rather than a smaller amount spread across several. Work backward from your own revenue-per-lead math rather than from a benchmark number.</p>
+<h3>My leads stopped coming in. What happened?</h3>
+<p>Check the Page connection before you touch the campaign. Access tokens expire and permissions get revoked — often after someone changes Page roles or a password. If ad spend is still being delivered but leads have gone quiet, it's almost always the connection, not the ad.</p>
+<h2>The short version</h2>
+<p>The ad is the easy part. Sell the symptom, use your own jobsite photos, name your service area, and ask four qualifying questions even though it costs you volume. Then spend your attention on where the lead goes after submission — because that's the part that's quietly costing contractors a month of budget at a time.</p>
+<p>Next: <a href="/blog/speed-to-lead">what happens to a drainage lead after 30 minutes</a>.</p>
+    </div>
+  </section>
+</article>
+
+<section class="tight">
+  <div class="wrap-narrow">
+    <div class="panel post-cta">
+      <h3>See this run on a real job</h3>
+      <p>ScapesHQ takes a lead from a Facebook form to a signed proposal without retyping it once. Bring a job you're quoting this week.</p>
+      <a class="btn btn-lg mt-m" href="/demo" data-cta="blog_post_end">Book a walkthrough</a>
+    </div>
+  </div>
+</section>
+
+<section class="tight">
+  <div class="wrap-narrow">
+    <h2>Keep reading</h2>
+    <div class="grid-2 mt-m">
+      <a class="panel post-card" href="/blog/speed-to-lead">
+        <span class="lbl teal">Lead gen &amp; Meta ads</span>
+        <h3>Speed to Lead: What Happens After 30 Minutes</h3>
+        <p>Why the first call wins most contract jobs, what actually delays a contractor's response, and how to get first contact under two minutes.</p>
+        <span class="post-more">Read it &rarr;</span>
+      </a>
+      <a class="panel post-card" href="/blog/how-to-price-a-french-drain-job">
+        <span class="lbl teal">Pricing &amp; estimating</span>
+        <h3>How to Price a French Drain Job: A Contractor's Breakdown</h3>
+        <p>Every cost bucket in a French drain bid, a real 148-foot job priced line by line, and the math that keeps a $13,130 job profitable. Written for contractors.</p>
+        <span class="post-more">Read it &rarr;</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="/">
+          <svg width="24" height="24" viewBox="0 0 26 26" aria-hidden="true">
+            <rect x="0.75" y="0.75" width="24.5" height="24.5" rx="7" fill="none" stroke="#3ddbb4" stroke-width="1.4"></rect>
+            <path d="M6 16.5c3.9 0 3.9-3.6 7-3.6s3.4 3.3 7 3.3" stroke="#3ddbb4" stroke-width="1.7" fill="none" stroke-linecap="round"></path>
+          </svg>
+          <span class="name">Scapes<em>HQ</em></span>
+        </a>
+        <p>Operations and CRM for landscape, hardscape and drainage contractors. Built in the field, not in a boardroom.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Product</h4>
+        <ul>
+          <li><a href="/features">Features</a></li>
+          <li><a href="/how-it-works">How it works</a></li>
+          <li><a href="/integrations">Integrations</a></li>
+          <li><a href="/pricing">Pricing</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/about">About</a></li>
+          <li><a href="/who-its-for">Who it's for</a></li>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/demo" data-cta="footer">Book a walkthrough</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Trades</h4>
+        <ul>
+          <li><a href="/who-its-for">Drainage</a></li>
+          <li><a href="/who-its-for">Hardscape</a></li>
+          <li><a href="/who-its-for">Landscape</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bar">
+      <span>&copy; 2026 ScapesHQ. All rights reserved.</span>
+      <span>Live in production with a connected business.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/nav.js"></script>
+</body>
+</html>

@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NSFZ2WC6');</script>
+<!-- End Google Tag Manager -->
+<!-- First-touch campaign capture (session-scoped; feeds the walkthrough form) -->
+<script>
+(function(){
+  try{
+    var ss=window.sessionStorage,p=new URLSearchParams(location.search),
+        k=['utm_source','utm_medium','utm_campaign','utm_content','utm_term'],i,v;
+    if(!ss.getItem('sq_landing')){
+      ss.setItem('sq_landing',location.pathname);
+      ss.setItem('sq_referrer',document.referrer||'direct');
+    }
+    for(i=0;i<k.length;i++){
+      v=p.get(k[i]);
+      if(v&&!ss.getItem('sq_'+k[i])) ss.setItem('sq_'+k[i],v);
+    }
+  }catch(e){}
+})();
+</script>
+<title>Integrations — ScapesHQ</title>
+<meta name="description" content="Facebook Lead Ads intake, Slack notifications, Postmark proposal delivery, and the Supabase and Netlify infrastructure ScapesHQ runs on.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://scapeshq.com/integrations">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Sora:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NSFZ2WC6"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<header class="site-head">
+  <div class="wrap">
+    <nav class="nav" aria-label="Main">
+      <a class="brand" href="index.html">
+        <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true">
+          <rect x="0.75" y="0.75" width="24.5" height="24.5" rx="7" fill="none" stroke="#3ddbb4" stroke-width="1.4"></rect>
+          <path d="M6 16.5c3.9 0 3.9-3.6 7-3.6s3.4 3.3 7 3.3" stroke="#3ddbb4" stroke-width="1.7" fill="none" stroke-linecap="round"></path>
+          <path d="M6 11c3.9 0 3.9-3.6 7-3.6s3.4 3.3 7 3.3" stroke="#3ddbb4" stroke-width="1.7" fill="none" stroke-linecap="round" opacity=".45"></path>
+        </svg>
+        <span class="name">Scapes<em>HQ</em></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <div class="nav-links" id="nav-links">
+        <a href="features.html">Features</a>
+        <a href="how-it-works.html">How it works</a>
+        <a href="who-its-for.html">Who it's for</a>
+        <a href="integrations.html" aria-current="page">Integrations</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="/blog">Blog</a>
+        <a href="about.html">About</a>
+        <a class="btn" href="demo.html" data-cta="nav">Book a walkthrough</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="page-head">
+  <div class="wrap">
+    <span class="eyebrow lbl"><i></i>Connected systems</span>
+    <h1>It plugs into where your leads and your team already are.</h1>
+    <p class="lede">The Facebook integration is the deep one — live in production, with connection health, routing and recovery built around it. The rest deliver mail, notify the team and keep the platform running.</p>
+  </div>
+</section>
+
+<section class="tight">
+  <div class="wrap">
+    <div class="panel" style="padding:32px">
+      <div class="pillrow"><span class="on"><i></i>Live in production</span><span>Deepest integration</span></div>
+      <h2 class="mt-s">Facebook / Meta Lead Ads</h2>
+      <p class="mt-s muted" style="max-width:62ch">Connect your Facebook Page and lead ad submissions arrive inside ScapesHQ automatically, routed to the correct business workspace by the Page they came from. The connection is monitored, and intake that fails can be recovered instead of disappearing.</p>
+      <div class="grid-2 mt-l" style="gap:26px">
+        <div>
+          <h3>What the integration does</h3>
+          <ul class="speclist">
+            <li>Facebook login and Page connection</li>
+            <li>Page selection for the workspace</li>
+            <li>Automatic lead intake from Lead Ads</li>
+            <li>Routing to the correct business workspace</li>
+            <li>Connection health monitoring</li>
+            <li>Disconnect and connection lifecycle management</li>
+            <li>Encrypted storage of credential information</li>
+            <li>Automatic cleanup when a workspace is permanently closed</li>
+          </ul>
+        </div>
+        <div>
+          <h3>States it reports</h3>
+          <div class="tablewrap" style="margin-top:14px">
+            <table style="min-width:0">
+              <thead><tr><th scope="col">Connection</th><th scope="col">Lead intake</th></tr></thead>
+              <tbody>
+                <tr><td class="k">Active</td><td class="d">Received</td></tr>
+                <tr><td class="k">Revoked</td><td class="d">Processing</td></tr>
+                <tr><td class="k">Error</td><td class="d">Created</td></tr>
+                <tr><td class="k">Expired</td><td class="d">Failed — retry or replay</td></tr>
+                <tr><td class="k">—</td><td class="d">Rejected — workspace closed</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="lbl teal">The rest of the stack</span>
+      <h2>Everything else it talks to</h2>
+    </div>
+    <div class="grid-2">
+      <div class="fcard">
+        <h3>Slack</h3>
+        <p>Team notifications delivered where your crew leads and office already talk, so an accepted proposal or a failed intake doesn't wait for someone to open the app.</p>
+      </div>
+      <div class="fcard">
+        <h3>Postmark</h3>
+        <p>Proposal delivery and operational email. Sends are tracked per proposal, which is what makes reconciliation possible instead of guesswork.</p>
+      </div>
+      <div class="fcard">
+        <h3>Supabase</h3>
+        <p>Database, authentication, server functions, file storage, scheduled and background jobs, and secure secret storage.</p>
+      </div>
+      <div class="fcard">
+        <h3>Netlify</h3>
+        <p>Hosting and deployment for the web application.</p>
+      </div>
+    </div>
+    <div class="stackrow mt-l">
+      <span>Meta Lead Ads</span><span>Slack</span><span>Postmark</span><span>Supabase</span><span>Netlify</span>
+    </div>
+  </div>
+</section>
+
+<section class="tight">
+  <div class="wrap">
+    <div class="cta">
+      <div>
+        <h2>Bring a live lead to the walkthrough</h2>
+        <p>Connect your Page, take one real inquiry from intake to a sent proposal, and look at the activity record it leaves behind. Twenty minutes, no slides.</p>
+      </div>
+      <a class="btn btn-lg" href="demo.html" data-cta="page_end">Book a walkthrough</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="index.html">
+          <svg width="24" height="24" viewBox="0 0 26 26" aria-hidden="true">
+            <rect x="0.75" y="0.75" width="24.5" height="24.5" rx="7" fill="none" stroke="#3ddbb4" stroke-width="1.4"></rect>
+            <path d="M6 16.5c3.9 0 3.9-3.6 7-3.6s3.4 3.3 7 3.3" stroke="#3ddbb4" stroke-width="1.7" fill="none" stroke-linecap="round"></path>
+          </svg>
+          <span class="name">Scapes<em>HQ</em></span>
+        </a>
+        <p>Operations and CRM for landscape, hardscape and drainage contractors. Built in the field, not in a boardroom.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Product</h4>
+        <ul>
+          <li><a href="features.html">Features</a></li>
+          <li><a href="how-it-works.html">How it works</a></li>
+          <li><a href="integrations.html">Integrations</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="who-its-for.html">Who it's for</a></li>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="demo.html" data-cta="footer">Book a walkthrough</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Trades</h4>
+        <ul>
+          <li><a href="who-its-for.html">Drainage</a></li>
+          <li><a href="who-its-for.html">Hardscape</a></li>
+          <li><a href="who-its-for.html">Landscape</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bar">
+      <span>&copy; 2026 ScapesHQ. All rights reserved.</span>
+      <span>Live in production with a connected business.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/nav.js"></script>
+</body>
+</html>

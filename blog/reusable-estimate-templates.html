@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NSFZ2WC6');</script>
+<!-- End Google Tag Manager -->
+<!-- First-touch campaign capture (session-scoped; feeds the walkthrough form) -->
+<script>
+(function(){
+  try{
+    var ss=window.sessionStorage,p=new URLSearchParams(location.search),
+        k=['utm_source','utm_medium','utm_campaign','utm_content','utm_term'],i,v;
+    if(!ss.getItem('sq_landing')){
+      ss.setItem('sq_landing',location.pathname);
+      ss.setItem('sq_referrer',document.referrer||'direct');
+    }
+    for(i=0;i<k.length;i++){
+      v=p.get(k[i]);
+      if(v&&!ss.getItem('sq_'+k[i])) ss.setItem('sq_'+k[i],v);
+    }
+  }catch(e){}
+})();
+</script>
+<title>How to Build Estimate Templates You Reuse on Every Job — ScapesHQ</title>
+<meta name="description" content="Stop rebuilding the same estimate from scratch. How to turn your five most common jobs into reusable templates, and what has to stay job-specific.">
+<link rel="canonical" href="https://scapeshq.com/blog/reusable-estimate-templates">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Sora:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="/assets/styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "How to Build Estimate Templates You Reuse on Every Job",
+      "description": "Stop rebuilding the same estimate from scratch. How to turn your five most common jobs into reusable templates, and what has to stay job-specific.",
+      "datePublished": "2026-08-18",
+      "dateModified": "2026-08-18",
+      "author": {
+        "@type": "Organization",
+        "name": "ScapesHQ"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "ScapesHQ"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://scapeshq.com/blog/reusable-estimate-templates"
+      },
+      "articleSection": "Pricing & estimating"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How many estimate templates should I have?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Five or fewer to start, covering your highest-volume job types. More templates than that and you'll spend more time picking one than editing one."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should the template include my prices or just the structure?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Both. Structure without rates still leaves you looking up numbers. Load default rates and put a quarterly review on the calendar so they don't drift."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if every job I do is different?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "They're less different than they feel. The sections and line items repeat even when quantities and conditions don't. Start the template from your last three jobs and you'll see the same forty lines in all of them."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I stop a template from shipping the wrong default quantity?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Set defaults to zero, not to a \"typical\" number. A zero forces a decision; a typical number ships silently and shows up as a loss later."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NSFZ2WC6"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<header class="site-head">
+  <div class="wrap">
+    <nav class="nav" aria-label="Main">
+      <a class="brand" href="/">
+        <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true">
+          <rect x="0.75" y="0.75" width="24.5" height="24.5" rx="7" fill="none" stroke="#3ddbb4" stroke-width="1.4"></rect>
+          <path d="M6 16.5c3.9 0 3.9-3.6 7-3.6s3.4 3.3 7 3.3" stroke="#3ddbb4" stroke-width="1.7" fill="none" stroke-linecap="round"></path>
+          <path d="M6 11c3.9 0 3.9-3.6 7-3.6s3.4 3.3 7 3.3" stroke="#3ddbb4" stroke-width="1.7" fill="none" stroke-linecap="round" opacity=".45"></path>
+        </svg>
+        <span class="name">Scapes<em>HQ</em></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <div class="nav-links" id="nav-links">
+        <a href="/features">Features</a>
+        <a href="/how-it-works">How it works</a>
+        <a href="/who-its-for">Who it's for</a>
+        <a href="/integrations">Integrations</a>
+        <a href="/pricing">Pricing</a>
+        <a href="/blog" aria-current="page">Blog</a>
+        <a href="/about">About</a>
+        <a class="btn" href="/demo" data-cta="nav">Book a walkthrough</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<article class="post">
+  <section class="page-head">
+    <div class="wrap-narrow">
+      <span class="eyebrow lbl"><i></i>Pricing &amp; estimating</span>
+      <h1>How to Build Estimate Templates You Reuse on Every Job</h1>
+      <p class="lede">Stop rebuilding the same estimate from scratch. How to turn your five most common jobs into reusable templates, and what has to stay job-specific.</p>
+      <p class="post-meta"><time datetime="2026-08-18">August 18, 2026</time> &middot; 6 min read</p>
+    </div>
+  </section>
+
+  <section class="tight">
+    <div class="wrap-narrow article">
+<p>Ask a contractor how long an estimate takes and he'll say twenty minutes. Watch him do one and it's an hour and ten — because he isn't estimating, he's remembering. Digging up the last similar job, checking what he charged, trying to recall whether he included haul-off that time.</p>
+<p>The fix isn't working faster. It's never starting from a blank page again.</p>
+<h2>Why estimates take so long when they shouldn't</h2>
+<p>Three things eat the time, and none of them are the math:</p>
+<ul class="speclist"><li><span><strong>Recall.</strong> Reconstructing a line list from memory, every time, and missing something different on each one.</span></li><li><span><strong>Rate lookup.</strong> Hunting for what stone cost last month or what you charged the last customer with a 40-foot gate.</span></li><li><span><strong>Formatting.</strong> Retyping the same scope paragraphs and exclusions so the document looks professional.</span></li></ul>
+<p>All three are solved by the same thing: a template that already contains the structure, the language and the default rates, so the only thing you enter is what's actually different about this job.</p>
+<h2>Start with your five</h2>
+<p>You don't need a template library. You need five, covering the jobs that make up most of your revenue. For a drainage-heavy contractor that's usually:</p>
+<ol class="speclist"><li><span><strong>Yard drainage system</strong> — trench, pipe, stone, basins, outlet, restoration</span></li><li><span><strong>Downspout tie-in</strong> — smaller, repeatable, often an add-on</span></li><li><span><strong>Regrade and swale</strong> — earthwork-heavy, little pipe</span></li><li><span><strong>Retaining wall or hardscape</strong> — different unit basis entirely</span></li><li><span><strong>Service or repair call</strong> — existing system, diagnostic-first</span></li></ol>
+<p>Build those five and you'll cover the large majority of what comes through the door. Everything else starts from the closest one and gets edited.</p>
+<h2>What goes in the template</h2>
+<p><strong>Sections in the right order.</strong> Mobilization, excavation, system, discharge, restoration. Same order every time, so you notice when something's missing.</p>
+<p><strong>Every line item, including the zeros.</strong> This is the part contractors get wrong. Leave the rarely-used lines in the template with a quantity of zero rather than deleting them. A hand-excavation line sitting at zero is a question you have to answer on every job. A hand-excavation line that isn't there is one you'll forget to ask.</p>
+<p><strong>Default units and rates.</strong> Pre-loaded, so entering "148" in the pipe row prices itself. Rates need a review date — set a calendar reminder each quarter to update stone, fuel and labor.</p>
+<p><strong>Standard scope language.</strong> Exclusions, assumptions, change-order triggers, warranty terms. These are legal-ish paragraphs you should write carefully once, not improvise at 9 p.m.</p>
+<p><strong>Option structure.</strong> If you sell good/better/best — and you should — build the option scaffolding into the template so the second and third options aren't an afterthought.</p>
+<h2>What stays job-specific</h2>
+<p>Templates go wrong when they try to pre-fill things that genuinely vary. Keep these out:</p>
+<ul class="speclist"><li><span><strong>Quantities.</strong> Obviously — but also resist "typical" defaults, which get shipped by accident.</span></li><li><span><strong>Depth bands.</strong> The single biggest driver of drainage cost. Never default it.</span></li><li><span><strong>Access conditions.</strong> Gate width, distance to the trailer, slope. Measure every time.</span></li><li><span><strong>Site-specific exclusions.</strong> The dead tree, the neighbor's fence, the pool equipment in the way.</span></li><li><span><strong>The customer's own words.</strong> "Water stands by the back steps for two days after it rains" belongs on the estimate. It's the sentence that proves you listened, and it closes jobs.</span></li></ul>
+<h2>The maintenance rule nobody follows</h2>
+<p>A template is only as good as its last update. Two habits keep it honest:</p>
+<p><strong>Quarterly rate review.</strong> Fifteen minutes with your last three supplier invoices and your loaded labor rate. Update the defaults. Stone and fuel move enough that a year-old template quietly bids under cost.</p>
+<p><strong>Post-mortem edits.</strong> When a job goes sideways for a reason the estimate didn't anticipate — a line you forgot, an exclusion you needed — fix the template that day. Not the job, the template. That's how a template gets smarter instead of just getting old.</p>
+<p>Most contractors do neither, which is why so many "templates" are really just an old estimate someone keeps copying.</p>
+<h2>Where the time actually goes back</h2>
+<p>A drainage estimate built from a live template is quantities, depth bands, access notes and the customer's description. Call it fifteen minutes.</p>
+<p>The compounding part isn't the forty-five minutes saved. It's that the estimate is <em>identical in structure</em> every time. Same sections, same exclusions, same warranty language. Your close rate becomes comparable across jobs because the document is comparable. When you eventually want to know why you win at $9k and lose at $22k, you'll have fifty estimates that can actually be compared instead of fifty one-off documents.</p>
+<p>Estimate templates in ScapesHQ hold sections, line items and default rates, and the scope carries straight into the proposal the homeowner sees — so what you priced and what they read are the same thing. See <a href="/features">how estimates and proposals connect</a>.</p>
+<h2>FAQ</h2>
+<h3>How many estimate templates should I have?</h3>
+<p>Five or fewer to start, covering your highest-volume job types. More templates than that and you'll spend more time picking one than editing one.</p>
+<h3>Should the template include my prices or just the structure?</h3>
+<p>Both. Structure without rates still leaves you looking up numbers. Load default rates and put a quarterly review on the calendar so they don't drift.</p>
+<h3>What if every job I do is different?</h3>
+<p>They're less different than they feel. The sections and line items repeat even when quantities and conditions don't. Start the template from your last three jobs and you'll see the same forty lines in all of them.</p>
+<h3>How do I stop a template from shipping the wrong default quantity?</h3>
+<p>Set defaults to zero, not to a "typical" number. A zero forces a decision; a typical number ships silently and shows up as a loss later.</p>
+<h2>The short version</h2>
+<p>Build five templates from your real jobs. Keep every line item, including the ones at zero. Pre-load rates and review them quarterly. Keep quantities, depth and access out of the defaults. Then fix the template — not just the job — every time reality teaches you something.</p>
+<p><a href="/demo">Book a walkthrough</a> and we'll build your first template from an estimate you've already sent.</p>
+    </div>
+  </section>
+</article>
+
+<section class="tight">
+  <div class="wrap-narrow">
+    <div class="panel post-cta">
+      <h3>See this run on a real job</h3>
+      <p>ScapesHQ takes a lead from a Facebook form to a signed proposal without retyping it once. Bring a job you're quoting this week.</p>
+      <a class="btn btn-lg mt-m" href="/demo" data-cta="blog_post_end">Book a walkthrough</a>
+    </div>
+  </div>
+</section>
+
+<section class="tight">
+  <div class="wrap-narrow">
+    <h2>Keep reading</h2>
+    <div class="grid-2 mt-m">
+      <a class="panel post-card" href="/blog/drainage-estimate-template">
+        <span class="lbl teal">Pricing &amp; estimating</span>
+        <h3>Drainage Estimate Template: Every Line Item Explained</h3>
+        <p>Every line item in a drainage estimate, what each one should say, and the four lines contractors forget until the job is already losing money.</p>
+        <span class="post-more">Read it &rarr;</span>
+      </a>
+      <a class="panel post-card" href="/blog/how-to-price-a-french-drain-job">
+        <span class="lbl teal">Pricing &amp; estimating</span>
+        <h3>How to Price a French Drain Job: A Contractor's Breakdown</h3>
+        <p>Every cost bucket in a French drain bid, a real 148-foot job priced line by line, and the math that keeps a $13,130 job profitable. Written for contractors.</p>
+        <span class="post-more">Read it &rarr;</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="/">
+          <svg width="24" height="24" viewBox="0 0 26 26" aria-hidden="true">
+            <rect x="0.75" y="0.75" width="24.5" height="24.5" rx="7" fill="none" stroke="#3ddbb4" stroke-width="1.4"></rect>
+            <path d="M6 16.5c3.9 0 3.9-3.6 7-3.6s3.4 3.3 7 3.3" stroke="#3ddbb4" stroke-width="1.7" fill="none" stroke-linecap="round"></path>
+          </svg>
+          <span class="name">Scapes<em>HQ</em></span>
+        </a>
+        <p>Operations and CRM for landscape, hardscape and drainage contractors. Built in the field, not in a boardroom.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Product</h4>
+        <ul>
+          <li><a href="/features">Features</a></li>
+          <li><a href="/how-it-works">How it works</a></li>
+          <li><a href="/integrations">Integrations</a></li>
+          <li><a href="/pricing">Pricing</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/about">About</a></li>
+          <li><a href="/who-its-for">Who it's for</a></li>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/demo" data-cta="footer">Book a walkthrough</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Trades</h4>
+        <ul>
+          <li><a href="/who-its-for">Drainage</a></li>
+          <li><a href="/who-its-for">Hardscape</a></li>
+          <li><a href="/who-its-for">Landscape</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bar">
+      <span>&copy; 2026 ScapesHQ. All rights reserved.</span>
+      <span>Live in production with a connected business.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/nav.js"></script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+[build]
+  publish = "."
+  # Static site — no build step, no dependencies.
+  command = ""
+
+# Assets are NOT fingerprinted — styles.css and nav.js keep the same filename
+# across deploys — so they must never be cached immutably. Revalidate on every
+# request instead: Netlify answers with a 304 when nothing changed, which is
+# cheap, and an edit reaches returning visitors on their next page load.
+# If these ever gain content hashes in the filename (styles.a1b2c3.css),
+# switch this back to "public, max-age=31536000, immutable".
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+# Collapse the duplicate .html URLs onto the pretty paths the sitemap and the
+# rel="canonical" tags declare. force = true is required: without it a matching
+# static file wins over the redirect, which is exactly the situation here.
+# 404.html is deliberately absent — Netlify serves it for error responses and
+# redirecting it would break that.
+[[redirects]]
+  from = "/index.html"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/features.html"
+  to = "/features"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/how-it-works.html"
+  to = "/how-it-works"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/who-its-for.html"
+  to = "/who-its-for"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/integrations.html"
+  to = "/integrations"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/pricing.html"
+  to = "/pricing"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/about.html"
+  to = "/about"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/demo.html"
+  to = "/demo"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/thank-you.html"
+  to = "/thank-you"
+  status = 301
+  force = true
+
+
+# Blog: collapse .html duplicates onto the pretty paths (same rule as the core pages).
+
+[[redirects]]
+  from = "/blog/index.html"
+  to = "/blog"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/how-to-price-a-french-drain-job.html"
+  to = "/blog/how-to-price-a-french-drain-job"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/drainage-estimate-template.html"
+  to = "/blog/drainage-estimate-template"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/reusable-estimate-templates.html"
+  to = "/blog/reusable-estimate-templates"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/diagnosing-a-wet-yard.html"
+  to = "/blog/diagnosing-a-wet-yard"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/facebook-lead-ads-for-contractors.html"
+  to = "/blog/facebook-lead-ads-for-contractors"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/speed-to-lead.html"
+  to = "/blog/speed-to-lead"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/drainage-proposal-anatomy.html"
+  to = "/blog/drainage-proposal-anatomy"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/online-proposals-vs-pdf.html"
+  to = "/blog/online-proposals-vs-pdf"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/running-a-business-on-spreadsheets.html"
+  to = "/blog/running-a-business-on-spreadsheets"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/best-software-for-drainage-contractors.html"
+  to = "/blog/best-software-for-drainage-contractors"
+  status = 301
+  force = true

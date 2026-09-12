@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NSFZ2WC6');</script>
+<!-- End Google Tag Manager -->
+<!-- First-touch campaign capture (session-scoped; feeds the walkthrough form) -->
+<script>
+(function(){
+  try{
+    var ss=window.sessionStorage,p=new URLSearchParams(location.search),
+        k=['utm_source','utm_medium','utm_campaign','utm_content','utm_term'],i,v;
+    if(!ss.getItem('sq_landing')){
+      ss.setItem('sq_landing',location.pathname);
+      ss.setItem('sq_referrer',document.referrer||'direct');
+    }
+    for(i=0;i<k.length;i++){
+      v=p.get(k[i]);
+      if(v&&!ss.getItem('sq_'+k[i])) ss.setItem('sq_'+k[i],v);
+    }
+  }catch(e){}
+})();
+</script>
+<title>Running a Contracting Business on Spreadsheets — ScapesHQ</title>
+<meta name="description" content="Spreadsheets work until they don't. The five failure points where a landscape or drainage business outgrows them, and how to tell which you're on.">
+<link rel="canonical" href="https://scapeshq.com/blog/running-a-business-on-spreadsheets">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Sora:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="/assets/styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Running a Contracting Business on Spreadsheets",
+      "description": "Spreadsheets work until they don't. The five failure points where a landscape or drainage business outgrows them, and how to tell which you're on.",
+      "datePublished": "2026-09-08",
+      "dateModified": "2026-09-08",
+      "author": {
+        "@type": "Organization",
+        "name": "ScapesHQ"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "ScapesHQ"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://scapeshq.com/blog/running-a-business-on-spreadsheets"
+      },
+      "articleSection": "Running the operation"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "At what point does a contractor need a CRM?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Usually at the second person or the first paid ad campaign — whichever comes first. Both create a need for shared truth that a file on one computer can't provide."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can't I just use a shared Google Sheet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It fixes concurrent editing, which is part of break 1. It doesn't fix lead triage, the flat customer model, version drift, or the absence of stage history. Those need a different shape of data, not a different file location."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What about the money I've spent building my spreadsheet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Your pricing logic and line items are the valuable part, and they transfer directly into estimate templates. It's the record-keeping half you're replacing, not the pricing work."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does switching take?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Less than contractors fear, mostly because you don't migrate everything. Move active customers and open jobs, keep the old file as an archive, and build templates from your last few estimates."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NSFZ2WC6"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<header class="site-head">
+  <div class="wrap">
+    <nav class="nav" aria-label="Main">
+      <a class="brand" href="/">
+        <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true">
+          <rect x="0.75" y="0.75" width="24.5" height="24.5" rx="7" fill="none" stroke="#3ddbb4" stroke-width="1.4"></rect>
+          <path d="M6 16.5c3.9 0 3.9-3.6 7-3.6s3.4 3.3 7 3.3" stroke="#3ddbb4" stroke-width="1.7" fill="none" stroke-linecap="round"></path>
+          <path d="M6 11c3.9 0 3.9-3.6 7-3.6s3.4 3.3 7 3.3" stroke="#3ddbb4" stroke-width="1.7" fill="none" stroke-linecap="round" opacity=".45"></path>
+        </svg>
+        <span class="name">Scapes<em>HQ</em></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <div class="nav-links" id="nav-links">
+        <a href="/features">Features</a>
+        <a href="/how-it-works">How it works</a>
+        <a href="/who-its-for">Who it's for</a>
+        <a href="/integrations">Integrations</a>
+        <a href="/pricing">Pricing</a>
+        <a href="/blog" aria-current="page">Blog</a>
+        <a href="/about">About</a>
+        <a class="btn" href="/demo" data-cta="nav">Book a walkthrough</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<article class="post">
+  <section class="page-head">
+    <div class="wrap-narrow">
+      <span class="eyebrow lbl"><i></i>Running the operation</span>
+      <h1>Running a Contracting Business on Spreadsheets</h1>
+      <p class="lede">Spreadsheets work until they don't. The five failure points where a landscape or drainage business outgrows them, and how to tell which you're on.</p>
+      <p class="post-meta"><time datetime="2026-09-08">September 8, 2026</time> &middot; 7 min read</p>
+    </div>
+  </section>
+
+  <section class="tight">
+    <div class="wrap-narrow article">
+<p>Spreadsheets get a lot of unfair criticism from people selling software. So let's be straight about it: for a one-truck operation doing forty jobs a year, a spreadsheet is the correct tool. It's free, it's flexible, it does exactly what you tell it, and nobody has to be trained on it.</p>
+<p>The problem isn't that spreadsheets are bad. It's that they fail suddenly rather than gradually, and the failure looks like a series of unrelated bad days rather than a system problem.</p>
+<p>Here are the five points where it actually breaks. Most contractors are standing on one of them right now without naming it.</p>
+<h2>Break 1: The second person needs the same information</h2>
+<p>Everything works while one person holds the business in their head. The spreadsheet is a memory aid for a system that lives in the owner's mind.</p>
+<p>Then you hire an office person, or your partner starts selling too, and the file has to be a source of truth rather than a reminder. That's a different job, and spreadsheets are bad at it:</p>
+<ul class="speclist"><li><span>Two people editing the same file produces "copy of copy of Jobs 2026 FINAL"</span></li><li><span>The shared version is always the one somebody doesn't have open</span></li><li><span>Nobody can tell whether a blank cell means "no" or "not filled in yet"</span></li><li><span>The person who built the formulas becomes a permanent dependency</span></li></ul>
+<p><strong>The tell:</strong> someone in your business regularly asks another person for information that is theoretically in the file.</p>
+<h2>Break 2: Leads arrive faster than anyone can triage</h2>
+<p>A spreadsheet is a terrible inbox. It has no concept of new, no notification, and no sense of urgency.</p>
+<p>When leads came in at two a week and the owner answered the phone, it didn't matter. At fifteen a week from paid ads, arriving at all hours, a row in a spreadsheet is where a lead goes to be forgotten. The row exists. Nobody is looking at the row.</p>
+<p><strong>The tell:</strong> you've called a lead back and heard "oh, I already had someone out." Or you can't answer "which leads still need a first call?" without reading every line.</p>
+<p>This is the most expensive break, because you're paying for those leads. See <a href="/blog/speed-to-lead">what happens to a lead after 30 minutes</a>.</p>
+<h2>Break 3: The same customer exists five times</h2>
+<p>A spreadsheet row is flat. One line, one job, one customer.</p>
+<p>But real customers aren't flat. The woman who calls isn't the husband who signs. The property manager has nine buildings. The homeowner you did drainage for in 2024 is calling about a patio in 2026, at a different house.</p>
+<p>In a flat file all of that becomes duplicate rows with slightly different spellings, and the history breaks apart. Nobody can answer "have we worked for these people before?" without searching three ways and hoping.</p>
+<p><strong>The tell:</strong> you've quoted a property you'd already worked on and didn't realize it. Or your file has "Whitfield," "Whitfield, D." and "Dana W." as three separate customers.</p>
+<h2>Break 4: Proposals and pricing drift out of sync</h2>
+<p>The estimate lives in one spreadsheet, the proposal is a Word document, the customer-facing version is a PDF, and the "what did we actually agree to" version is a text thread.</p>
+<p>Every one of those is a place scope can change without the others knowing. Version drift on a $20,000 hardscape job is not a filing inconvenience; it's an argument you'll have with a customer holding a document you don't recognize.</p>
+<p><strong>The tell:</strong> a filename anywhere on your computer ending in <code>_v3_FINAL_revised</code>.</p>
+<h2>Break 5: You can't answer questions about your own business</h2>
+<p>This is the quiet one, and it's usually last.</p>
+<p>Your close rate. Which lead source produces jobs versus which produces tire-kickers. Average job value by service line, this year versus last. What's sitting in proposal stage right now, and for how long.</p>
+<p>None of these are exotic. All of them are unanswerable from a file that records jobs one row at a time without stages, timestamps or source data. You end up running the business on gut feel, which works right up until you're deciding whether to hire someone or where to put next quarter's ad budget.</p>
+<p><strong>The tell:</strong> you've made a real money decision — a hire, an ad budget, a truck — based on how the last few months <em>felt</em>.</p>
+<h2>Which break are you on?</h2>
+<p>Rough sequence, in the order most contracting businesses hit them:</p>
+<div class="tablewrap"><table><thead><tr><th>Stage</th><th>Usually breaks</th><th>Still fine in a spreadsheet</th></tr></thead><tbody><tr><td>Owner-operator, word of mouth</td><td>Nothing</td><td>Everything</td></tr><tr><td>Owner + first employee</td><td>Break 1 (shared truth)</td><td>Job list, basic pricing</td></tr><tr><td>Running paid ads</td><td>Break 2 (lead triage)</td><td>—</td></tr><tr><td>Repeat and commercial customers</td><td>Break 3 (relationships)</td><td>—</td></tr><tr><td>Multi-option proposals, larger jobs</td><td>Break 4 (version drift)</td><td>—</td></tr><tr><td>Deciding where to invest</td><td>Break 5 (no answers)</td><td>—</td></tr></tbody></table></div>
+<p>If you're at the first row, keep your spreadsheet and spend the money on marketing instead. Genuinely.</p>
+<h2>What replacing it should and shouldn't cost you</h2>
+<p>The reasonable fear about contractor software is that you'll trade a fast, flexible tool for a slow one that makes you fill in fields you don't care about. That fear is well earned — plenty of platforms are built for enterprise workflows and imposed on small crews.</p>
+<p>What to insist on:</p>
+<ul class="speclist"><li><span><strong>Your stages, not theirs.</strong> A pipeline that matches how you actually sell.</span></li><li><span><strong>Faster estimating, not slower.</strong> Templates should cut estimate time, not add data entry.</span></li><li><span><strong>A real customer model.</strong> Clients, contacts, companies and properties as connected records, so break 3 stays fixed.</span></li><li><span><strong>Automatic history.</strong> Timestamps and events recorded as work happens, not logged by hand — otherwise nobody logs them and break 5 comes right back.</span></li><li><span><strong>An export button.</strong> Your data should be able to leave. If it can't, you haven't replaced a spreadsheet, you've rented one.</span></li></ul>
+<p>That last point deserves weight. The reason contractors trust spreadsheets is that the file is theirs. Any system replacing it should be as easy to walk away from.</p>
+<p>ScapesHQ was built inside a working drainage business that hit all five of these breaks in about eighteen months. Estimates, proposals, customer relationships, lead intake and the activity record are one connected system, with export and workspace controls in the owner's hands. See <a href="/how-it-works">how the workflow runs</a>.</p>
+<h2>FAQ</h2>
+<h3>At what point does a contractor need a CRM?</h3>
+<p>Usually at the second person or the first paid ad campaign — whichever comes first. Both create a need for shared truth that a file on one computer can't provide.</p>
+<h3>Can't I just use a shared Google Sheet?</h3>
+<p>It fixes concurrent editing, which is part of break 1. It doesn't fix lead triage, the flat customer model, version drift, or the absence of stage history. Those need a different shape of data, not a different file location.</p>
+<h3>What about the money I've spent building my spreadsheet?</h3>
+<p>Your pricing logic and line items are the valuable part, and they transfer directly into estimate templates. It's the record-keeping half you're replacing, not the pricing work.</p>
+<h3>How long does switching take?</h3>
+<p>Less than contractors fear, mostly because you don't migrate everything. Move active customers and open jobs, keep the old file as an archive, and build templates from your last few estimates.</p>
+<h2>The short version</h2>
+<p>Spreadsheets break at five predictable points: a second person needing the same truth, leads arriving faster than triage, customers who aren't flat, proposals drifting out of sync, and questions about your own business you can't answer. If none of those describe you, keep the spreadsheet. If two or more do, the file isn't the system anymore — it's just where the symptoms show up.</p>
+<p><a href="/demo">Book a walkthrough</a> and we'll look at which break you're actually on.</p>
+    </div>
+  </section>
+</article>
+
+<section class="tight">
+  <div class="wrap-narrow">
+    <div class="panel post-cta">
+      <h3>See this run on a real job</h3>
+      <p>ScapesHQ takes a lead from a Facebook form to a signed proposal without retyping it once. Bring a job you're quoting this week.</p>
+      <a class="btn btn-lg mt-m" href="/demo" data-cta="blog_post_end">Book a walkthrough</a>
+    </div>
+  </div>
+</section>
+
+<section class="tight">
+  <div class="wrap-narrow">
+    <h2>Keep reading</h2>
+    <div class="grid-2 mt-m">
+      <a class="panel post-card" href="/blog/speed-to-lead">
+        <span class="lbl teal">Lead gen &amp; Meta ads</span>
+        <h3>Speed to Lead: What Happens After 30 Minutes</h3>
+        <p>Why the first call wins most contract jobs, what actually delays a contractor's response, and how to get first contact under two minutes.</p>
+        <span class="post-more">Read it &rarr;</span>
+      </a>
+      <a class="panel post-card" href="/blog/drainage-estimate-template">
+        <span class="lbl teal">Pricing &amp; estimating</span>
+        <h3>Drainage Estimate Template: Every Line Item Explained</h3>
+        <p>Every line item in a drainage estimate, what each one should say, and the four lines contractors forget until the job is already losing money.</p>
+        <span class="post-more">Read it &rarr;</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="/">
+          <svg width="24" height="24" viewBox="0 0 26 26" aria-hidden="true">
+            <rect x="0.75" y="0.75" width="24.5" height="24.5" rx="7" fill="none" stroke="#3ddbb4" stroke-width="1.4"></rect>
+            <path d="M6 16.5c3.9 0 3.9-3.6 7-3.6s3.4 3.3 7 3.3" stroke="#3ddbb4" stroke-width="1.7" fill="none" stroke-linecap="round"></path>
+          </svg>
+          <span class="name">Scapes<em>HQ</em></span>
+        </a>
+        <p>Operations and CRM for landscape, hardscape and drainage contractors. Built in the field, not in a boardroom.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Product</h4>
+        <ul>
+          <li><a href="/features">Features</a></li>
+          <li><a href="/how-it-works">How it works</a></li>
+          <li><a href="/integrations">Integrations</a></li>
+          <li><a href="/pricing">Pricing</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/about">About</a></li>
+          <li><a href="/who-its-for">Who it's for</a></li>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/demo" data-cta="footer">Book a walkthrough</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Trades</h4>
+        <ul>
+          <li><a href="/who-its-for">Drainage</a></li>
+          <li><a href="/who-its-for">Hardscape</a></li>
+          <li><a href="/who-its-for">Landscape</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bar">
+      <span>&copy; 2026 ScapesHQ. All rights reserved.</span>
+      <span>Live in production with a connected business.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/nav.js"></script>
+</body>
+</html>

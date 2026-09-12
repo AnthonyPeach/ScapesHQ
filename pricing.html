@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NSFZ2WC6');</script>
+<!-- End Google Tag Manager -->
+<!-- First-touch campaign capture (session-scoped; feeds the walkthrough form) -->
+<script>
+(function(){
+  try{
+    var ss=window.sessionStorage,p=new URLSearchParams(location.search),
+        k=['utm_source','utm_medium','utm_campaign','utm_content','utm_term'],i,v;
+    if(!ss.getItem('sq_landing')){
+      ss.setItem('sq_landing',location.pathname);
+      ss.setItem('sq_referrer',document.referrer||'direct');
+    }
+    for(i=0;i<k.length;i++){
+      v=p.get(k[i]);
+      if(v&&!ss.getItem('sq_'+k[i])) ss.setItem('sq_'+k[i],v);
+    }
+  }catch(e){}
+})();
+</script>
+<title>Pricing — ScapesHQ</title>
+<meta name="description" content="ScapesHQ pricing plans for landscape, hardscape and drainage contractors.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://scapeshq.com/pricing">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Sora:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NSFZ2WC6"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<header class="site-head">
+  <div class="wrap">
+    <nav class="nav" aria-label="Main">
+      <a class="brand" href="index.html">
+        <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true">
+          <rect x="0.75" y="0.75" width="24.5" height="24.5" rx="7" fill="none" stroke="#3ddbb4" stroke-width="1.4"></rect>
+          <path d="M6 16.5c3.9 0 3.9-3.6 7-3.6s3.4 3.3 7 3.3" stroke="#3ddbb4" stroke-width="1.7" fill="none" stroke-linecap="round"></path>
+          <path d="M6 11c3.9 0 3.9-3.6 7-3.6s3.4 3.3 7 3.3" stroke="#3ddbb4" stroke-width="1.7" fill="none" stroke-linecap="round" opacity=".45"></path>
+        </svg>
+        <span class="name">Scapes<em>HQ</em></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <div class="nav-links" id="nav-links">
+        <a href="features.html">Features</a>
+        <a href="how-it-works.html">How it works</a>
+        <a href="who-its-for.html">Who it's for</a>
+        <a href="integrations.html">Integrations</a>
+        <a href="pricing.html" aria-current="page">Pricing</a>
+        <a href="/blog">Blog</a>
+        <a href="about.html">About</a>
+        <a class="btn" href="demo.html" data-cta="nav">Book a walkthrough</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="page-head center">
+  <div class="wrap">
+    <span class="eyebrow lbl"><i></i>Pricing</span>
+    <h1>Priced per workspace, not per headache.</h1>
+    <p class="lede">One price for the business, with seats for the people who need them. No charge for the leads you bring in, and no penalty for having a busy spring.</p>
+  </div>
+</section>
+
+<section class="tight">
+  <div class="wrap">
+    <div class="plans">
+      <div class="plan">
+        <div class="tier"><h3>Crew</h3></div>
+        <div><span class="price num">$199</span> <span class="per">/ month per workspace</span></div>
+        <p class="desc">For an owner-operator and a small crew running everything themselves.</p>
+        <ul class="speclist">
+          <li>3 seats included</li>
+          <li>Leads, customers, properties and projects</li>
+          <li>Estimates, quotes and proposals</li>
+          <li>Homeowner review and signing</li>
+          <li>Activity timeline and notifications</li>
+          <li>Data export</li>
+        </ul>
+        <a class="btn btn-quiet" href="demo.html" data-cta="pricing_crew">Book a walkthrough</a>
+      </div>
+
+      <div class="plan featured">
+        <div class="tier"><h3>Operator</h3><span class="tagpill">Most contractors</span></div>
+        <div><span class="price num">$299</span> <span class="per">/ month per workspace</span></div>
+        <p class="desc">For a company with an office, a sales seat and more than one crew in the field.</p>
+        <ul class="speclist">
+          <li>10 seats included</li>
+          <li>Everything in Crew</li>
+          <li>Facebook Lead Ads intake and routing</li>
+          <li>Connection health monitoring and lead replay</li>
+          <li>Slack notifications</li>
+          <li>Proposal templates and options</li>
+        </ul>
+        <a class="btn" href="demo.html" data-cta="pricing_operator">Book a walkthrough</a>
+      </div>
+
+      <div class="plan">
+        <div class="tier"><h3>Multi-branch</h3></div>
+        <div><span class="per">Starting at</span> <span class="price num">$499</span> <span class="per">/ month per workspace</span></div>
+        <p class="desc">For companies running more than one location, brand or business inside separate workspaces.</p>
+        <ul class="speclist">
+          <li>Seats to suit your branches, plus additional workspaces</li>
+          <li>Everything in Operator</li>
+          <li>Multiple isolated workspaces</li>
+          <li>Per-workspace Page connections and routing</li>
+          <li>Priority onboarding and data migration help</li>
+        </ul>
+        <a class="btn btn-quiet" href="demo.html" data-cta="pricing_multibranch">Talk to us</a>
+      </div>
+    </div>
+    <p class="form-note center mt-m">Every plan includes the full record set — leads, customers, properties, projects, jobs, estimates, quotes, proposals and the activity timeline. Plans differ on seats and integrations, never on whether your data is yours. Billed monthly — no annual contract, and no free trial clock.</p>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="lbl teal">Straight answers</span>
+      <h2>The questions contractors actually ask</h2>
+    </div>
+    <div class="grid-2">
+      <div class="panel">
+        <h3>Do I pay per lead?</h3>
+        <p>No. Bring in as many leads as your ads produce — the price is for the workspace, not the volume.</p>
+      </div>
+      <div class="panel">
+        <h3>What happens to my data if I leave?</h3>
+        <p>Data export is a control inside the product, and account and workspace closure belong to the owner. You don't have to ask permission to go.</p>
+      </div>
+      <div class="panel">
+        <h3>Can I collect payment through it?</h3>
+        <p>Not yet. Invoicing and payments are reserved in the platform but not shipped, and we won't sell you a screenshot of them. See the <a href="features.html" style="color:var(--teal)">features page</a> for the full built-versus-reserved list.</p>
+      </div>
+      <div class="panel">
+        <h3>Do you help me get set up?</h3>
+        <p>Yes. Connecting your Facebook Page, defining your pipeline stages and building your first estimate templates is part of onboarding, not an upsell.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="tight">
+  <div class="wrap">
+    <div class="cta">
+      <div>
+        <h2>Bring a live lead to the walkthrough</h2>
+        <p>Connect your Page, take one real inquiry from intake to a sent proposal, and look at the activity record it leaves behind. Twenty minutes, no slides.</p>
+      </div>
+      <a class="btn btn-lg" href="demo.html" data-cta="page_end">Book a walkthrough</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="index.html">
+          <svg width="24" height="24" viewBox="0 0 26 26" aria-hidden="true">
+            <rect x="0.75" y="0.75" width="24.5" height="24.5" rx="7" fill="none" stroke="#3ddbb4" stroke-width="1.4"></rect>
+            <path d="M6 16.5c3.9 0 3.9-3.6 7-3.6s3.4 3.3 7 3.3" stroke="#3ddbb4" stroke-width="1.7" fill="none" stroke-linecap="round"></path>
+          </svg>
+          <span class="name">Scapes<em>HQ</em></span>
+        </a>
+        <p>Operations and CRM for landscape, hardscape and drainage contractors. Built in the field, not in a boardroom.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Product</h4>
+        <ul>
+          <li><a href="features.html">Features</a></li>
+          <li><a href="how-it-works.html">How it works</a></li>
+          <li><a href="integrations.html">Integrations</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="who-its-for.html">Who it's for</a></li>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="demo.html" data-cta="footer">Book a walkthrough</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Trades</h4>
+        <ul>
+          <li><a href="who-its-for.html">Drainage</a></li>
+          <li><a href="who-its-for.html">Hardscape</a></li>
+          <li><a href="who-its-for.html">Landscape</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bar">
+      <span>&copy; 2026 ScapesHQ. All rights reserved.</span>
+      <span>Live in production with a connected business.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/nav.js"></script>
+</body>
+</html>
