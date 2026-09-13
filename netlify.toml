@@ -290,3 +290,27 @@
   to = "/blog/what-a-drainage-lead-is-worth"
   status = 301
   force = true
+
+[[redirects]]
+  from = "/blog/landing-pages-for-contractor-ads.html"
+  to = "/blog/landing-pages-for-contractor-ads"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/good-better-best-proposal-options.html"
+  to = "/blog/good-better-best-proposal-options"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/what-to-put-in-a-drainage-warranty.html"
+  to = "/blog/what-to-put-in-a-drainage-warranty"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/scheduling-drainage-work-around-weather.html"
+  to = "/blog/scheduling-drainage-work-around-weather"
+  status = 301
+  force = true

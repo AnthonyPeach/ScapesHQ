@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NSFZ2WC6');</script>
+<!-- End Google Tag Manager -->
+<!-- First-touch campaign capture (session-scoped; feeds the walkthrough form) -->
+<script>
+(function(){
+  try{
+    var ss=window.sessionStorage,p=new URLSearchParams(location.search),
+        k=['utm_source','utm_medium','utm_campaign','utm_content','utm_term'],i,v;
+    if(!ss.getItem('sq_landing')){
+      ss.setItem('sq_landing',location.pathname);
+      ss.setItem('sq_referrer',document.referrer||'direct');
+    }
+    for(i=0;i<k.length;i++){
+      v=p.get(k[i]);
+      if(v&&!ss.getItem('sq_'+k[i])) ss.setItem('sq_'+k[i],v);
+    }
+  }catch(e){}
+})();
+</script>
+<title>Where Contractor Ad Traffic Should Actually Land &mdash; ScapesHQ</title>
+<meta name="description" content="Why sending Meta ad clicks to your home page wastes most of them, what the first screen has to do, which form fields to ask for, and how to measure the page.">
+<link rel="canonical" href="https://scapeshq.com/blog/landing-pages-for-contractor-ads">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Sora:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="/assets/styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Where Contractor Ad Traffic Should Actually Land",
+      "description": "Why sending Meta ad clicks to your home page wastes most of them, what the first screen has to do, which form fields to ask for, and how to measure the page.",
+      "datePublished": "2026-09-13",
+      "dateModified": "2026-09-13",
+      "author": {
+        "@type": "Organization",
+        "name": "ScapesHQ"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "ScapesHQ"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://scapeshq.com/blog/landing-pages-for-contractor-ads"
+      },
+      "articleSection": "Lead gen & Meta ads"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Do I need a separate landing page for every ad?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Build one page per service you advertise — drainage, patios, retaining walls — not one per creative. What you should separate is the tracking: use a different UTM tag or URL variant per ad set so you can tell which creative produced the leads that booked. Three well-maintained pages beat twelve neglected ones."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I use a Meta instant form or send people to my own landing page?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Instant forms convert at much higher rates because nothing has to load and the fields pre-fill, but the leads are looser because the effort was near zero. A landing page converts fewer people and filters better. If you answer the phone within minutes and you're comfortable disqualifying on the call, instant forms are usually the cheaper path to a booked visit."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many fields should my form have?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ask only for fields whose answers change who you call first or what you say when you call. For drainage work that's typically name, mobile, ZIP, what's happening in the yard as a set of choices, and how long it's been going on, plus an optional photo upload. Test a shorter version against a longer one and compare site visits booked, not form fills."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long before I know whether a landing page is working?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Give it at least 100 clicks before you change anything, and 200 clicks per version before you declare a winner in a test. Three fills from 40 clicks tells you almost nothing — that result is consistent with a page that converts at 3% or at 15%. If a proper test costs more than you want to spend, skip testing and put the money into traffic."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I just use an existing service page on my website?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It's a real improvement over the home page and you can do it this afternoon. Trim the navigation, move the form above the first scroll, and rewrite the headline to match the words in your ad. It won't convert like a purpose-built page, but it will beat dropping ad traffic into a services grid."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NSFZ2WC6"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<header class="site-head">
+  <div class="wrap">
+    <nav class="nav" aria-label="Main">
+      <a class="brand" href="/">
+        <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true">
+          <rect x="0.75" y="0.75" width="24.5" height="24.5" rx="7" fill="none" stroke="#3ddbb4" stroke-width="1.4"></rect>
+          <path d="M6 16.5c3.9 0 3.9-3.6 7-3.6s3.4 3.3 7 3.3" stroke="#3ddbb4" stroke-width="1.7" fill="none" stroke-linecap="round"></path>
+          <path d="M6 11c3.9 0 3.9-3.6 7-3.6s3.4 3.3 7 3.3" stroke="#3ddbb4" stroke-width="1.7" fill="none" stroke-linecap="round" opacity=".45"></path>
+        </svg>
+        <span class="name">Scapes<em>HQ</em></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <div class="nav-links" id="nav-links">
+        <a href="/features">Features</a>
+        <a href="/how-it-works">How it works</a>
+        <a href="/who-its-for">Who it's for</a>
+        <a href="/integrations">Integrations</a>
+        <a href="/pricing">Pricing</a>
+        <a href="/blog" aria-current="page">Blog</a>
+        <a href="/about">About</a>
+        <a class="btn" href="/demo" data-cta="nav">Book a walkthrough</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<article class="post">
+  <section class="page-head">
+    <div class="wrap-narrow">
+      <span class="eyebrow lbl"><i></i>Lead gen &amp; Meta ads</span>
+      <h1>Where Contractor Ad Traffic Should Actually Land</h1>
+      <p class="lede">A $840 campaign sent 240 people to a home page and produced six form fills. The ads weren't the problem.</p>
+      <p class="post-meta"><time datetime="2026-09-13">September 13, 2026</time> &middot; 10 min read</p>
+    </div>
+  </section>
+
+  <section class="tight">
+    <div class="wrap-narrow article">
+<p>A drainage contractor outside Raleigh ran $840 through a Meta campaign in May. Meta reported 240 link clicks. His website form got six submissions.</p>
+
+<p>Here's what that costs him:</p>
+
+<ul class="speclist"><li><span>$840 ÷ 240 clicks = <strong>$3.50 per click</strong></span></li><li><span>6 fills ÷ 240 clicks = <strong>2.5% of visitors converted</strong></span></li><li><span>$840 ÷ 6 leads = <strong>$140 per lead</strong></span></li></ul>
+
+<p>He blamed the ads. The ads did their job — they bought 240 people who were interested enough to tap. What happened next is where the money went.</p>
+
+<p>Suppose the same 240 clicks land on a page built for one purpose and 8% of them fill in a form. That's 19 leads instead of 6, and $840 ÷ 19 = about $44 per lead. Same ads, same spend, same audience. Conversion rates vary enormously by market, offer, season and how bad the last storm was, so don't take 8% as a promise — take it as the size of the prize. The gap between 2.5% and 8% is worth more than any bid adjustment you'll make this year.</p>
+
+<h2>Your home page is built for the wrong visitor</h2>
+
+<p>Your home page has to serve a past customer looking up your number, a supplier, a job applicant, someone comparing three companies, and a homeowner who just watched a video of a yard that looks like theirs. It serves all of them adequately and none of them well.</p>
+
+<p>Ad traffic is different from every other visitor you get. They didn't search for you. They weren't looking for a contractor thirty seconds ago. They saw a photo of a trench or a flooded side yard, recognised their own house in it, and tapped. Their attention is on loan and the loan is short.</p>
+
+<p>Drop that person on a home page and you hand them a navigation bar with eight links, a hero image of a paver patio when they clicked an ad about standing water, a services grid, a gallery, an about-us block and a contact form somewhere below all of it. Every one of those is a decision. Most people resolve a decision by leaving.</p>
+
+<p>The fix isn't complicated design. It's removing choices until there's one thing to do.</p>
+
+<h2>The first screen has to answer four questions before anyone scrolls</h2>
+
+<p>Most contractor ad traffic from Meta arrives on a phone. Check your own analytics rather than trusting that, but build for phone first. The first screen on a phone is roughly the top four or five inches of the page — a headline, a line of support, maybe an image, and a button if you're disciplined.</p>
+
+<p>Four things have to happen in that space:</p>
+
+<ol class="speclist"><li><span><strong>Am I in the right place?</strong> Name the service and the area in the headline. "Yard drainage and French drains — Wake County and Johnston County." Not "Excellence in outdoor living since 2009."</span></li><li><span><strong>Do you fix my specific problem?</strong> The page should use the words the ad used. If the ad showed standing water forty-eight hours after rain, the page says standing water forty-eight hours after rain. When the ad and the page don't match, the visitor assumes they've been bounced somewhere generic.</span></li><li><span><strong>Why should I believe you?</strong> One concrete proof point, not three vague ones. "Over 400 drainage jobs since 2011" or "licensed, insured, and we pull the grading permit" beats "quality workmanship and customer satisfaction."</span></li><li><span><strong>What happens if I fill this in?</strong> Say it plainly. "Send this and I'll call you back today to ask four questions about your yard." People hesitate at forms because they don't know what they're triggering. Tell them.</span></li></ol>
+
+<p>Two more rules that matter more than they should. Strip the navigation bar — there's nowhere else you want this person to go. And put your phone number in the first screen as a tappable link, because a meaningful share of people who are ready to talk will never fill in a form.</p>
+
+<h2>Where ad traffic can land, and what each option leaks</h2>
+
+<p>You have more than two choices, and the right one depends on how much time you have to build and maintain something.</p>
+
+<div class="tablewrap"><table><thead><tr><th>Destination</th><th>Effort to set up</th><th>Where it leaks</th><th>Best for</th></tr></thead><tbody><tr><td>Home page</td><td>None</td><td>No message match, too many exits, form usually below three scrolls</td><td>Nothing. This is the default, not a decision.</td></tr><tr><td>Existing service page</td><td>Low — trim the nav, move the form up</td><td>Still carries site furniture; usually written for search, not for someone who arrived thirty seconds ago</td><td>A first improvement you can make this afternoon</td></tr><tr><td>Dedicated landing page per service</td><td>Moderate — one page per offer, built once</td><td>Needs maintenance; needs its own form handling</td><td>Any campaign you plan to run for more than a month</td></tr><tr><td>Meta instant form (on-platform)</td><td>Low — built inside the ad</td><td>Lower intent per lead; you can't show proof, photos or scope the way a page can</td><td>Volume-first campaigns where you'll call fast and disqualify on the phone</td></tr><tr><td>Click-to-call ad</td><td>Low</td><td>Nothing captured if you miss the call; no record unless you build one</td><td>One-person operations who answer the phone reliably</td></tr></tbody></table></div>
+
+<p>The honest middle ground for most contractors: one dedicated page per service you advertise. Drainage, patios, retaining walls. Not one per ad — one per thing you sell. Three pages is manageable. Twelve is a second job.</p>
+
+<h2>Ask for the fields that change your next action, and nothing else</h2>
+
+<p>Every required field on a form costs you some percentage of submissions. How much varies, and anyone quoting you a precise figure is guessing. But the direction is never in question: more fields, fewer fills.</p>
+
+<p>That doesn't mean ask for two fields. Fewer fields gets you more leads of lower average quality, and lead quality decides how many phone hours you burn. The test for each field is simple: <em>does the answer change who I call first, or what I say when I call?</em> If it doesn't, cut it.</p>
+
+<p>Fields that pass that test for drainage and landscape work:</p>
+
+<ul class="speclist"><li><span><strong>Name and mobile number.</strong> Non-negotiable. Email alone is a slower, colder lead.</span></li><li><span><strong>ZIP or postcode.</strong> Cheaper than a full address and it disqualifies out-of-area leads before you dial. Full street address is a bigger ask and can wait for the call.</span></li><li><span><strong>What's happening</strong> — as a short list of choices, not a text box. Standing water in the yard. Water getting into the basement or crawlspace. Soggy ground that never dries. Erosion or washout. Gutters and downspouts dumping at the foundation. The answer tells you whether you're looking at surface water or subsurface water before you've said hello.</span></li><li><span><strong>How long it's been going on.</strong> "Since the spring" and "since we bought the house in 2019" are different conversations, and different urgency.</span></li><li><span><strong>Photo upload, optional.</strong> Marking it optional costs you nothing. The people who upload a photo are a different grade of lead, and you'll know within ten seconds whether the job is worth a visit.</span></li></ul>
+
+<p>Fields to leave off: budget (people don't know, and asking makes you look like you're sorting them), how they heard about you (you already know — they clicked your ad), and anything about square footage or linear feet. They'll guess wrong and you'll price off a bad number.</p>
+
+<p>One thing worth testing once you have traffic: the same page with a four-field form and a six-field form. Run each for a couple of weeks and compare not form fills but <em>site visits booked</em>. The shorter form usually wins on fills and sometimes loses on visits. You want the version that fills your calendar, not the one that fills your inbox.</p>
+
+<h2>Some campaigns don't need a page at all</h2>
+
+<p>Meta's instant forms open inside the app, pre-fill name and phone from the user's profile, and never make anyone load a website. They convert at rates a landing page can't touch — and the leads are looser, because the effort required was almost zero.</p>
+
+<p>That's a trade, not a flaw. If you answer fast and you're comfortable disqualifying on the phone, cheaper and looser can beat expensive and tight. The <a href="/blog/facebook-lead-ads-for-contractors">campaign structure and form questions</a> matter more than the destination in that case, and adding qualifying questions to an instant form recovers a lot of the quality you'd have got from a page.</p>
+
+<p>Worth knowing about the plumbing either way. ScapesHQ takes Meta Lead Ads intake directly — connection health on the Page, and replay if an intake fails so a lead doesn't vanish because a token expired. A form on your own landing page is a different path: that submission lands wherever your site sends it, usually an email inbox, and you'd be moving it across by hand. Decide where those leads live before you build the page, not after the first one gets buried under a supplier invoice.</p>
+
+<h2>Judge the page on booked jobs, not on form fills</h2>
+
+<p>Five numbers, tracked per campaign. Write them on the same sheet every month:</p>
+
+<ol class="speclist"><li><span>Clicks (or landing page views, which is the more honest number Meta reports)</span></li><li><span>Form fills</span></li><li><span>Leads you actually reached by phone</span></li><li><span>Site visits booked</span></li><li><span>Jobs signed</span></li></ol>
+
+<p>Run the earlier example all the way through with plausible rates:</p>
+
+<ul class="speclist"><li><span>240 clicks → 19 form fills (8%)</span></li><li><span>19 fills → 13 reached by phone (68%)</span></li><li><span>13 reached → 9 site visits booked</span></li><li><span>9 visits → 3 jobs signed</span></li><li><span>$840 ÷ 3 = <strong>$280 of ad spend per signed job</strong></span></li></ul>
+
+<p>On a $6,800 average drainage job, that's about 4% of revenue going to advertising. Swap in your own close rate and average ticket — the method is the point, and <a href="/blog/what-a-drainage-lead-is-worth">working backwards from your close rate to what a lead is worth</a> tells you whether $280 is cheap or ruinous in your market.</p>
+
+<p>Notice where the biggest leak sits. Six leads evaporated between the form fill and a human conversation. That's a bigger loss than anything you'd fix by rewriting the headline, and it isn't a landing page problem at all — it's a <a href="/blog/speed-to-lead">response time problem</a>. Fix the page, then fix the gap after the page.</p>
+
+<h3>Don't judge a page on forty clicks</h3>
+
+<p>Three fills from 40 clicks looks like 7.5%. It's also entirely consistent with a page that truly converts at 3% or at 15% — you can't tell yet. Small samples move around violently.</p>
+
+<p>A workable rule: don't change anything until the page has seen at least 100 clicks, and don't declare a winner between two versions until each has 200 or more. If your click cost is $3.50, 200 clicks is $700. If that's too much to spend deciding between two headlines, then don't A/B test headlines — just build one good page and spend the money on traffic.</p>
+
+<h3>Count the calls</h3>
+
+<p>Form fills undercount your results if the phone number on the page works. The cheapest fix is a distinct tracking number used only on landing pages, so any call to it is attributable. Prices for call tracking vary by provider and volume, and they change; check current rates rather than trusting a figure in a blog post. If you'd rather not pay for it, the low-tech version is asking every caller "did you find us on Facebook?" and tallying the answers on the same sheet.</p>
+
+<p>One last piece of hygiene: use a different landing page URL, or at minimum a different UTM tag, for each ad set. Otherwise you'll know the page converts at 8% and have no idea which of your three creatives produced people worth talking to. Ad costs, creative fatigue and competition all shift between seasons and markets — the page you built in February may need a different headline by September. The measurement habit is what survives.</p>
+<h2>FAQ</h2>
+<h3>Do I need a separate landing page for every ad?</h3>
+<p>No. Build one page per service you advertise — drainage, patios, retaining walls — not one per creative. What you should separate is the tracking: use a different UTM tag or URL variant per ad set so you can tell which creative produced the leads that booked. Three well-maintained pages beat twelve neglected ones.</p>
+<h3>Should I use a Meta instant form or send people to my own landing page?</h3>
+<p>Instant forms convert at much higher rates because nothing has to load and the fields pre-fill, but the leads are looser because the effort was near zero. A landing page converts fewer people and filters better. If you answer the phone within minutes and you're comfortable disqualifying on the call, instant forms are usually the cheaper path to a booked visit.</p>
+<h3>How many fields should my form have?</h3>
+<p>Ask only for fields whose answers change who you call first or what you say when you call. For drainage work that's typically name, mobile, ZIP, what's happening in the yard as a set of choices, and how long it's been going on, plus an optional photo upload. Test a shorter version against a longer one and compare site visits booked, not form fills.</p>
+<h3>How long before I know whether a landing page is working?</h3>
+<p>Give it at least 100 clicks before you change anything, and 200 clicks per version before you declare a winner in a test. Three fills from 40 clicks tells you almost nothing — that result is consistent with a page that converts at 3% or at 15%. If a proper test costs more than you want to spend, skip testing and put the money into traffic.</p>
+<h3>Can I just use an existing service page on my website?</h3>
+<p>It's a real improvement over the home page and you can do it this afternoon. Trim the navigation, move the form above the first scroll, and rewrite the headline to match the words in your ad. It won't convert like a purpose-built page, but it will beat dropping ad traffic into a services grid.</p>
+<h2>The short version</h2>
+<p>Ad traffic sent to your home page mostly leaves, because the home page asks the visitor to make eight decisions when they only have attention for one. Build one page per advertised service, match its headline to the ad's wording, put a tappable phone number and a short form in the first screen, and strip the navigation. Ask only for fields that change who you call first or what you say. Then track clicks, fills, people actually reached, visits booked and jobs signed — the biggest leak is usually between the form fill and the phone call, not on the page itself.</p>
+<p><a href="/demo">Book a walkthrough</a> and we'll walk through where your current ad traffic lands and what happens to a lead after it arrives.</p>
+    </div>
+  </section>
+</article>
+
+<section class="tight">
+  <div class="wrap-narrow">
+    <div class="panel post-cta">
+      <h3>See this run on a real job</h3>
+      <p>ScapesHQ takes a lead from a Facebook form to a signed proposal without retyping it once. Bring a job you're quoting this week.</p>
+      <a class="btn btn-lg mt-m" href="/demo" data-cta="blog_post_end">Book a walkthrough</a>
+    </div>
+  </div>
+</section>
+
+<section class="tight">
+  <div class="wrap-narrow">
+    <h2>Keep reading</h2>
+    <div class="grid-2 mt-m">
+      <a class="panel post-card" href="/blog/facebook-lead-ads-for-contractors">
+        <span class="lbl teal">Lead gen &amp; Meta ads</span>
+        <h3>Facebook Lead Ads for Contractors: The Real Setup</h3>
+        <p>How contractors should actually run Meta lead ads: campaign structure, form questions that filter tire-kickers, and where the leads really end up.</p>
+        <span class="post-more">Read it &rarr;</span>
+      </a>
+      <a class="panel post-card" href="/blog/what-a-drainage-lead-is-worth">
+        <span class="lbl teal">Lead gen &amp; Meta ads</span>
+        <h3>What a Drainage Lead Is Actually Worth</h3>
+        <p>Work backwards from your close rate and average job to the most you can pay for a lead. The arithmetic on the page, with numbers you swap for your own.</p>
+        <span class="post-more">Read it &rarr;</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="/">
+          <svg width="24" height="24" viewBox="0 0 26 26" aria-hidden="true">
+            <rect x="0.75" y="0.75" width="24.5" height="24.5" rx="7" fill="none" stroke="#3ddbb4" stroke-width="1.4"></rect>
+            <path d="M6 16.5c3.9 0 3.9-3.6 7-3.6s3.4 3.3 7 3.3" stroke="#3ddbb4" stroke-width="1.7" fill="none" stroke-linecap="round"></path>
+          </svg>
+          <span class="name">Scapes<em>HQ</em></span>
+        </a>
+        <p>Operations and CRM for landscape, hardscape and drainage contractors. Built in the field, not in a boardroom.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Product</h4>
+        <ul>
+          <li><a href="/features">Features</a></li>
+          <li><a href="/how-it-works">How it works</a></li>
+          <li><a href="/integrations">Integrations</a></li>
+          <li><a href="/pricing">Pricing</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/about">About</a></li>
+          <li><a href="/who-its-for">Who it's for</a></li>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/demo" data-cta="footer">Book a walkthrough</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Trades</h4>
+        <ul>
+          <li><a href="/who-its-for">Drainage</a></li>
+          <li><a href="/who-its-for">Hardscape</a></li>
+          <li><a href="/who-its-for">Landscape</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bar">
+      <span>&copy; 2026 ScapesHQ. All rights reserved.</span>
+      <span>Live in production with a connected business.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/nav.js"></script>
+</body>
+</html>
