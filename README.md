@@ -160,6 +160,24 @@ the rejected topic stays unchecked for the next run. Locally, `--dry-run` builds
 model and `--fixture post.json` renders from a local file, which is also the
 way to hand-write a post and let the script place it correctly.
 
+**The queue tops itself up.** `.github/workflows/topics.yml` checks every
+Monday and, when fewer than 8 topics remain, asks for enough to reach 16 and
+commits them straight to `main`. Most weeks it exits without calling the model
+at all. It runs a day ahead of the Tuesday post run so a refill has landed
+before anything draws on it, and it shares a concurrency group with the post
+workflow because both write `blog-topics.md`.
+
+Proposed topics are validated before they are accepted: the slug must be
+lowercase-hyphenated, under 60 characters and free of years; the cluster must be
+one of the six exactly; the angle must be substantial enough to write from; and
+the slug must neither duplicate an existing one nor share 60% of its meaningful
+words with one, which is what catches the same topic proposed twice in different
+words. Rejections are listed in the run log. `--fixture topics.json` runs the
+same checks over a hand-written list.
+
+Topics are appended in order and taken from the top, so reordering or deleting
+lines in the queue is how you change what publishes next.
+
 **Cost.** Measured over nine posts on 2026-09-13: about **3,500 input and
 8,700 output tokens per post**, output ranging 5.1k-13.7k. That is the number
 to multiply by current Opus pricing, and the run log prints it for every post.

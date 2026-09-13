@@ -1,0 +1,100 @@
+name: Top up blog topics
+
+# Keeps .claude/blog-topics.md from running dry. Checks weekly and does nothing
+# unless the queue has fallen below the threshold in scripts/refill-topics.mjs,
+# so most weeks this exits without calling the model at all.
+#
+# Deliberately a separate workflow from "Blog post": a refill riding along with
+# a batch that went to review would sit unmerged in that pull request, which is
+# exactly when the queue most needs topping up. This always commits to main.
+#
+# Runs Mondays, a day ahead of the Tuesday post run, so a refill has landed
+# before anything tries to draw from it.
+
+on:
+  schedule:
+    - cron: '0 12 * * 1'
+  workflow_dispatch:
+    inputs:
+      force:
+        description: 'Top up even if the queue is above the threshold'
+        required: false
+        type: boolean
+        default: false
+      dry_run:
+        description: 'Report the counts and stop, without calling the model'
+        required: false
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  # Shares a group with the post workflow: both edit blog-topics.md, and a
+  # refill landing mid-batch would make the generator's queue shift underfoot.
+  group: blog-post
+  cancel-in-progress: false
+
+jobs:
+  refill:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '22'
+
+      - name: Top up the queue
+        id: refill
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          TOPIC_MODEL: ${{ vars.TOPIC_MODEL }}
+          BLOG_MODEL: ${{ vars.BLOG_MODEL }}
+          FORCE: ${{ inputs.force }}
+          DRY_RUN: ${{ inputs.dry_run }}
+        run: |
+          args=()
+          if [ "$FORCE" = "true" ]; then args+=(--force); fi
+          if [ "$DRY_RUN" = "true" ]; then args+=(--dry-run); fi
+          node scripts/refill-topics.mjs ${args[@]+"${args[@]}"}
+
+      - name: Commit
+        if: steps.refill.outputs.added != '' && steps.refill.outputs.added != '0'
+        env:
+          ADDED: ${{ steps.refill.outputs.added }}
+          QUEUE: ${{ steps.refill.outputs.queue }}
+        run: |
+          git config user.name  "scapeshq-blog[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add .claude/blog-topics.md
+          git commit -m "Top up blog topics: +$ADDED (queue now $QUEUE)" \
+                     -m "The queue had fallen below the threshold. Topics are appended in
+          order and the post workflow takes them from the top, so reordering or
+          deleting any of them changes what publishes next." \
+                     -m "Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>"
+
+          git pull --rebase origin main
+          git push origin HEAD:main
+
+      - name: Summary
+        if: always()
+        env:
+          ADDED: ${{ steps.refill.outputs.added }}
+          REASON: ${{ steps.refill.outputs.reason }}
+          QUEUE: ${{ steps.refill.outputs.queue }}
+          REJECTED: ${{ steps.refill.outputs.rejected }}
+          SLUGS: ${{ steps.refill.outputs.slugs }}
+        run: |
+          if [ -n "$ADDED" ] && [ "$ADDED" != "0" ]; then
+            printf '### Added %s topics, queue now %s\n\n' "$ADDED" "$QUEUE" >> "$GITHUB_STEP_SUMMARY"
+            for s in $SLUGS; do printf -- '- `%s`\n' "$s" >> "$GITHUB_STEP_SUMMARY"; done
+            if [ -n "$REJECTED" ] && [ "$REJECTED" != "0" ]; then
+              printf '\n%s proposed topics were rejected by validation; see the step log.\n' "$REJECTED" >> "$GITHUB_STEP_SUMMARY"
+            fi
+          elif [ "$REASON" = "above-threshold" ]; then
+            printf '### Queue is healthy\n\nNo top-up needed, and no model call was made.\n' >> "$GITHUB_STEP_SUMMARY"
+          fi
