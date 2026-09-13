@@ -17,10 +17,10 @@ plus one stylesheet and one small script. Drop it on Netlify (or anywhere) as is
 | `demo.html` | Book a walkthrough | Lead form (Netlify Forms), posts to `/thank-you` |
 | `thank-you.html` | Request received | Post-submit confirmation. `noindex`, fires `generate_lead` |
 | `404.html` | Not found | Netlify serves this automatically |
-| `sitemap.xml` | — | 19 URLs: 8 core + `/blog` + 10 posts. Excludes `thank-you` (noindex) and `404` |
+| `sitemap.xml` | — | 29 URLs: 8 core + `/blog/` + 20 posts. Excludes `thank-you` (noindex) and `404` |
 | `robots.txt` | — | Allows all, points at the sitemap |
-| `blog/index.html` | Blog | 10 posts, card grid, cluster pills |
-| `blog/<slug>.html` | Blog posts | 10 posts at `/blog/<slug>`. Article + FAQPage JSON-LD |
+| `blog/index.html` | Blog | 20 posts, card grid, cluster pills |
+| `blog/<slug>.html` | Blog posts | 20 posts at `/blog/<slug>`. Article + FAQPage JSON-LD |
 
 Assets live in `assets/` — `styles.css`, `nav.js`, `favicon.svg`.
 
@@ -41,9 +41,8 @@ Assets live in `assets/` — `styles.css`, `nav.js`, `favicon.svg`.
 4. **Domain and analytics.** Live at `scapeshq.com`, served from Netlify with
    DNS kept at GoDaddy (apex `A` → `75.2.60.5`, `www` CNAME → `scapeshq.netlify.app`).
    **GTM `GTM-NSFZ2WC6` is the only tag on the site** — container high in
-   `<head>`, `noscript` iframe immediately after `<body>`, on all 21 pages.
-   Inlined deliberately, not in `assets/`, because `netlify.toml` caches that
-   directory `immutable` for a year.
+   `<head>`, `noscript` iframe immediately after `<body>`, on all 31 pages.
+   Inlined deliberately, not in `assets/`, rather than as a shared asset file.
 
    GTM owns every tag — the hard-coded `gtag.js` block was removed so GA4 is
    configured once, inside the container, with no double-counting. Published
@@ -107,7 +106,7 @@ netlify deploy --dir=. --prod
 
 ## Blog
 
-Ten posts under `blog/`, served at `/blog/<slug>`. Generated from
+20 posts under `blog/`, served at `/blog/<slug>`. The first ten came from
 `scapeshq-blog-content_1.json` (content + ready-made JSON-LD) by a one-off
 script; the HTML is the source of truth now, so edit the pages directly.
 
@@ -160,6 +159,14 @@ at the first post the generator rejects and keeps everything written before it;
 the rejected topic stays unchecked for the next run. Locally, `--dry-run` builds the prompt without calling the
 model and `--fixture post.json` renders from a local file, which is also the
 way to hand-write a post and let the script place it correctly.
+
+**Cost.** Measured over nine posts on 2026-09-13: about **3,500 input and
+8,700 output tokens per post**, output ranging 5.1k-13.7k. That is the number
+to multiply by current Opus pricing, and the run log prints it for every post.
+The first batch of ten exhausted the account's credit balance on the tenth,
+which is what a spent balance looks like from here: the run stops, keeps every
+post written before it, and leaves the topic queued. Set up auto-reload, or
+switch `BLOG_MODEL` to a cheaper model, if unattended Tuesdays matter.
 
 Requires an `ANTHROPIC_API_KEY` repository secret — **billed to the Anthropic
 API account, separately from a Claude subscription**. `BLOG_MODEL` is an
