@@ -170,3 +170,9 @@
   to = "/blog/best-software-for-drainage-contractors"
   status = 301
   force = true
+
+[[redirects]]
+  from = "/blog/pricing-a-drainage-job-by-the-foot.html"
+  to = "/blog/pricing-a-drainage-job-by-the-foot"
+  status = 301
+  force = true
