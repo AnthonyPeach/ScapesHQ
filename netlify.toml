@@ -176,3 +176,57 @@
   to = "/blog/pricing-a-drainage-job-by-the-foot"
   status = 301
   force = true
+
+[[redirects]]
+  from = "/blog/what-to-charge-for-a-site-visit.html"
+  to = "/blog/what-to-charge-for-a-site-visit"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/catch-basin-vs-dry-well.html"
+  to = "/blog/catch-basin-vs-dry-well"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/regrading-vs-drainage-system.html"
+  to = "/blog/regrading-vs-drainage-system"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/sump-pump-discharge-done-right.html"
+  to = "/blog/sump-pump-discharge-done-right"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/why-your-leads-go-cold.html"
+  to = "/blog/why-your-leads-go-cold"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/google-local-services-vs-meta-ads.html"
+  to = "/blog/google-local-services-vs-meta-ads"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/proposal-follow-up-sequence.html"
+  to = "/blog/proposal-follow-up-sequence"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/handling-price-objections-drainage.html"
+  to = "/blog/handling-price-objections-drainage"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/hiring-your-first-office-person.html"
+  to = "/blog/hiring-your-first-office-person"
+  status = 301
+  force = true

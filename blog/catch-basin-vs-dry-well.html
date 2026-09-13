@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NSFZ2WC6');</script>
+<!-- End Google Tag Manager -->
+<!-- First-touch campaign capture (session-scoped; feeds the walkthrough form) -->
+<script>
+(function(){
+  try{
+    var ss=window.sessionStorage,p=new URLSearchParams(location.search),
+        k=['utm_source','utm_medium','utm_campaign','utm_content','utm_term'],i,v;
+    if(!ss.getItem('sq_landing')){
+      ss.setItem('sq_landing',location.pathname);
+      ss.setItem('sq_referrer',document.referrer||'direct');
+    }
+    for(i=0;i<k.length;i++){
+      v=p.get(k[i]);
+      if(v&&!ss.getItem('sq_'+k[i])) ss.setItem('sq_'+k[i],v);
+    }
+  }catch(e){}
+})();
+</script>
+<title>Catch Basin vs Dry Well: Which Fix Your Yard Needs &mdash; ScapesHQ</title>
+<meta name="description" content="How to choose between a catch basin and a dry well using outfall elevation, a shovel perc test and drawdown math — plus what to do when neither one works.">
+<link rel="canonical" href="https://scapeshq.com/blog/catch-basin-vs-dry-well">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Sora:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="/assets/styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Catch Basin vs Dry Well: Which Fix Your Yard Needs",
+      "description": "How to choose between a catch basin and a dry well using outfall elevation, a shovel perc test and drawdown math — plus what to do when neither one works.",
+      "datePublished": "2026-09-13",
+      "dateModified": "2026-09-13",
+      "author": {
+        "@type": "Organization",
+        "name": "ScapesHQ"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "ScapesHQ"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://scapeshq.com/blog/catch-basin-vs-dry-well"
+      },
+      "articleSection": "Drainage authority"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can you install a dry well in clay soil?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can install it, but it won't work as designed. Clay typically percolates under 0.5 inches per hour, which means a dry well sized for a normal storm can take three days or more to empty and will overflow during back-to-back rain. Run a perc test at the proposed bottom depth and do the drawdown arithmetic before quoting one. If the number fails, price a pumped system or a regrade instead."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How far from the house does a dry well need to be?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ten feet from the foundation is a common minimum, and many jurisdictions want more — plus setbacks from septic fields, property lines and drinking water wells. Put it downslope of the house, never upslope. Check your local stormwater and building standards, because these distances vary a lot by market."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need a catch basin if I already have a French drain?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "They handle different water. A French drain intercepts water moving through the soil; a catch basin takes standing surface water off a low spot. Properties with both a soggy subsurface and a ponding spot often need both, tied into the same outlet pipe. What matters is that whatever you install has somewhere legal and lower to discharge."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How often should a catch basin be cleaned out?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Twice a year is a reasonable default: once after leaf drop and once in spring. Pull the grate and scoop or vacuum whatever is sitting in the sump below the outlet invert. Basins collecting runoff from mulch beds or unpaved areas fill faster and may need quarterly attention."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How deep should a dry well be?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Deep enough that the stored volume you calculated fits, that the bottom sits well above the seasonal high water table, and — in freezing markets — that the bulk of the storage is below your local frost depth. Work it backward from the volume: divide required storage by your void ratio, then by the footprint area, to get the depth of media you need."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NSFZ2WC6"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<header class="site-head">
+  <div class="wrap">
+    <nav class="nav" aria-label="Main">
+      <a class="brand" href="/">
+        <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true">
+          <rect x="0.75" y="0.75" width="24.5" height="24.5" rx="7" fill="none" stroke="#3ddbb4" stroke-width="1.4"></rect>
+          <path d="M6 16.5c3.9 0 3.9-3.6 7-3.6s3.4 3.3 7 3.3" stroke="#3ddbb4" stroke-width="1.7" fill="none" stroke-linecap="round"></path>
+          <path d="M6 11c3.9 0 3.9-3.6 7-3.6s3.4 3.3 7 3.3" stroke="#3ddbb4" stroke-width="1.7" fill="none" stroke-linecap="round" opacity=".45"></path>
+        </svg>
+        <span class="name">Scapes<em>HQ</em></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <div class="nav-links" id="nav-links">
+        <a href="/features">Features</a>
+        <a href="/how-it-works">How it works</a>
+        <a href="/who-its-for">Who it's for</a>
+        <a href="/integrations">Integrations</a>
+        <a href="/pricing">Pricing</a>
+        <a href="/blog" aria-current="page">Blog</a>
+        <a href="/about">About</a>
+        <a class="btn" href="/demo" data-cta="nav">Book a walkthrough</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<article class="post">
+  <section class="page-head">
+    <div class="wrap-narrow">
+      <span class="eyebrow lbl"><i></i>Drainage authority</span>
+      <h1>Catch Basin vs Dry Well: Which Fix Your Yard Needs</h1>
+      <p class="lede">One inch of rain on half a roof is 748 gallons, and every drainage decision on that property comes down to where those gallons end up.</p>
+      <p class="post-meta"><time datetime="2026-09-13">September 13, 2026</time> &middot; 11 min read</p>
+    </div>
+  </section>
+
+  <section class="tight">
+    <div class="wrap-narrow article">
+<p>One inch of rain on 1,200 square feet of roof is 748 gallons. The math is <code>1,200 &times; (1 &divide; 12) = 100 cubic feet</code>, and <code>100 &times; 7.48 = 748 gallons</code>. That's half a house and an ordinary summer storm.</p>
+
+<p>Those gallons have to end up somewhere lower than where they started, or somewhere the ground is willing to take them. That's the whole decision. Everything else — basin size, pipe diameter, stone versus chambers — is detail hanging off it.</p>
+
+<p>Homeowners call and ask for a catch basin or a dry well because those are the two words they found online. The two things don't do the same job, and quoting one when the site needs the other is how a drainage contractor ends up back on a property in November with a shovel and no invoice.</p>
+
+<h2>Catch Basins Collect, Dry Wells Dispose — They're Not Competing Products</h2>
+
+<p>A catch basin is a box in the ground with a grate on top, an outlet pipe on the side, and a sump below the outlet that traps grit and leaves. It is an <em>intake</em>. It takes water out of a low spot and hands it to a pipe. On its own it disposes of nothing.</p>
+
+<p>A dry well is a buried void — a stone-filled pit, a plastic chamber, a stack of crates — that holds water temporarily and lets it soak into the surrounding soil. It is a <em>disposal point</em>. It's the end of the line.</p>
+
+<p>So the honest answer to "catch basin or dry well" is usually "a catch basin, and then we need to talk about where its pipe goes." Sometimes that pipe goes to daylight and you never need a dry well. Sometimes there's nowhere to daylight and the dry well is what the basin empties into. The two show up together on plenty of jobs.</p>
+
+<h2>Find the Outfall Before You Price Anything Else</h2>
+
+<p>Gravity to daylight is cheaper, lasts longer and fails more visibly than infiltration. Rule out the free option before you price the expensive one.</p>
+
+<p>Stand in the low spot. Look for any point — a slope break, a swale, a ditch, a curb, a legal storm structure — that sits lower than the bottom of your proposed basin outlet, plus pitch, plus a few inches of margin. Shoot it with a laser, or run a string and a line level if that's what's in the truck.</p>
+
+<p>Then do the arithmetic before you promise anything. At 1% pitch, a 60-foot run needs <code>60 &times; 0.01 = 0.6 ft = 7.2 inches</code> of fall between the outlet invert and the discharge invert. At 2%, which you'd rather have on solid pipe, it needs 14.4 inches. Add the depth of the basin outlet below grade — often 8 to 14 inches on a residential structure — and you've got your real elevation requirement.</p>
+
+<p>If you've got 5 inches of fall over 60 feet, gravity to daylight is off the table and you now have a soil question. If you've got 18 inches, stop thinking about dry wells.</p>
+
+<p>One more thing that varies entirely by market: where you're allowed to put the water. Discharging onto a neighbor's lot, into a street gutter, into a roadside ditch or into anything the municipality owns is governed locally, and the rules range from "nobody asks" to "permit, inspection and a plan set." Find out before you write the number, not after.</p>
+
+<h2>A Perc Test With a Shovel and a Five-Gallon Bucket Settles the Argument</h2>
+
+<p>If there's no outfall, a dry well is only viable if the soil will actually take water. You cannot tell that by squeezing a handful of topsoil. Topsoil is almost always more permeable than what's four feet down, which is exactly where the dry well bottom will sit.</p>
+
+<ol class="speclist"><li><span>Dig a test hole 8 to 12 inches across, down to the depth you plan to set the bottom of the dry well. Depth is the point — soil at 12 inches tells you nothing about soil at 48.</span></li><li><span>Scrape the sidewalls with a knife or a chunk of rebar to break up the smear a shovel or auger leaves behind, then drop two inches of gravel in the bottom so the inflow doesn't seal it.</span></li><li><span>Presoak. Fill the hole with about 12 inches of water, let it drain, fill it again. If both fills disappear in under ten minutes, you're in sand and you're fine.</span></li><li><span>Refill to 6 to 8 inches and measure the drop every 15 to 30 minutes for at least an hour after the presoak. Use the <em>last</em> interval as your rate, not the first — the first one is always optimistic.</span></li><li><span>Convert: inches dropped divided by hours elapsed equals your rate in inches per hour.</span></li><li><span>Dig a hole at every proposed location. Soil can change completely across 30 feet of a suburban lot, especially on graded fill.</span></li></ol>
+
+<p>Rough bands, and treat these as bands rather than thresholds:</p>
+
+<ul class="speclist"><li><span><strong>Over 4 in/hr</strong> — sand or loamy sand. A dry well works easily. Check separation to groundwater and any local setback from wells and septic.</span></li><li><span><strong>1 to 4 in/hr</strong> — sandy loam to loam. Normal dry well territory. Size it and move on.</span></li><li><span><strong>0.5 to 1 in/hr</strong> — marginal. It'll work if you oversize it and the homeowner accepts slow drawdown.</span></li><li><span><strong>Under 0.5 in/hr</strong> — clay or compacted fill. A dry well here is a buried cistern with a slow leak. Don't sell one.</span></li></ul>
+
+<p>Many jurisdictions set a floor somewhere near 0.5 in/hr for infiltration systems and apply a safety factor of 2 to the measured rate. That number varies; your local stormwater standard has the one that counts.</p>
+
+<p>Leave the hole open overnight if you can, ideally in the wet season. If water rises into it on its own, you've found the water table, and a dry well bottom below that line is a hole full of groundwater before the first storm arrives.</p>
+
+<h2>Sizing a Dry Well Is Arithmetic, and the Arithmetic Usually Says Bigger</h2>
+
+<p>Take the 1,200 square feet of roof and a 1-inch design storm. That's 100 cubic feet of water to store. Some markets size to a 10-year 24-hour event instead, which might be 3 to 5 inches of rain and triples or quintuples the number — check what your jurisdiction expects.</p>
+
+<p>Now divide by the void ratio of whatever you're filling the hole with. Clean washed stone holds water in roughly 35 to 40 percent of its volume. Plastic chambers and crates run 90 to 95 percent.</p>
+
+<p>Stone at 0.35: <code>100 &divide; 0.35 = 286 cubic feet</code>, or about 10.6 cubic yards of stone. An 8-by-8 footprint would need <code>286 &divide; 64 = 4.5 feet</code> of stone depth, plus cover over the top. Chambers at 0.90: <code>100 &divide; 0.9 = 111 cubic feet</code> of chamber volume — far less digging, more product cost.</p>
+
+<p>Then check drawdown, which is the number that actually kills marginal jobs. Measured perc of 1 in/hr with a safety factor of 2 gives a design rate of 0.5 in/hr, or 0.0417 ft/hr. Across a 64-square-foot bottom that's <code>64 &times; 0.0417 = 2.7 cubic feet per hour</code>. Emptying 100 cubic feet takes <code>100 &divide; 2.7 = 37 hours</code>. That clears a 72-hour standard and fails a 24-hour one.</p>
+
+<p>Run the same math at a design rate of 0.25 in/hr and you get 1.33 cubic feet per hour and 75 hours to empty. Back-to-back storms mean the second one overflows. That's the real reason clay disqualifies a dry well — not that water never moves, but that it doesn't move before the next rain.</p>
+
+<p>Notice also that infiltration during the storm is a rounding error. At 2.7 cubic feet per hour, a two-hour storm loses 5 cubic feet out of 100. Size for storage and treat in-storm infiltration as a bonus.</p>
+
+<p>And don't forget the spoil. That 8-by-8-by-5.5-foot excavation is <code>8 &times; 8 &times; 5.5 = 352 cubic feet</code>, about 13 cubic yards in place, which swells 20 to 30 percent once it's loose — call it 16 yards leaving the site. Haul-off is one of the <a href="/blog/drainage-estimate-template">line items contractors leave off a drainage estimate</a> and then eat.</p>
+
+<h2>Frost Depth and Fines Decide How Long the Thing Lasts</h2>
+
+<p>Frost depth runs from effectively zero along the Gulf Coast to five feet or more in northern Minnesota and Maine, and the number your building department publishes is the one to design against. A dry well whose entire storage volume sits above the frost line becomes a block of ice in February, which is exactly when a thaw-plus-rain event shows up.</p>
+
+<p>Get the bulk of the storage below frost where you can. Keep the inlet pipe pitched hard enough to self-drain so it isn't holding a standing column of water that freezes and heaves. In hard-freeze markets a shallow, nearly flat lateral is the part that fails first.</p>
+
+<p>Catch basins tolerate cold better. The sump holds water and it does ice over, but as long as the outlet invert stays clear and the outlet pipe drains, the basin keeps passing water across the top of the ice. A basin whose outlet pipe holds standing water is the one that freezes solid.</p>
+
+<p>Maintenance is where the two really separate:</p>
+
+<ul class="speclist"><li><span>A catch basin fails visibly. Water ponds on the grate, someone calls, you pull the grate and scoop the sump. Ten minutes, twice a year.</span></li><li><span>A dry well fails invisibly. It silts up from the top of the stone down over years, and the first symptom is a wet yard again with no obvious cause.</span></li><li><span>Never feed a dry well raw yard runoff without a sumped structure ahead of it. Sheet flow off a lawn carries fines, and fines are what end a dry well's life.</span></li><li><span>Wrap the sides and top of the stone in geotextile to keep surrounding soil out. Opinions differ on the bottom; either way, the sediment sump upstream is what actually extends the life.</span></li><li><span>Set a 4-inch observation riser down to the bottom of the stone with a cap at grade. It costs almost nothing and lets anyone check for standing water three days after a storm without digging.</span></li></ul>
+
+<h2>When the Answer Is Neither</h2>
+
+<p>No outfall and no percolation is a real combination, and it's common on graded clay subdivisions. The honest options there are a pumped system, a regrade that reaches a legal outfall, or storage with slow release — not a dry well priced hopefully.</p>
+
+<p>It's also worth checking that you're solving the right problem. If the water is a spring, a high seasonal table, or subsurface flow arriving from uphill, a basin in the low spot treats a symptom. A <a href="/blog/diagnosing-a-wet-yard">systematic five-source diagnostic on the first visit</a> sorts that out before anyone quotes structures.</p>
+
+<p>Sometimes the fix is dirt. Two percent of fall away from the foundation for the first ten feet, and downspouts extended past that, eliminates a surprising number of "we need a drainage system" calls.</p>
+
+<div class="tablewrap"><table><thead><tr><th>System</th><th>Requires</th><th>Fails when</th><th>Maintenance</th><th>Installed range (varies widely by market)</th></tr></thead><tbody><tr><td>Catch basin + solid pipe to daylight</td><td>Continuous fall to a legal discharge point</td><td>Outlet buried by silt, or the daylight end gets landscaped over</td><td>Scoop the sump twice a year</td><td>Roughly $250-$600 per structure, plus pipe commonly $15-$35 per installed foot depending on depth, soil and restoration</td></tr><tr><td>Dry well (stone or chambers)</td><td>Perc above about 0.5 in/hr, separation to groundwater, room for the excavation</td><td>Clay, high water table, or fines from unfiltered runoff</td><td>Effectively none until it fails, then excavation</td><td>Roughly $1,500-$5,000 residential, driven mostly by dig volume and spoil haul-off</td></tr><tr><td>Catch basin feeding a dry well</td><td>Both of the above, minus the outfall</td><td>Same failures, but the sump buys the dry well years</td><td>Sump twice a year, observation riser after big storms</td><td>Sum of the two, minus one mobilization</td></tr><tr><td>Sump basin + pump to a discharge point</td><td>Power, a legal discharge point, a homeowner who accepts a machine</td><td>Power outage, check valve failure, pump end of life</td><td>Test annually, replace pump every 5-12 years</td><td>Roughly $1,500-$4,000 plus electrical</td></tr></tbody></table></div>
+
+<p>Those ranges move with labor rates, rock, access and restoration standards in your market. Build your own from your loaded crew hour and your real material pricing rather than borrowing someone else's number.</p>
+
+<h2>Price Both Paths and Let the Homeowner Choose</h2>
+
+<p>On any site where the outfall is arguable, the cleanest proposal shows both: Option A, basin and solid pipe to daylight across the neighbor's easement; Option B, basin and dry well on-site. Put the measured perc rate and the fall measurement in writing on the same page so the choice is visible rather than asserted.</p>
+
+<p>Options also protect you when the dig goes sideways. State the assumed excavation depth, the assumed spoil volume, and what happens if you hit rock or a buried irrigation main. That's the difference between a change order conversation and an argument, and it's the same discipline behind <a href="/blog/drainage-proposal-anatomy">a proposal that gets signed the same week</a>.</p>
+
+<p>ScapesHQ builds proposals with side-by-side options and records which one the homeowner actually signed, with the evidence attached to the record. It won't tell you what the pit cost you to dig — job costing against budget isn't built — so keep your actuals wherever you keep them today and compare them against the estimate yourself.</p>
+<h2>FAQ</h2>
+<h3>Can you install a dry well in clay soil?</h3>
+<p>You can install it, but it won't work as designed. Clay typically percolates under 0.5 inches per hour, which means a dry well sized for a normal storm can take three days or more to empty and will overflow during back-to-back rain. Run a perc test at the proposed bottom depth and do the drawdown arithmetic before quoting one. If the number fails, price a pumped system or a regrade instead.</p>
+<h3>How far from the house does a dry well need to be?</h3>
+<p>Ten feet from the foundation is a common minimum, and many jurisdictions want more — plus setbacks from septic fields, property lines and drinking water wells. Put it downslope of the house, never upslope. Check your local stormwater and building standards, because these distances vary a lot by market.</p>
+<h3>Do I need a catch basin if I already have a French drain?</h3>
+<p>They handle different water. A French drain intercepts water moving through the soil; a catch basin takes standing surface water off a low spot. Properties with both a soggy subsurface and a ponding spot often need both, tied into the same outlet pipe. What matters is that whatever you install has somewhere legal and lower to discharge.</p>
+<h3>How often should a catch basin be cleaned out?</h3>
+<p>Twice a year is a reasonable default: once after leaf drop and once in spring. Pull the grate and scoop or vacuum whatever is sitting in the sump below the outlet invert. Basins collecting runoff from mulch beds or unpaved areas fill faster and may need quarterly attention.</p>
+<h3>How deep should a dry well be?</h3>
+<p>Deep enough that the stored volume you calculated fits, that the bottom sits well above the seasonal high water table, and — in freezing markets — that the bulk of the storage is below your local frost depth. Work it backward from the volume: divide required storage by your void ratio, then by the footprint area, to get the depth of media you need.</p>
+<h2>The short version</h2>
+<p>A catch basin collects water and a dry well disposes of it, so the real question is whether you have somewhere lower to send the pipe. Check fall to a legal outfall first, because gravity to daylight is cheaper and lasts longer than infiltration. If there's no outfall, dig a perc test at the proposed dry well depth and run the drawdown math — measured rate cut by a safety factor of two, applied to the pit's bottom area, against the volume you need to store. If that comes out past 72 hours, the answer is a pump or a regrade, not a dry well.</p>
+<p><a href="/demo">Book a walkthrough</a> and we'll look at how your last drainage proposal laid out the options side by side.</p>
+    </div>
+  </section>
+</article>
+
+<section class="tight">
+  <div class="wrap-narrow">
+    <div class="panel post-cta">
+      <h3>See this run on a real job</h3>
+      <p>ScapesHQ takes a lead from a Facebook form to a signed proposal without retyping it once. Bring a job you're quoting this week.</p>
+      <a class="btn btn-lg mt-m" href="/demo" data-cta="blog_post_end">Book a walkthrough</a>
+    </div>
+  </div>
+</section>
+
+<section class="tight">
+  <div class="wrap-narrow">
+    <h2>Keep reading</h2>
+    <div class="grid-2 mt-m">
+      <a class="panel post-card" href="/blog/diagnosing-a-wet-yard">
+        <span class="lbl teal">Drainage authority</span>
+        <h3>Diagnosing a Wet Yard in One Site Visit: A Field Guide</h3>
+        <p>A repeatable five-source diagnostic for drainage contractors: grade, roof water, soil, water table and off-site runoff, all in one site visit.</p>
+        <span class="post-more">Read it &rarr;</span>
+      </a>
+      <a class="panel post-card" href="/blog/drainage-estimate-template">
+        <span class="lbl teal">Pricing &amp; estimating</span>
+        <h3>Drainage Estimate Template: Every Line Item Explained</h3>
+        <p>Every line item in a drainage estimate, what each one should say, and the four lines contractors forget until the job is already losing money.</p>
+        <span class="post-more">Read it &rarr;</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="/">
+          <svg width="24" height="24" viewBox="0 0 26 26" aria-hidden="true">
+            <rect x="0.75" y="0.75" width="24.5" height="24.5" rx="7" fill="none" stroke="#3ddbb4" stroke-width="1.4"></rect>
+            <path d="M6 16.5c3.9 0 3.9-3.6 7-3.6s3.4 3.3 7 3.3" stroke="#3ddbb4" stroke-width="1.7" fill="none" stroke-linecap="round"></path>
+          </svg>
+          <span class="name">Scapes<em>HQ</em></span>
+        </a>
+        <p>Operations and CRM for landscape, hardscape and drainage contractors. Built in the field, not in a boardroom.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Product</h4>
+        <ul>
+          <li><a href="/features">Features</a></li>
+          <li><a href="/how-it-works">How it works</a></li>
+          <li><a href="/integrations">Integrations</a></li>
+          <li><a href="/pricing">Pricing</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/about">About</a></li>
+          <li><a href="/who-its-for">Who it's for</a></li>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/demo" data-cta="footer">Book a walkthrough</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Trades</h4>
+        <ul>
+          <li><a href="/who-its-for">Drainage</a></li>
+          <li><a href="/who-its-for">Hardscape</a></li>
+          <li><a href="/who-its-for">Landscape</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bar">
+      <span>&copy; 2026 ScapesHQ. All rights reserved.</span>
+      <span>Live in production with a connected business.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/nav.js"></script>
+</body>
+</html>
