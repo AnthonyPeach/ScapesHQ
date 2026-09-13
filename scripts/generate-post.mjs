@@ -568,16 +568,21 @@ function summarise(post, topic, dateISO, meta, report) {
     lines.push('');
   }
 
-  lines.push(
-    '### Review checklist',
-    '',
-    '- [ ] Every number is a range or is derived on the page',
-    '- [ ] Nothing Reserved is implied to be built',
-    '- [ ] Internal links go somewhere real',
-    '- [ ] It reads like the other posts',
-    '',
-    'Deploy preview is linked below once Netlify builds it. Merging publishes.',
-  );
+  if (flags.length) {
+    lines.push(
+      '### Review checklist',
+      '',
+      '- [ ] Every number is a range or is derived on the page',
+      '- [ ] Nothing Reserved is implied to be built',
+      '- [ ] Internal links go somewhere real',
+      '- [ ] It reads like the other posts',
+      '',
+      'This post raised flags, so it is waiting here rather than publishing.',
+      'Deploy preview is linked below once Netlify builds it. Merging publishes.',
+    );
+  } else {
+    lines.push('Nothing was flagged, so this went straight to `main` and is live.');
+  }
 
   return lines.join('\n');
 }

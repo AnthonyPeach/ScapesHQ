@@ -55,13 +55,33 @@ jobs:
           if [ -n "$TOPIC" ]; then args+=(--topic "$TOPIC"); fi
           node scripts/generate-post.mjs ${args[@]+"${args[@]}"}
 
+      # A post that raised no flags publishes itself. The hard failures in the
+      # generator have already run at this point and write nothing when they
+      # trip, so anything reaching here is structurally sound; flags are the
+      # cases that want a human eye, and only those become a pull request.
+      - name: Publish
+        if: steps.generate.outputs.created == 'true' && steps.generate.outputs.flags == '0'
+        env:
+          TITLE: ${{ steps.generate.outputs.title }}
+        run: |
+          git config user.name  "scapeshq-blog[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add blog/ sitemap.xml netlify.toml .claude/blog-topics.md
+          git commit -m "Add blog post: $TITLE" \
+                     -m "Generated from the topic queue, no flags raised." \
+                     -m "Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>"
+
+          # Someone may have pushed while the model was writing.
+          git pull --rebase origin main
+          git push origin HEAD:main
+
       - name: Open the pull request
-        if: steps.generate.outputs.created == 'true'
+        if: steps.generate.outputs.created == 'true' && steps.generate.outputs.flags != '0'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SLUG: ${{ steps.generate.outputs.slug }}
           TITLE: ${{ steps.generate.outputs.title }}
-          FLAGS: ${{ steps.generate.outputs.flags }}
         run: |
           git config user.name  "scapeshq-blog[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -70,21 +90,17 @@ jobs:
           git checkout -b "$BRANCH"
           git add blog/ sitemap.xml netlify.toml .claude/blog-topics.md
           git commit -m "Add blog post: $TITLE" \
-                     -m "Generated from the topic queue. Review before merging." \
+                     -m "Generated from the topic queue. Flagged for review." \
                      -m "Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>"
           git push --force origin "$BRANCH"
 
-          LABEL="blog"
-          gh label create "$LABEL" --color 3ddbb4 --description "Generated blog posts" 2>/dev/null || true
-          if [ "$FLAGS" != "0" ]; then
-            gh label create "needs-review" --color d4a017 --description "Automated checks raised flags" 2>/dev/null || true
-            LABEL="$LABEL,needs-review"
-          fi
+          gh label create "blog" --color 3ddbb4 --description "Generated blog posts" 2>/dev/null || true
+          gh label create "needs-review" --color d4a017 --description "Automated checks raised flags" 2>/dev/null || true
 
           gh pr create \
             --title "Blog: $TITLE" \
             --body-file "${{ runner.temp }}/pr-body.md" \
-            --label "$LABEL" \
+            --label "blog,needs-review" \
             --base main \
             --head "$BRANCH"
 
@@ -100,7 +116,11 @@ jobs:
           BODY_FILE: ${{ runner.temp }}/pr-body.md
         run: |
           if [ "$CREATED" = "true" ]; then
-            printf '### Draft ready: %s\n\nFlags raised: %s\n\n' "$TITLE" "$FLAGS" >> "$GITHUB_STEP_SUMMARY"
+            if [ "$FLAGS" = "0" ]; then
+              printf '### Published: %s\n\nNo flags raised, so it went straight to main and is live.\n\n' "$TITLE" >> "$GITHUB_STEP_SUMMARY"
+            else
+              printf '### Waiting for review: %s\n\n%s flag(s) raised, so it is a pull request rather than a publish.\n\n' "$TITLE" "$FLAGS" >> "$GITHUB_STEP_SUMMARY"
+            fi
             cat "$BODY_FILE" >> "$GITHUB_STEP_SUMMARY"
           elif [ "$REASON" = "empty-queue" ]; then
             printf '### Nothing to publish\n\nThe topic queue in `.claude/blog-topics.md` has no unchecked entries.\n' >> "$GITHUB_STEP_SUMMARY"

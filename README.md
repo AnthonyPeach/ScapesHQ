@@ -126,9 +126,13 @@ visible `<time>`, and `datePublished` / `dateModified` in the JSON-LD — plus
 ### Automated posts
 
 New posts are written on a schedule by `.github/workflows/blog.yml`, Tuesdays
-and Fridays at 13:00 UTC. The workflow opens a pull request and stops —
-**nothing publishes without a human merging it**, and Netlify builds a deploy
-preview on the branch so the post can be read in place first.
+and Fridays at 13:00 UTC.
+
+**A post that raises no flags publishes itself** — committed straight to `main`,
+live as soon as Netlify builds. A post that raises any flag becomes a pull
+request labelled `needs-review` instead, with the flags in its body and a deploy
+preview to read it in place. Hard failures never reach either path; they stop
+the run and write nothing.
 
 `scripts/generate-post.mjs` does the work. It takes the first unchecked topic
 in `.claude/blog-topics.md`, asks the model for the post, then wires it into
