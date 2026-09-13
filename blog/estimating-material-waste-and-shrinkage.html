@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NSFZ2WC6');</script>
+<!-- End Google Tag Manager -->
+<!-- First-touch campaign capture (session-scoped; feeds the walkthrough form) -->
+<script>
+(function(){
+  try{
+    var ss=window.sessionStorage,p=new URLSearchParams(location.search),
+        k=['utm_source','utm_medium','utm_campaign','utm_content','utm_term'],i,v;
+    if(!ss.getItem('sq_landing')){
+      ss.setItem('sq_landing',location.pathname);
+      ss.setItem('sq_referrer',document.referrer||'direct');
+    }
+    for(i=0;i<k.length;i++){
+      v=p.get(k[i]);
+      if(v&&!ss.getItem('sq_'+k[i])) ss.setItem('sq_'+k[i],v);
+    }
+  }catch(e){}
+})();
+</script>
+<title>Estimating Material Waste: Swell, Shrinkage and Offcuts &mdash; ScapesHQ</title>
+<meta name="description" content="Spoil swell, stone consolidation, pipe offcuts, fabric overlap, worked on a 148-foot trench — where to put the overage so it reads as math, not padding.">
+<link rel="canonical" href="https://scapeshq.com/blog/estimating-material-waste-and-shrinkage">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Sora:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="/assets/styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Estimating Material Waste: Swell, Shrinkage and Offcuts",
+      "description": "Spoil swell, stone consolidation, pipe offcuts, fabric overlap, worked on a 148-foot trench — where to put the overage so it reads as math, not padding.",
+      "datePublished": "2026-09-13",
+      "dateModified": "2026-09-13",
+      "author": {
+        "@type": "Organization",
+        "name": "ScapesHQ"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "ScapesHQ"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://scapeshq.com/blog/estimating-material-waste-and-shrinkage"
+      },
+      "articleSection": "Pricing & estimating"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What swell factor should I use for clay?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most clay and clay loam expands somewhere between 25% and 40% from bank volume to loose volume, with the higher end when it's wet and coming out in chunks. Start at 30% and correct it after three jobs by comparing your take-off yardage to the trips you actually hauled. Your soil and your bucket will move that number more than any published table will."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many tons of #57 stone do I need per cubic yard of trench?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Washed #57 generally runs about 1.3 to 1.4 tons per cubic yard, but it depends on the rock — limestone, granite and river gravel differ — and wet stone weighs more per yard than dry. Get the conversion from the quarry you actually buy from, then check it once against a load you measured. Add consolidation and handling to your in-place volume before you convert, not after."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is it dishonest to add a waste factor to a homeowner's estimate?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, as long as it's visible. Write the quantity in place and the quantity ordered on the same line with a short reason for the gap, and it reads as competence. What looks dishonest is a round lump sum with an unexplained number inside it that you can't defend when a cheaper bid shows up."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How wide does filter fabric need to be for a French drain?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Add the trench bottom width plus both side heights, then add enough to fold both flaps across the top with a six-inch lap. A 12-inch-wide, 24-inch-deep trench comes to about 6.5 feet, which means a 3-foot or 6-foot roll won't wrap it properly. Buy fabric by width first and length second."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should waste factors come out of my contingency?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Keep them separate. Waste factors cover physics that happens on every job — swell, consolidation, offcuts, laps — while contingency covers risk that might not happen, like hitting rock or losing a week to rain. If you blend them, cutting contingency to win a bid quietly cuts your material order too."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NSFZ2WC6"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<header class="site-head">
+  <div class="wrap">
+    <nav class="nav" aria-label="Main">
+      <a class="brand" href="/">
+        <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true">
+          <rect x="0.75" y="0.75" width="24.5" height="24.5" rx="7" fill="none" stroke="#3ddbb4" stroke-width="1.4"></rect>
+          <path d="M6 16.5c3.9 0 3.9-3.6 7-3.6s3.4 3.3 7 3.3" stroke="#3ddbb4" stroke-width="1.7" fill="none" stroke-linecap="round"></path>
+          <path d="M6 11c3.9 0 3.9-3.6 7-3.6s3.4 3.3 7 3.3" stroke="#3ddbb4" stroke-width="1.7" fill="none" stroke-linecap="round" opacity=".45"></path>
+        </svg>
+        <span class="name">Scapes<em>HQ</em></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <div class="nav-links" id="nav-links">
+        <a href="/features">Features</a>
+        <a href="/how-it-works">How it works</a>
+        <a href="/who-its-for">Who it's for</a>
+        <a href="/integrations">Integrations</a>
+        <a href="/pricing">Pricing</a>
+        <a href="/blog" aria-current="page">Blog</a>
+        <a href="/about">About</a>
+        <a class="btn" href="/demo" data-cta="nav">Book a walkthrough</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<article class="post">
+  <section class="page-head">
+    <div class="wrap-narrow">
+      <span class="eyebrow lbl"><i></i>Pricing &amp; estimating</span>
+      <h1>Estimating Material Waste: Swell, Shrinkage and Offcuts</h1>
+      <p class="lede">Eleven cubic yards came out of the trench and fourteen went into the trailer, and nobody measured anything wrong.</p>
+      <p class="post-meta"><time datetime="2026-09-13">September 13, 2026</time> &middot; 11 min read</p>
+    </div>
+  </section>
+
+  <section class="tight">
+    <div class="wrap-narrow article">
+<p>A 148-foot trench, 12 inches wide and 24 inches deep, holds 296 cubic feet of soil. That's 11.0 cubic yards. Your take-off is correct.</p>
+<p>Then you break it loose and it turns into roughly 13.7 loose yards sitting in a pile on the tarp, which is one more trailer trip than you bid. The stone you ordered to fill the same hole settles four inches over the first week. The 148 feet of pipe you bought came in 10-foot sticks and 15 feet of it went home as offcuts.</p>
+<p>None of that is a measuring error. It's the difference between the volume of a hole and the quantity of material you have to buy, and it's the most common way a technically correct estimate comes up short.</p>
+<h2>Your take-off measures the hole, not the order</h2>
+<p>A take-off answers one question: how much space is there. Length times width times depth, in place, finished. That's the number you need to design the job and the number a homeowner can picture.</p>
+<p>It is not the number you order. Between the hole and the invoice, four things happen to material. Soil swells when you break it. Stone consolidates after you place it. Pipe gets cut, and the cut ends are usually too short to use. Fabric has to wrap a cross-section and lap itself, so you buy width you never see.</p>
+<p>Each of those is a unit conversion, not a guess. That distinction matters more than it sounds. A waste factor you can derive survives a conversation with a homeowner who's comparing bids. A round number you added because you were nervous doesn't, and it also hides from you — when the job comes in over, you can't tell whether the factor was wrong or the price was.</p>
+<p>The worked job below uses the same trench as <a href="/blog/how-to-price-a-french-drain-job">the 148-foot French drain priced line by line</a>, so you can see where the overage lands inside a real bid rather than in the abstract.</p>
+<h2>Spoil swells the moment you break it</h2>
+<p>Soil in the ground is at bank volume. The second a bucket lifts it, air gets in and it occupies more space. That expansion is the swell factor, and it's the one that costs you trips.</p>
+<p>Ranges vary with soil and moisture, but the ones you'll see across most yards:</p>
+<ul class="speclist">
+<li><span>Sandy loam and screened topsoil: roughly 15-25% swell</span></li>
+<li><span>Clay and clay loam: roughly 25-40%, higher when it's wet and chunky</span></li>
+<li><span>Weathered rock, shale, old fill with rubble: 40% and up, and it doesn't pile neatly</span></li>
+</ul>
+<p>Take the trench above at 11.0 bank yards in a clay loam, call it 25% swell: 11.0 × 1.25 = 13.7 loose yards. If your dump trailer heaps about 4 loose yards, you bid 11.0 ÷ 4 = 2.75, round to 3 trips. The job actually wants 13.7 ÷ 4 = 3.4, round to 4. You just ate a trip — fuel, drive time, and possibly a second dump fee.</p>
+<p>Weight stops you before volume on wet material. Loose wet clay runs somewhere around 2,000-2,400 lb per loose yard depending on how much water it's holding. On a trailer plated for 7,000 lb of payload, that's about three yards, not four, and the sides being empty doesn't change it. Check your own plate and your own axle rating rather than the number a guy at the supply yard quoted you.</p>
+<p>Swell also means you don't have a backfill problem, you have a haul-off problem. The stone occupies almost the whole trench, so nearly all of that spoil leaves. What you do buy back is restoration soil: a 1.5-foot-wide strip over 148 feet at a finished 3 inches is 148 × 1.5 × 0.25 = 55.5 cubic feet, or 2.06 yards in place. Delivered screened topsoil settles something like 20-25% once it's raked, walked and rained on, so 2.06 ÷ 0.78 = 2.6 loose yards. You order 3, and you tell the homeowner it will settle, because it will.</p>
+<h2>Stone is sold by weight, installed by volume, and keeps settling</h2>
+<p>The quarry sells tons. The trench holds cubic yards. Everything that goes wrong with a stone order lives in that conversion.</p>
+<p>Start with volume in place. The trench is 296 cubic feet. A 4-inch pipe has an outside diameter of about 4.5 inches, so its cross-section is about 0.11 square feet, and over 148 feet it displaces roughly 16 cubic feet. Net stone volume: 296 − 16 = 280 cubic feet, or 10.4 cubic yards.</p>
+<p>Now the two adjustments. Washed angular stone placed loose and then tamped or vibrated consolidates roughly 5-10%; call it 7%, so 10.4 ÷ 0.93 = 11.2 yards. Then handling loss — what stays stuck in the trailer, spills off the tarp, gets pushed into mud at the edges, or goes into the sump pocket you didn't draw. On a wheelbarrow-and-plank job across a lawn that runs higher than on a job where the machine reaches the trench. Add 5%: 11.2 × 1.05 = 11.8 yards. Order 12.</p>
+<p>Then convert. Washed #57 typically runs somewhere in the range of 1.3-1.4 tons per cubic yard, but that depends on the rock — limestone, granite and river gravel are not the same density — so ask your quarry for their number instead of using mine. At 1.35: 12 × 1.35 = 16.2 tons. You order 16 or 17.</p>
+<p>One thing that ages honestly: stone weighs more per yard when it's wet. After a rainy week, a ton buys you less volume than it did in August. If you're ordering by weight against a volume you need, and the pile has been sitting in the rain, the last twenty feet of trench is where you find out.</p>
+<h2>Pipe waste is a count of cuts, not a percentage</h2>
+<p>Adding 10% to pipe is the laziest factor on the sheet, and it's wrong in both directions. A single straight run of perforated pipe off a 100-foot coil has close to zero waste. A run broken into five segments by basins, in 10-foot rigid sticks, can waste 15% and there's nothing you can do about it.</p>
+<p>Count the segments instead. Say the 148 feet breaks up like this:</p>
+<ol class="speclist">
+<li><span>House corner to basin one — 42 ft — 5 sticks</span></li>
+<li><span>Basin one to basin two — 30 ft — 3 sticks</span></li>
+<li><span>Basin two to basin three — 28 ft — 3 sticks</span></li>
+<li><span>Basin three to the low corner — 26 ft — 3 sticks</span></li>
+<li><span>Low corner to daylight — 22 ft — 3 sticks</span></li>
+</ol>
+<p>Seventeen sticks is 170 feet of pipe for 148 feet installed. That's 22 feet of offcut, about 15%, and the offcuts are 2-4 feet each — long enough to feel wasteful, short enough that they mostly ride around in the trailer for a month.</p>
+<p>The point isn't to beat the waste down. It's that the number is knowable before you leave the yard. Segment lengths, rounded up to your stock length, summed. Do that and your material line is right whether the job is one long run or six short ones.</p>
+<p>Fittings deserve the same treatment. Count them off the sketch — every tee, every 45, every adapter where corrugated meets rigid — and add one spare of whatever you've driven back to the supply house for before. The spare is cheap. The trip is an hour of crew time.</p>
+<h2>Fabric waste runs across the trench, not along it</h2>
+<p>Filter fabric is the material contractors most often order by the wrong dimension. You need 148 linear feet of trench, so you buy a 150-foot roll, and then you discover the roll is 3 feet wide and your trench profile needs six and a half.</p>
+<p>Work the cross-section. For a 12-inch-wide, 24-inch-deep trench wrapped burrito style: 1 foot across the bottom, 2 feet up each side, then both flaps fold over the top with an overlap. Bottom plus sides is 1 + 2 + 2 = 5 feet. Folding both flaps across a 12-inch top with a 6-inch lap costs another 1.5 feet. You need about 6.5 feet of fabric width for every linear foot of trench.</p>
+<p>So a 12.5 × 360 roll gives you one 6.5-foot strip down its length — 360 feet of trench coverage — plus a 6-foot remnant that's only good for a shallower trench. A 6-foot-wide roll is six inches short of spec on this profile, which usually means somebody stops folding the flaps over and the stone gets an open seam along the top.</p>
+<p>End laps are the small one. Where roll ends meet, overlap 12-24 inches in the direction of flow so silt can't work into the joint. On a 148-foot job off one roll that's nothing. On a 900-foot commercial run with three rolls it's five or six feet, which still rounds to nothing — the width is what decides whether you have enough fabric, every time.</p>
+<h2>Put the factor on the line, not in the total</h2>
+<p>Here's where most of this gets thrown away. A contractor does the arithmetic, arrives at 16 tons of stone, and writes <code>Stone and fabric — $2,140</code>. The factor is now invisible, including to him, eleven months later when he's wondering why stone jobs feel tight.</p>
+<p>Write the line so the conversion survives:</p>
+<ul class="speclist">
+<li><span>Quantity in place, which is what the homeowner can picture — 10.4 cy of stone in 148 ft of trench</span></li>
+<li><span>Quantity ordered, which is what you actually pay for — 16 tons delivered</span></li>
+<li><span>A short reason for the gap — consolidation and handling, in six words, not a paragraph</span></li>
+</ul>
+<p>That's the difference between a factor and padding. Padding is a number nobody can question because nobody can see it. A factor is a number you can walk a skeptical homeowner through in thirty seconds, which is exactly the conversation you're in when a cheaper bid shows up. <a href="/blog/drainage-estimate-template">The line-item breakdown of a drainage estimate</a> covers where these sit relative to labour, mobilization and restoration.</p>
+<p>Keep the factors out of your contingency, too. Contingency covers risk — rock you didn't find, a rain week, an irrigation line through the trench. Waste factors cover physics that happens on every single job. Blend them and you'll cut the contingency to win a bid and quietly cut your stone order at the same time. If you build your jobs from <a href="/blog/reusable-estimate-templates">reusable estimate templates</a>, the factor lives in the template as a standing line and the quantity is the only thing you touch per job. That's how ScapesHQ templates are set up — the note and the structure persist, the numbers don't.</p>
+<h2>Check your factors against three real delivery tickets</h2>
+<p>Every range in this post is a starting point, and starting points are worth about a week. Your soil, your quarry, your crew and your access decide the real numbers.</p>
+<p>On your next three jobs, write your take-off quantity on a page, then staple the delivery tickets and the dump receipts to it. Compare. Three jobs is enough to tell you whether your clay swells 25% or 35%, and whether your crew's handling loss is 3% or 9%.</p>
+<div class="tablewrap"><table><thead><tr><th>Material</th><th>Bought as</th><th>What changes</th><th>Range you'll see</th><th>How to check yours</th></tr></thead><tbody><tr><td>Excavated spoil</td><td>Trips or loose yards</td><td>Swells when broken</td><td>15-25% sandy, 25-40% clay, more in rock</td><td>Count actual trips against bank yards on three jobs</td></tr><tr><td>Stone in trench</td><td>Tons</td><td>Consolidates, plus handling loss</td><td>5-10% consolidation, 3-8% handling</td><td>Weigh-ticket tons vs. trench volume you measured</td></tr><tr><td>Ton-to-yard conversion</td><td>Quarry price per ton</td><td>Rock type and moisture</td><td>Around 1.3-1.4 t/cy for washed #57</td><td>Ask the quarry, then verify on a full trailer</td></tr><tr><td>Pipe</td><td>Sticks or coils</td><td>Offcuts at every cut</td><td>Near zero on coil, 5-15% on sticks</td><td>Add up the offcuts in your trailer at day's end</td></tr><tr><td>Filter fabric</td><td>Rolls, width × length</td><td>Cross-section and laps</td><td>Width-driven; 6.5 ft per ft on a 12×24 trench</td><td>Run a tape across a finished wrapped profile</td></tr><tr><td>Topsoil</td><td>Loose yards delivered</td><td>Settles after placement</td><td>20-25%</td><td>Measure finished depth two weeks later</td></tr></tbody></table></div>
+<p>Worth saying plainly: ScapesHQ does not close this loop for you. There's no job costing, no actuals against budget and no time tracking in it — estimates and proposals are where it stops. Comparing what you estimated to what the tickets say is still a spreadsheet and a folder, and <a href="/blog/job-costing-for-contractors">tracking four numbers by hand on your next three jobs</a> is the cheapest version of it that works. If a vendor tells you their estimating tool handles your actuals, ask them to show you the screen.</p>
+<p>Once you've got your own factors from your own tickets, they stop being overhead and start being an advantage. You're ordering right the first time, your trailer isn't making a surprise fourth trip, and when someone asks why your stone number is higher than the other bid, you have an answer that's arithmetic instead of attitude.</p>
+<h2>FAQ</h2>
+<h3>What swell factor should I use for clay?</h3>
+<p>Most clay and clay loam expands somewhere between 25% and 40% from bank volume to loose volume, with the higher end when it's wet and coming out in chunks. Start at 30% and correct it after three jobs by comparing your take-off yardage to the trips you actually hauled. Your soil and your bucket will move that number more than any published table will.</p>
+<h3>How many tons of #57 stone do I need per cubic yard of trench?</h3>
+<p>Washed #57 generally runs about 1.3 to 1.4 tons per cubic yard, but it depends on the rock — limestone, granite and river gravel differ — and wet stone weighs more per yard than dry. Get the conversion from the quarry you actually buy from, then check it once against a load you measured. Add consolidation and handling to your in-place volume before you convert, not after.</p>
+<h3>Is it dishonest to add a waste factor to a homeowner's estimate?</h3>
+<p>No, as long as it's visible. Write the quantity in place and the quantity ordered on the same line with a short reason for the gap, and it reads as competence. What looks dishonest is a round lump sum with an unexplained number inside it that you can't defend when a cheaper bid shows up.</p>
+<h3>How wide does filter fabric need to be for a French drain?</h3>
+<p>Add the trench bottom width plus both side heights, then add enough to fold both flaps across the top with a six-inch lap. A 12-inch-wide, 24-inch-deep trench comes to about 6.5 feet, which means a 3-foot or 6-foot roll won't wrap it properly. Buy fabric by width first and length second.</p>
+<h3>Should waste factors come out of my contingency?</h3>
+<p>Keep them separate. Waste factors cover physics that happens on every job — swell, consolidation, offcuts, laps — while contingency covers risk that might not happen, like hitting rock or losing a week to rain. If you blend them, cutting contingency to win a bid quietly cuts your material order too.</p>
+<h2>The short version</h2>
+<p>Your take-off measures the hole; your order has to account for soil swelling 15-40% when you break it, stone consolidating 5-10% after placement, pipe offcuts at every cut, and fabric width that has to wrap a whole cross-section plus laps. Work each one as arithmetic from your own trench dimensions rather than slapping a round percentage on the total. Then write both numbers on the estimate line — quantity in place and quantity ordered — so the gap is visible instead of hidden, and check your factors against the delivery tickets from your next three jobs.</p>
+<p><a href="/demo">Book a walkthrough</a> and we'll look at how your own take-off numbers carry through to the estimate lines a homeowner actually reads.</p>
+    </div>
+  </section>
+</article>
+
+<section class="tight">
+  <div class="wrap-narrow">
+    <div class="panel post-cta">
+      <h3>See this run on a real job</h3>
+      <p>ScapesHQ takes a lead from a Facebook form to a signed proposal without retyping it once. Bring a job you're quoting this week.</p>
+      <a class="btn btn-lg mt-m" href="/demo" data-cta="blog_post_end">Book a walkthrough</a>
+    </div>
+  </div>
+</section>
+
+<section class="tight">
+  <div class="wrap-narrow">
+    <h2>Keep reading</h2>
+    <div class="grid-2 mt-m">
+      <a class="panel post-card" href="/blog/how-to-price-a-french-drain-job">
+        <span class="lbl teal">Pricing &amp; estimating</span>
+        <h3>How to Price a French Drain Job: A Contractor's Breakdown</h3>
+        <p>Every cost bucket in a French drain bid, a real 148-foot job priced line by line, and the math that keeps a $13,130 job profitable. Written for contractors.</p>
+        <span class="post-more">Read it &rarr;</span>
+      </a>
+      <a class="panel post-card" href="/blog/job-costing-for-contractors">
+        <span class="lbl teal">Running the operation</span>
+        <h3>Job Costing Without Enterprise Software</h3>
+        <p>Track four numbers by hand on your next three jobs, compare estimated to actual, and find out where your bids are wrong. A worked example you can copy.</p>
+        <span class="post-more">Read it &rarr;</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="/">
+          <svg width="24" height="24" viewBox="0 0 26 26" aria-hidden="true">
+            <rect x="0.75" y="0.75" width="24.5" height="24.5" rx="7" fill="none" stroke="#3ddbb4" stroke-width="1.4"></rect>
+            <path d="M6 16.5c3.9 0 3.9-3.6 7-3.6s3.4 3.3 7 3.3" stroke="#3ddbb4" stroke-width="1.7" fill="none" stroke-linecap="round"></path>
+          </svg>
+          <span class="name">Scapes<em>HQ</em></span>
+        </a>
+        <p>Operations and CRM for landscape, hardscape and drainage contractors. Built in the field, not in a boardroom.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Product</h4>
+        <ul>
+          <li><a href="/features">Features</a></li>
+          <li><a href="/how-it-works">How it works</a></li>
+          <li><a href="/integrations">Integrations</a></li>
+          <li><a href="/pricing">Pricing</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/about">About</a></li>
+          <li><a href="/who-its-for">Who it's for</a></li>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/demo" data-cta="footer">Book a walkthrough</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Trades</h4>
+        <ul>
+          <li><a href="/who-its-for">Drainage</a></li>
+          <li><a href="/who-its-for">Hardscape</a></li>
+          <li><a href="/who-its-for">Landscape</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bar">
+      <span>&copy; 2026 ScapesHQ. All rights reserved.</span>
+      <span>Live in production with a connected business.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/nav.js"></script>
+</body>
+</html>

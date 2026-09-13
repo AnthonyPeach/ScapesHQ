@@ -242,3 +242,51 @@
   to = "/blog/crm-vs-spreadsheet-for-contractors"
   status = 301
   force = true
+
+[[redirects]]
+  from = "/blog/french-drain-vs-channel-drain.html"
+  to = "/blog/french-drain-vs-channel-drain"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/why-french-drains-fail.html"
+  to = "/blog/why-french-drains-fail"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/downspout-drainage-done-right.html"
+  to = "/blog/downspout-drainage-done-right"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/reading-a-yard-in-the-rain.html"
+  to = "/blog/reading-a-yard-in-the-rain"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/estimating-material-waste-and-shrinkage.html"
+  to = "/blog/estimating-material-waste-and-shrinkage"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/change-orders-without-losing-the-customer.html"
+  to = "/blog/change-orders-without-losing-the-customer"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/seasonal-pricing-for-drainage-work.html"
+  to = "/blog/seasonal-pricing-for-drainage-work"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/what-a-drainage-lead-is-worth.html"
+  to = "/blog/what-a-drainage-lead-is-worth"
+  status = 301
+  force = true
