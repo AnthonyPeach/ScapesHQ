@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NSFZ2WC6');</script>
+<!-- End Google Tag Manager -->
+<!-- First-touch campaign capture (session-scoped; feeds the walkthrough form) -->
+<script>
+(function(){
+  try{
+    var ss=window.sessionStorage,p=new URLSearchParams(location.search),
+        k=['utm_source','utm_medium','utm_campaign','utm_content','utm_term'],i,v;
+    if(!ss.getItem('sq_landing')){
+      ss.setItem('sq_landing',location.pathname);
+      ss.setItem('sq_referrer',document.referrer||'direct');
+    }
+    for(i=0;i<k.length;i++){
+      v=p.get(k[i]);
+      if(v&&!ss.getItem('sq_'+k[i])) ss.setItem('sq_'+k[i],v);
+    }
+  }catch(e){}
+})();
+</script>
+<title>Subcontractor vs Employee Crew: The Real Cost Math &mdash; ScapesHQ</title>
+<meta name="description" content="Work out your true cost per billable hour, compare it against a sub's day rate on a real dig, and see which parts of a drainage job you should never hand off.">
+<link rel="canonical" href="https://scapeshq.com/blog/subcontractor-vs-employee-crew">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Sora:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="/assets/styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Subcontractor vs Employee Crew: The Real Cost Math",
+      "description": "Work out your true cost per billable hour, compare it against a sub's day rate on a real dig, and see which parts of a drainage job you should never hand off.",
+      "datePublished": "2026-09-13",
+      "dateModified": "2026-09-13",
+      "author": {
+        "@type": "Organization",
+        "name": "ScapesHQ"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "ScapesHQ"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://scapeshq.com/blog/subcontractor-vs-employee-crew"
+      },
+      "articleSection": "Running the operation"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How many machine days a year justify buying a mini excavator?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Divide your annual fixed cost of ownership — payment, insurance, maintenance reserve and the share of truck and trailer — by the amount you save each day compared to a sub. In the worked example, $17,400 a year divided by $794 saved per day came out to about 22 machine days. Run it with your own payment and your own local sub rate, because both move a lot by market."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I mark up subcontractor work on a proposal?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Sub work carries your coordination time, your liability and your warranty, so it should not pass through at cost. Contractors who handle it well typically add somewhere between 10% and 25%, with the higher end where you're supervising heavily or warranting the sub's portion for years."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is my subcontractor actually an employee in the eyes of the law?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It depends on your state or country and the rules change, so ask your accountant rather than a blog. The factors that usually matter are who controls the schedule, who supplies the machine and tools, whether the person works for others, whether they carry their own insurance and file their own returns, and whether there's a written agreement per job. A person who works only for you, on your schedule, with your equipment is very likely an employee regardless of how you pay them."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What should I never subcontract on a drainage job?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The buried assembly — fabric, stone, pipe, fall, cleanouts and the outfall. That's what your warranty covers and what fails in year two, and you can't inspect it once the trench is closed. Excavation, hauling and restoration are all reasonable to sub if you write the scope down and verify the work before cover."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I protect myself when a sub's work fails a year later?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Photograph everything before backfill, write a per-job scope that names depth, fall, stone and fabric specs rather than agreeing on the phone, and hold back 10-15% on restoration until you've walked it. Also get a current certificate of insurance from every sub on every job. Without those, a failure eighteen months out is entirely your cost."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NSFZ2WC6"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<header class="site-head">
+  <div class="wrap">
+    <nav class="nav" aria-label="Main">
+      <a class="brand" href="/">
+        <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true">
+          <rect x="0.75" y="0.75" width="24.5" height="24.5" rx="7" fill="none" stroke="#3ddbb4" stroke-width="1.4"></rect>
+          <path d="M6 16.5c3.9 0 3.9-3.6 7-3.6s3.4 3.3 7 3.3" stroke="#3ddbb4" stroke-width="1.7" fill="none" stroke-linecap="round"></path>
+          <path d="M6 11c3.9 0 3.9-3.6 7-3.6s3.4 3.3 7 3.3" stroke="#3ddbb4" stroke-width="1.7" fill="none" stroke-linecap="round" opacity=".45"></path>
+        </svg>
+        <span class="name">Scapes<em>HQ</em></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <div class="nav-links" id="nav-links">
+        <a href="/features">Features</a>
+        <a href="/how-it-works">How it works</a>
+        <a href="/who-its-for">Who it's for</a>
+        <a href="/integrations">Integrations</a>
+        <a href="/pricing">Pricing</a>
+        <a href="/blog" aria-current="page">Blog</a>
+        <a href="/about">About</a>
+        <a class="btn" href="/demo" data-cta="nav">Book a walkthrough</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<article class="post">
+  <section class="page-head">
+    <div class="wrap-narrow">
+      <span class="eyebrow lbl"><i></i>Running the operation</span>
+      <h1>Subcontractor vs Employee Crew: The Real Cost Math</h1>
+      <p class="lede">A sub invoiced you $2,400 for two days of trenching. Here's how to find out what those same two days would have cost with your own guy on the sticks.</p>
+      <p class="post-meta"><time datetime="2026-09-13">September 13, 2026</time> &middot; 11 min read</p>
+    </div>
+  </section>
+
+  <section class="tight">
+    <div class="wrap-narrow article">
+<p>A sub dug 180 feet of trench for you last Tuesday and Wednesday. The invoice came in at $2,400. Lining him up took about forty minutes of phone calls, you spent an hour on site Tuesday morning walking the layout, and you drove back Wednesday afternoon because the spoil pile was sitting exactly where the stone had to go.</p>
+
+<p>Was that cheaper than doing it with your own people? Most contractors answer from memory, and memory is consistently wrong about labor. It takes about ten minutes of arithmetic to answer properly, and once you've done it for excavation you can redo it for hauling, for sod, for anything you're thinking about handing off.</p>
+
+<h2>Your cost per billable hour is the only number that makes the comparison honest</h2>
+
+<p>The mistake is comparing a sub's day rate to your guy's hourly wage. Wage is maybe two thirds of what an employee costs you, and the hours you pay him for are not the hours he's standing in a trench.</p>
+
+<p>Start with base wage and add the burden. Here's the stack on a $22/hour laborer, and every one of these is a number you can pull off your own paperwork:</p>
+
+<ul class="speclist">
+<li><span><strong>Payroll taxes.</strong> Employer FICA plus federal and state unemployment. Runs roughly 8-12% depending on your state and your claims history. Call it 9% — $1.98.</span></li>
+<li><span><strong>Workers comp.</strong> Quoted per $100 of payroll, and the class code matters enormously. Excavation and landscape construction codes run anywhere from about $5 to $25 per $100 depending on state and carrier. At $9 per $100 that's another 9% — $1.98.</span></li>
+<li><span><strong>General liability, uniforms, small tools, phone.</strong> Take the annual total, divide by field hours. Call it $1.00 an hour.</span></li>
+</ul>
+
+<p>That puts you at $26.96 for every hour you pay him. Now the second half, which is the part people skip.</p>
+
+<p>A full-time employee is 2,080 paid hours a year. He is not on a job site for 2,080 hours. Knock off 80 for holidays and PTO, 80 for weather days you still paid for or partially paid for, 400 for shop time, loading, unloading, dump runs and driving between sites, and 60 for meetings, training and sitting while a machine gets fixed. That leaves 1,460 hours where he is actually producing work you billed for.</p>
+
+<p>So: 2,080 &times; $26.96 = $56,077 a year. Divided by 1,460 billable hours, that's <strong>$38.41 per billable hour</strong>.</p>
+
+<p>Your number will not be $38.41. Change the wage, change the comp rate, change the utilization split — the four inputs are yours. But it will almost certainly land somewhere in the high thirties to mid forties for a field laborer in most markets, and it will be far above the wage you think you're paying.</p>
+
+<h2>Three ways to get the dig done, priced against each other</h2>
+
+<p>Take the same two-day dig. Mini excavator, one operator, 180 feet of trench in ordinary soil. Three ways to make it happen.</p>
+
+<p>For ownership I'm assuming a machine with a $780 monthly payment, $90 of machine insurance, $250 a month set aside for wear parts, filters and the repair that's coming, and $330 for the share of the trailer and truck that exists mostly to move it. That's $1,450 a month fixed, $17,400 a year, whether it digs or sits.</p>
+
+<div class="tablewrap"><table><thead><tr><th>Approach</th><th>Cost per machine day</th><th>Fixed cost regardless of volume</th><th>What breaks it</th></tr></thead><tbody><tr><td>Sub with his own machine and operator</td><td>$1,200 invoiced</td><td>None</td><td>You're on his calendar, not yours</td></tr><tr><td>Rent the machine, run it yourself</td><td>$425 rental + $100 delivery amortized + $30 fuel + $346 operator (9 paid hours &times; $38.41) = <strong>$901</strong></td><td>None</td><td>Your operator isn't on another job that day</td></tr><tr><td>Own the machine, run it yourself</td><td>$181 fixed cost allocated (at 8 machine days a month) + $60 fuel and wear + $346 operator = <strong>$587</strong></td><td>$17,400 a year</td><td>Slow months where it sits on the trailer</td></tr></tbody></table></div>
+
+<p>Two things fall out of that table immediately.</p>
+
+<p>First, renting beats subbing on pure dollars from the very first day — about $300 a day cheaper here — as long as you have somebody who can run a machine competently and can spare him. The sub premium is real and it's substantial. You're paying it for scheduling flexibility, for not owning anything, and for the fact that when the machine throws a hose it's his problem.</p>
+
+<p>Second, owning only wins if you feed it. The variable cost of running your own machine is $346 in operator time plus $60 in fuel and wear, so $406 a day. Against a $1,200 sub day, you're saving $794 every time you run it. Divide the $17,400 of fixed cost by $794 and you get <strong>about 22 machine days a year</strong> to break even.</p>
+
+<p>Twenty-two days is not a lot. If you're doing eleven two-day digs a year, buying starts making sense. If you're doing six, it doesn't, and every month between digs is $1,450 leaving the account for a machine sitting in the yard.</p>
+
+<p>One honest adjustment: this assumes your operator would otherwise be idle. If he'd be billable on another crew that day, his $346 isn't a savings, it's an opportunity cost, and the break-even day count goes up. Run it both ways.</p>
+
+<h2>A sub's invoice is not the whole price of a sub</h2>
+
+<p>The $2,400 is the visible number. It isn't the whole number.</p>
+
+<p>Go back through that job and count your own hours. Forty minutes to find and book him. An hour on site Tuesday to walk layout and mark the line. The Wednesday trip back over the spoil pile. Thirty minutes chasing the invoice and getting it into your books. That's roughly three and a half hours of owner time.</p>
+
+<p>Your hour is worth more than $38.41 — it's worth whatever the next estimate you didn't write is worth. Even valuing it conservatively at $75, that's $260 of unbilled coordination sitting on top of the $2,400. On a good sub who shows up right, it's an hour. On a bad one, it's a day and a half.</p>
+
+<p>Then there's markup. Sub work carries your risk, your warranty and your name, so it should not pass through at cost. Most contractors who handle this well mark sub work up somewhere between 10% and 25%, and the number moves with how much of the risk you're carrying and how much supervision the sub needs. If you're standing there all day, you're not brokering, you're managing, and that gets priced.</p>
+
+<h2>Sub the machine before you sub the finish</h2>
+
+<p>The cost math tells you what a day costs. It doesn't tell you which parts of a drainage job are safe to hand off. That's a different question and the answer isn't about money at all.</p>
+
+<p>Rough order, easiest to hardest:</p>
+
+<ol class="speclist">
+<li><span><strong>Hauling and disposal.</strong> Sub it freely. It's priced by the load or the yard, it's verified by a dump ticket, and there's no craft in it that a homeowner will ever see. Owning a dump trailer for occasional spoil is usually a worse deal than paying per load.</span></li>
+<li><span><strong>Excavation with an operator.</strong> Safe to sub if you're on site with a grade rod while the trench is open. Not safe to sub if you hand over a sketch and drive away. Trench bottom fall is the single thing most likely to be wrong and the single thing you cannot inspect after backfill.</span></li>
+<li><span><strong>Restoration — sod, seed, irrigation repair, concrete and asphalt patch, fence.</strong> Sub with named specs and a holdback, because restoration is the only part of the job the homeowner ever really judges. Nobody calls to compliment your stone. They call about the sod seam and the patch that doesn't match.</span></li>
+<li><span><strong>The buried assembly itself — fabric, stone, pipe, fall, cleanouts, outfall.</strong> Don't sub it. That's the thing you warranted. That's the thing that fails in year two. If your name is on the warranty, your people should be the ones laying it.</span></li>
+</ol>
+
+<p>The general rule underneath that list: sub the parts you can verify with a tape, a level or a ticket on the same day. Keep the parts whose quality only reveals itself after the hole is closed.</p>
+
+<h2>The quality problems show up two jobs later</h2>
+
+<p>A sub does not fail visibly. He fails quietly, and you find out in February.</p>
+
+<p>Trench bottom with a flat spot in the middle. Fabric lapped two inches instead of twelve. Stone that was cheaper at the yard that day and has more fines in it than what you specified. Cleanout riser set below finish grade because nobody told him where finish grade was going to be. Every one of the <a href="/blog/why-french-drains-fail">five ways a French drain fails</a> is something a rushed sub can hand you without either of you noticing on the day.</p>
+
+<p>Here's the asymmetry that costs money. You gave the homeowner a written warranty — two years, five years, whatever <a href="/blog/what-to-put-in-a-drainage-warranty">your warranty actually says</a>. Your sub gave you an invoice. Unless you wrote something different, his obligation to you ended when the check cleared. When you dig up 40 feet of silted fabric in eighteen months, that's entirely your cost.</p>
+
+<p>Three things fix most of that, and none of them are expensive:</p>
+
+<ul class="speclist">
+<li><span><strong>Photos before cover, every time.</strong> Trench bottom with a level in it, fabric lap, stone before and after pipe, riser at grade. Ten photos. If the sub knows you photograph before backfill, the work changes.</span></li>
+<li><span><strong>A written scope per job, not a phone call.</strong> Depth, fall, stone spec by name, fabric spec by name, where spoil goes, what restoration is his and what's yours. The arguments all happen in the gaps you didn't write down.</span></li>
+<li><span><strong>A holdback on restoration work.</strong> Ten or fifteen percent released after you've walked it. On sod, release it after it's taken.</span></li>
+</ul>
+
+<h2>The control you give up, stated plainly</h2>
+
+<p>Cost is the argument people have. Control is the thing that actually decides it.</p>
+
+<p>A sub has his own calendar and you are one line on it. The week you need to move a dig two days because the ground is saturated, he may not be able to move with you, and <a href="/blog/scheduling-drainage-work-around-weather">shuffling work around weather</a> is most of what running drainage jobs is. In May and October, when everybody wants him, you're bidding for his Tuesday against three other contractors.</p>
+
+<p>You also give up sequencing. An in-house crew digs, lays and backfills in one continuous motion. A subbed dig means an open trench overnight, a return trip, and a homeowner watching a hole in the yard with nobody in it.</p>
+
+<p>And you give up accumulation. A laborer who digs sixty trenches for you learns your bedding depth, your cleanout spacing, how you like the spoil staged. A sub who digs six a year learns nothing about you at all, and you re-explain it every time. That re-explaining is real cost and it never shows up on an invoice.</p>
+
+<p>The last thing, and it's the one that can hurt: classification. Rules vary by state and country and they do change, so this is a question for your accountant, not a blog. But the factors are broadly consistent — who controls the schedule, who supplies the machine and tools, is the person free to work for others, does he carry his own insurance and file his own returns, is there a written agreement for each job. A guy who works only for you, on your schedule, in your shirt, running your excavator is an employee in most authorities' eyes no matter what the invoice header says. Get a certificate of insurance from every sub, on every job, and check the dates.</p>
+
+<h2>Test it on three jobs instead of arguing about it</h2>
+
+<p>All of this stays theoretical until you measure one real job against another. Pick your next three jobs of similar size. Sub the excavation on one. Rent and self-perform on the second. If you own a machine, run it on the third.</p>
+
+<p>On each, write down four numbers on the truck seat before you leave the site: crew hours on site, machine or sub cost, material cost, and your own hours on coordination. That's the whole method from <a href="/blog/job-costing-for-contractors">job costing without enterprise software</a>, applied to one decision instead of the whole business.</p>
+
+<p>Compare the total delivered cost against what you bid. After three jobs you'll know which model your market and your crew actually support, and you'll know it from your own numbers instead of somebody else's benchmark.</p>
+
+<p>ScapesHQ does not do this part, and it would be dishonest to suggest otherwise. Time tracking, job actuals and costing against budget aren't built. What the estimate and the signed proposal give you is the budget side of the comparison — an exact record of what you said the job would cost, sitting next to what it did. The actuals go in a notebook or a spreadsheet, and that's fine for three jobs.</p>
+
+<p>The decision isn't permanent either way. Plenty of good operations sub all the machine work and self-perform everything that gets buried, forever, on purpose. That's not a compromise. It's a model, and for a two-crew company doing twenty digs a year it's frequently the right one.</p>
+<h2>FAQ</h2>
+<h3>How many machine days a year justify buying a mini excavator?</h3>
+<p>Divide your annual fixed cost of ownership — payment, insurance, maintenance reserve and the share of truck and trailer — by the amount you save each day compared to a sub. In the worked example, $17,400 a year divided by $794 saved per day came out to about 22 machine days. Run it with your own payment and your own local sub rate, because both move a lot by market.</p>
+<h3>Should I mark up subcontractor work on a proposal?</h3>
+<p>Yes. Sub work carries your coordination time, your liability and your warranty, so it should not pass through at cost. Contractors who handle it well typically add somewhere between 10% and 25%, with the higher end where you're supervising heavily or warranting the sub's portion for years.</p>
+<h3>Is my subcontractor actually an employee in the eyes of the law?</h3>
+<p>It depends on your state or country and the rules change, so ask your accountant rather than a blog. The factors that usually matter are who controls the schedule, who supplies the machine and tools, whether the person works for others, whether they carry their own insurance and file their own returns, and whether there's a written agreement per job. A person who works only for you, on your schedule, with your equipment is very likely an employee regardless of how you pay them.</p>
+<h3>What should I never subcontract on a drainage job?</h3>
+<p>The buried assembly — fabric, stone, pipe, fall, cleanouts and the outfall. That's what your warranty covers and what fails in year two, and you can't inspect it once the trench is closed. Excavation, hauling and restoration are all reasonable to sub if you write the scope down and verify the work before cover.</p>
+<h3>How do I protect myself when a sub's work fails a year later?</h3>
+<p>Photograph everything before backfill, write a per-job scope that names depth, fall, stone and fabric specs rather than agreeing on the phone, and hold back 10-15% on restoration until you've walked it. Also get a current certificate of insurance from every sub on every job. Without those, a failure eighteen months out is entirely your cost.</p>
+<h2>The short version</h2>
+<p>Build your true cost per billable hour first — wage plus payroll taxes, workers comp and insurance, divided by the hours your people are actually on a job site, not the hours you pay for. Then compare that against a sub's day rate on a real dig, and divide your annual fixed cost of owning a machine by the daily savings to find your break-even day count. Sub the hauling freely, sub excavation only if you're on site while the trench is open, and keep the buried assembly in-house because that's the part your warranty is written against.</p>
+<p><a href="/demo">Book a walkthrough</a> and we'll put your last three jobs side by side while you work out which parts of the next one you'd hand off.</p>
+    </div>
+  </section>
+</article>
+
+<section class="tight">
+  <div class="wrap-narrow">
+    <div class="panel post-cta">
+      <h3>See this run on a real job</h3>
+      <p>ScapesHQ takes a lead from a Facebook form to a signed proposal without retyping it once. Bring a job you're quoting this week.</p>
+      <a class="btn btn-lg mt-m" href="/demo" data-cta="blog_post_end">Book a walkthrough</a>
+    </div>
+  </div>
+</section>
+
+<section class="tight">
+  <div class="wrap-narrow">
+    <h2>Keep reading</h2>
+    <div class="grid-2 mt-m">
+      <a class="panel post-card" href="/blog/job-costing-for-contractors">
+        <span class="lbl teal">Running the operation</span>
+        <h3>Job Costing Without Enterprise Software</h3>
+        <p>Track four numbers by hand on your next three jobs, compare estimated to actual, and find out where your bids are wrong. A worked example you can copy.</p>
+        <span class="post-more">Read it &rarr;</span>
+      </a>
+      <a class="panel post-card" href="/blog/hiring-your-first-office-person">
+        <span class="lbl teal">Running the operation</span>
+        <h3>Hiring Your First Office Person: What to Hand Over First</h3>
+        <p>How to tally the admin load, run the wage math, decide what to hand over and what stays with you, and survive the first month before the hire pays for itself.</p>
+        <span class="post-more">Read it &rarr;</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="/">
+          <svg width="24" height="24" viewBox="0 0 26 26" aria-hidden="true">
+            <rect x="0.75" y="0.75" width="24.5" height="24.5" rx="7" fill="none" stroke="#3ddbb4" stroke-width="1.4"></rect>
+            <path d="M6 16.5c3.9 0 3.9-3.6 7-3.6s3.4 3.3 7 3.3" stroke="#3ddbb4" stroke-width="1.7" fill="none" stroke-linecap="round"></path>
+          </svg>
+          <span class="name">Scapes<em>HQ</em></span>
+        </a>
+        <p>Operations and CRM for landscape, hardscape and drainage contractors. Built in the field, not in a boardroom.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Product</h4>
+        <ul>
+          <li><a href="/features">Features</a></li>
+          <li><a href="/how-it-works">How it works</a></li>
+          <li><a href="/integrations">Integrations</a></li>
+          <li><a href="/pricing">Pricing</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/about">About</a></li>
+          <li><a href="/who-its-for">Who it's for</a></li>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/demo" data-cta="footer">Book a walkthrough</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Trades</h4>
+        <ul>
+          <li><a href="/who-its-for">Drainage</a></li>
+          <li><a href="/who-its-for">Hardscape</a></li>
+          <li><a href="/who-its-for">Landscape</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bar">
+      <span>&copy; 2026 ScapesHQ. All rights reserved.</span>
+      <span>Live in production with a connected business.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/nav.js"></script>
+</body>
+</html>

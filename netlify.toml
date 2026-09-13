@@ -314,3 +314,15 @@
   to = "/blog/scheduling-drainage-work-around-weather"
   status = 301
   force = true
+
+[[redirects]]
+  from = "/blog/subcontractor-vs-employee-crew.html"
+  to = "/blog/subcontractor-vs-employee-crew"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/jobber-vs-scapeshq-for-drainage.html"
+  to = "/blog/jobber-vs-scapeshq-for-drainage"
+  status = 301
+  force = true
