@@ -230,3 +230,15 @@
   to = "/blog/hiring-your-first-office-person"
   status = 301
   force = true
+
+[[redirects]]
+  from = "/blog/job-costing-for-contractors.html"
+  to = "/blog/job-costing-for-contractors"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/crm-vs-spreadsheet-for-contractors.html"
+  to = "/blog/crm-vs-spreadsheet-for-contractors"
+  status = 301
+  force = true
