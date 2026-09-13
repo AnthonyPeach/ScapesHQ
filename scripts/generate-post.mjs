@@ -274,7 +274,10 @@ async function callClaude(prompt) {
     },
     body: JSON.stringify({
       model: MODEL,
-      max_tokens: 8000,
+      // A post is roughly 1500 words of prose plus HTML markup, FAQs and JSON
+      // escaping. 8000 was not enough and truncated mid-object; the headroom
+      // costs nothing, since output is billed on what is actually produced.
+      max_tokens: 16000,
       messages: [{ role: 'user', content: prompt }],
     }),
   });
@@ -283,7 +286,17 @@ async function callClaude(prompt) {
 
   const data = await res.json();
   const text = (data.content || []).filter((b) => b.type === 'text').map((b) => b.text).join('');
+  const u = data.usage || {};
+  log(`  tokens  ${u.input_tokens ?? '?'} in, ${u.output_tokens ?? '?'} out  (stop: ${data.stop_reason})`);
+
   if (!text.trim()) die('the model returned no text');
+
+  // Worth naming explicitly: a truncated response usually has no closing brace
+  // at all, so the JSON check below would otherwise report it as "no JSON".
+  if (data.stop_reason === 'max_tokens') {
+    die(`the model hit the ${16000} token ceiling and its JSON was cut off mid-object.\n`
+      + `         Raise max_tokens in scripts/generate-post.mjs, or tighten the length target in HOUSE_STYLE.`);
+  }
 
   const start = text.indexOf('{');
   const end = text.lastIndexOf('}');
