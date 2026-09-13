@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NSFZ2WC6');</script>
+<!-- End Google Tag Manager -->
+<!-- First-touch campaign capture (session-scoped; feeds the walkthrough form) -->
+<script>
+(function(){
+  try{
+    var ss=window.sessionStorage,p=new URLSearchParams(location.search),
+        k=['utm_source','utm_medium','utm_campaign','utm_content','utm_term'],i,v;
+    if(!ss.getItem('sq_landing')){
+      ss.setItem('sq_landing',location.pathname);
+      ss.setItem('sq_referrer',document.referrer||'direct');
+    }
+    for(i=0;i<k.length;i++){
+      v=p.get(k[i]);
+      if(v&&!ss.getItem('sq_'+k[i])) ss.setItem('sq_'+k[i],v);
+    }
+  }catch(e){}
+})();
+</script>
+<title>CRM vs Spreadsheet: The Four Points It Breaks &mdash; ScapesHQ</title>
+<meta name="description" content="Four specific thresholds — headcount, lead volume, customer structure and proof — that decide when a contractor's spreadsheet stops being the right tool, with the math to check each one.">
+<link rel="canonical" href="https://scapeshq.com/blog/crm-vs-spreadsheet-for-contractors">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Sora:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="/assets/styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "CRM vs Spreadsheet: The Four Points It Breaks",
+      "description": "Four specific thresholds — headcount, lead volume, customer structure and proof — that decide when a contractor's spreadsheet stops being the right tool, with the math to check each one.",
+      "datePublished": "2026-09-13",
+      "dateModified": "2026-09-13",
+      "author": {
+        "@type": "Organization",
+        "name": "ScapesHQ"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "ScapesHQ"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://scapeshq.com/blog/crm-vs-spreadsheet-for-contractors"
+      },
+      "articleSection": "Comparisons"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How many leads a month before I need a CRM?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "There's no universal number, because the load depends on your follow-up cadence, not your lead count. Count the leads currently open with an action still owed — if that's under about fifteen and you can name them all without looking, a spreadsheet is fine. Once you're filtering rows every morning to figure out who's due today, the sheet has stopped doing the job."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can't I just add more columns to my spreadsheet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can, and for headcount and volume problems it buys you some time. It does not fix customer structure, because a spreadsheet only has one shape — one row, one thing — and a property manager with nine buildings doesn't fit that shape no matter how many columns you add. It also can't hold proof: a cell that says 'signed' isn't evidence of what was signed."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does a CRM handle invoicing and job costing too?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Some do, many don't, and you should check before you buy rather than assume. ScapesHQ specifically does not do invoicing, payments, time tracking or job costing against budget — it covers lead intake through signed proposal. If your real problem is not knowing which jobs made money, track four numbers by hand on your next three jobs first and keep the spreadsheet for that."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What's the actual cost of staying on a spreadsheet one more season?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Work it out from your own numbers rather than a benchmark. Count the leads from the last 30 days with no dated next step, halve your normal close rate because those leads have gone cold, and multiply by your average job value. Multiply that monthly figure by the months left in your season and compare it to what the software costs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Will I lose my history if I switch?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not if you don't try to migrate it. Draw a line at today, move only the live leads and outstanding proposals by hand, and keep the old spreadsheet as a read-only archive in a folder. You'll open it a handful of times a year to look up an old job, and that's all the access you actually need."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NSFZ2WC6"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<header class="site-head">
+  <div class="wrap">
+    <nav class="nav" aria-label="Main">
+      <a class="brand" href="/">
+        <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true">
+          <rect x="0.75" y="0.75" width="24.5" height="24.5" rx="7" fill="none" stroke="#3ddbb4" stroke-width="1.4"></rect>
+          <path d="M6 16.5c3.9 0 3.9-3.6 7-3.6s3.4 3.3 7 3.3" stroke="#3ddbb4" stroke-width="1.7" fill="none" stroke-linecap="round"></path>
+          <path d="M6 11c3.9 0 3.9-3.6 7-3.6s3.4 3.3 7 3.3" stroke="#3ddbb4" stroke-width="1.7" fill="none" stroke-linecap="round" opacity=".45"></path>
+        </svg>
+        <span class="name">Scapes<em>HQ</em></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <div class="nav-links" id="nav-links">
+        <a href="/features">Features</a>
+        <a href="/how-it-works">How it works</a>
+        <a href="/who-its-for">Who it's for</a>
+        <a href="/integrations">Integrations</a>
+        <a href="/pricing">Pricing</a>
+        <a href="/blog" aria-current="page">Blog</a>
+        <a href="/about">About</a>
+        <a class="btn" href="/demo" data-cta="nav">Book a walkthrough</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<article class="post">
+  <section class="page-head">
+    <div class="wrap-narrow">
+      <span class="eyebrow lbl"><i></i>Comparisons</span>
+      <h1>CRM vs Spreadsheet: The Four Points It Breaks</h1>
+      <p class="lede">Four tabs, 1,300 rows and a Notes column carrying the whole business — here's how to tell which of the four thresholds you've already crossed.</p>
+      <p class="post-meta"><time datetime="2026-09-13">September 13, 2026</time> &middot; 9 min read</p>
+    </div>
+  </section>
+
+  <section class="tight">
+    <div class="wrap-narrow article">
+<p>Four tabs, about 1,300 rows, and a column called Notes that's holding the whole business together. That's what most drainage and landscape outfits are running when they first start asking whether they need software.</p>
+<p>The confusing part is that the sheet usually still works. It opens, it sorts, it has every job you've ever quoted in it. Nothing on the screen tells you it's failing.</p>
+<p>It fails at the seams instead — at the handoff between two people, at the lead you didn't call back, at the customer who owns three properties, at the argument six months after the job. If you want the diagnosis of what that feels like day to day, <a href="/blog/running-a-business-on-spreadsheets">the five failure points of running on spreadsheets</a> covers it. This post is the decision: four thresholds, and how to check which ones you've already crossed.</p>
+
+<h2>The four thresholds, and which one you're on</h2>
+<p>You don't outgrow a spreadsheet gradually. You cross one of four specific lines, and after that the sheet costs you money quietly every week.</p>
+<div class="tablewrap"><table><thead><tr><th>Threshold</th><th>A spreadsheet still holds when</th><th>It's broken when</th></tr></thead><tbody><tr><td>Headcount</td><td>You're the only person who writes to it</td><td>A second person needs to update the same row on the same day</td></tr><tr><td>Lead volume</td><td>You can name every open lead from memory</td><td>Rows are aging with no dated next step and you can't tell which</td></tr><tr><td>Customer structure</td><td>One job equals one customer equals one row</td><td>One customer has several properties, contacts or repeat jobs</td></tr><tr><td>Proof</td><td>Nobody has ever disputed what was agreed</td><td>You need to show what was sent, when, and who signed it</td></tr></tbody></table></div>
+<p>One threshold crossed is usually survivable. Two is where the sheet starts eating jobs. Take them one at a time.</p>
+
+<h2>Headcount: the break is the second person, not the fifth</h2>
+<p>Most contractors assume the spreadsheet holds until they've got a real office. It doesn't. It breaks the first day two people both have a reason to write to it.</p>
+<p>The failure isn't dramatic. Your wife updates a lead's status to "quoted" from the kitchen on Tuesday. You've got the file open on your phone from Monday night, you type a note into the same row Wednesday morning, and her edit is gone. Or it isn't gone, but neither of you knows which version is current, so you both call the homeowner. Or neither of you does.</p>
+<p>Put a number on it from your own records. Count the leads that came in last month. Estimate how many fell into the gap between you and the other person — leads where each of you assumed the other had it. Then run your own close rate and average job:</p>
+<p><code>3 dropped leads &times; 25% close rate &times; $6,400 average job = $4,800 per month</code></p>
+<p>Substitute your own three numbers. Most contractors who do this honestly land somewhere between one and five dropped leads a month at the two-person stage, and the answer is almost always bigger than the price of software.</p>
+<p>This threshold arrives sooner than people expect, because it isn't about employees. A part-time bookkeeper, a foreman who answers the phone on your day off, a spouse doing follow-up calls — each of those is the second person.</p>
+
+<h2>Lead volume: count open leads with a due date, not leads per year</h2>
+<p>"How many leads do you get?" is the wrong question. The number that matters is how many leads are open right now with something you're supposed to do next.</p>
+<p>Take a six-touch follow-up cadence over two weeks, which is roughly what <a href="/blog/why-your-leads-go-cold">a working follow-up sequence</a> looks like. At ten new leads a week, you've got about twenty leads live at any moment, each with a next action on a specific day. Add the proposals you sent that are still out. That's thirty-odd items you're carrying.</p>
+<p>A spreadsheet can hold thirty items. What it can't do is tell you which five are due today without you reading every row and doing date math in your head, every morning, forever. So you stop doing it on the busy weeks, which are exactly the weeks it matters.</p>
+<p>Here's the check. Open your sheet, filter to leads that came in during the last 30 days, and count the rows that have no dated next step — no callback date, no "sent proposal 8/14, follow up 8/17," nothing. Just a name and a phone number going stale.</p>
+<p>Say you find 41 leads and 12 of them are orphaned. Those 12 won't close at your normal rate, because they've been sitting. Cut your close rate in half to be fair to yourself:</p>
+<p><code>12 orphaned &times; 12.5% &times; $6,400 = $9,600 in one month</code></p>
+<p>Run it on your own sheet with your own average job. If the orphan count comes back at zero, your volume hasn't crossed the line yet and you should keep the spreadsheet. If it comes back at ten or more, the sheet stopped being a system a while ago and became a graveyard.</p>
+
+<h2>Customer structure: when one customer stops fitting in one row</h2>
+<p>A spreadsheet has exactly one shape: one row, one thing. That works fine when a job is a homeowner, an address and a price, all the same entity.</p>
+<p>It stops working the first time any of these show up in your book:</p>
+<ul class="speclist"><li><span>A property manager with nine buildings, where the person who signs is not the person who meets you on site and neither one lives there.</span></li><li><span>A homeowner who bought a French drain in 2023, a patio in 2025, and is calling about the side yard now — three rows, three sets of notes, no history that reads as one relationship.</span></li><li><span>A builder who sends you four jobs a year at four different addresses under one company name and one PO process.</span></li><li><span>An HOA where the board contact changes every eighteen months and the property stays the same.</span></li></ul>
+<p>You can fake this in a sheet. People do — a column for company, a column for site address, copy-paste the phone number across the rows. Then the phone number changes and you update it in one place out of six. Six months later you call the old number and leave a message for a person who sold the house.</p>
+<p>This is the threshold that has nothing to do with size. A two-truck operation doing commercial property maintenance crosses it before a six-crew residential install company does. If your work is mostly one-off residential installs and every customer really is one address and one job, this threshold may never arrive for you, and that's a legitimate reason to stay on the sheet.</p>
+<p>The tell is simple: if you've ever had to look in two places to answer "what have we done for these people before," the structure is wrong for what you're selling.</p>
+
+<h2>Proof: what you can put on the table six months later</h2>
+<p>February. The homeowner calls and says the downspout tie-in was supposed to be in the price. You remember it wasn't. Your spreadsheet says <code>Quoted 8/22 — $13,130 — signed</code>.</p>
+<p>That row proves nothing. The actual agreement is a PDF in your sent folder, maybe, if you sent it from the account you still use. You don't know whether they opened it. You don't have a signature with a date and an IP address on it. You have a memory and a number.</p>
+<p>Most of the time you eat it, because arguing costs more than the tie-in. Call it $400 and a bad review avoided. Two or three of those a year and the proof threshold has a price.</p>
+<p>What closes this gap isn't a better spreadsheet. It's a record that holds the document you actually sent, the version they actually saw, the timestamp on the signature, and a timeline of every send and view against that customer. That's the part of ScapesHQ that exists to answer this specific problem — proposals with send history, e-signature with the evidence attached to the record, and an activity timeline that doesn't get overwritten.</p>
+<p>You don't need software to cross this threshold well. A disciplined folder structure and a signed PDF per job will do it. You need <em>something</em>, and a status column isn't it.</p>
+
+<h2>What moving off the spreadsheet will not fix</h2>
+<p>This is where most software comparisons get slippery, so plainly: a CRM handles the front of the job. It does not handle the back.</p>
+<p>ScapesHQ does not do invoicing, payments, time tracking, job actuals, job costing against budget, pricing rules, dispatch or route scheduling. Those are not built, and calling the product a CRM doesn't quietly include them.</p>
+<p>So if the thing hurting you is that you don't know which jobs made money, a CRM is the wrong purchase. That's a job costing problem, and you can solve it this month with four numbers per job tracked by hand — <a href="/blog/job-costing-for-contractors">the worked example here</a> shows the whole method. Keep your spreadsheet for that. A spreadsheet is genuinely good at columns of numbers you add up. It's bad at people, dates and evidence.</p>
+<p>Same goes for scheduling and invoicing. If your crew is showing up at the wrong address or your invoices go out three weeks late, fix those with the tools built for them. Crossing the four thresholds above is a separate decision.</p>
+
+<h2>How to move without losing the sheet</h2>
+<p>If two or more thresholds are clearly crossed, the switch is smaller than it looks. The trap is trying to migrate 1,300 rows of history.</p>
+<ol class="speclist"><li><span>Draw a line at today. Everything new goes into the new system. Nothing historical moves.</span></li><li><span>Move only the live ones by hand — open leads, outstanding proposals, jobs scheduled but not done. For most contractors that's 20 to 50 records and one evening.</span></li><li><span>Keep the old spreadsheet read-only, in a folder, forever. It's your archive. You'll open it four times a year and be glad it's there.</span></li><li><span>Run both for two weeks only. Longer than that and you'll keep updating the sheet out of habit and trust neither one.</span></li><li><span>Re-run the orphan count after 30 days. Filter the new system for leads with no next step. If that number dropped, the move paid for itself; if it didn't, the problem was never the tool.</span></li></ol>
+<p>That last step is the honest one. Software doesn't make follow-up calls. It removes the excuse that you didn't know who to call, which for most contractors is about eighty percent of the problem — but the calls still have to happen.</p>
+<h2>FAQ</h2>
+<h3>How many leads a month before I need a CRM?</h3>
+<p>There's no universal number, because the load depends on your follow-up cadence, not your lead count. Count the leads currently open with an action still owed — if that's under about fifteen and you can name them all without looking, a spreadsheet is fine. Once you're filtering rows every morning to figure out who's due today, the sheet has stopped doing the job.</p>
+<h3>Can't I just add more columns to my spreadsheet?</h3>
+<p>You can, and for headcount and volume problems it buys you some time. It does not fix customer structure, because a spreadsheet only has one shape — one row, one thing — and a property manager with nine buildings doesn't fit that shape no matter how many columns you add. It also can't hold proof: a cell that says 'signed' isn't evidence of what was signed.</p>
+<h3>Does a CRM handle invoicing and job costing too?</h3>
+<p>Some do, many don't, and you should check before you buy rather than assume. ScapesHQ specifically does not do invoicing, payments, time tracking or job costing against budget — it covers lead intake through signed proposal. If your real problem is not knowing which jobs made money, track four numbers by hand on your next three jobs first and keep the spreadsheet for that.</p>
+<h3>What's the actual cost of staying on a spreadsheet one more season?</h3>
+<p>Work it out from your own numbers rather than a benchmark. Count the leads from the last 30 days with no dated next step, halve your normal close rate because those leads have gone cold, and multiply by your average job value. Multiply that monthly figure by the months left in your season and compare it to what the software costs.</p>
+<h3>Will I lose my history if I switch?</h3>
+<p>Not if you don't try to migrate it. Draw a line at today, move only the live leads and outstanding proposals by hand, and keep the old spreadsheet as a read-only archive in a folder. You'll open it a handful of times a year to look up an old job, and that's all the access you actually need.</p>
+<h2>The short version</h2>
+<p>A spreadsheet stops being the right tool at four specific points: when a second person needs to write to it, when you can no longer name every open lead with an action owed, when one customer has multiple properties or contacts, and when you need to prove what was agreed six months later. Check each one against your own sheet — count the orphaned leads from the last 30 days, multiply by half your close rate and your average job value, and you'll have the cost in dollars. One threshold crossed is survivable; two means the sheet is quietly eating jobs. And if the real pain is not knowing which jobs made money, that's job costing, not a CRM.</p>
+<p><a href="/demo">Book a walkthrough</a> and we'll go through your own lead sheet and count how many rows have nobody on them.</p>
+    </div>
+  </section>
+</article>
+
+<section class="tight">
+  <div class="wrap-narrow">
+    <div class="panel post-cta">
+      <h3>See this run on a real job</h3>
+      <p>ScapesHQ takes a lead from a Facebook form to a signed proposal without retyping it once. Bring a job you're quoting this week.</p>
+      <a class="btn btn-lg mt-m" href="/demo" data-cta="blog_post_end">Book a walkthrough</a>
+    </div>
+  </div>
+</section>
+
+<section class="tight">
+  <div class="wrap-narrow">
+    <h2>Keep reading</h2>
+    <div class="grid-2 mt-m">
+      <a class="panel post-card" href="/blog/running-a-business-on-spreadsheets">
+        <span class="lbl teal">Running the operation</span>
+        <h3>Running a Contracting Business on Spreadsheets</h3>
+        <p>Spreadsheets work until they don't. The five failure points where a landscape or drainage business outgrows them, and how to tell which you're on.</p>
+        <span class="post-more">Read it &rarr;</span>
+      </a>
+      <a class="panel post-card" href="/blog/best-software-for-drainage-contractors">
+        <span class="lbl teal">Comparisons</span>
+        <h3>Best Software for Drainage Contractors: An Honest Comparison</h3>
+        <p>What drainage contractors actually need from software, how the main categories differ, and an honest account of what ScapesHQ does and doesn't do yet.</p>
+        <span class="post-more">Read it &rarr;</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="/">
+          <svg width="24" height="24" viewBox="0 0 26 26" aria-hidden="true">
+            <rect x="0.75" y="0.75" width="24.5" height="24.5" rx="7" fill="none" stroke="#3ddbb4" stroke-width="1.4"></rect>
+            <path d="M6 16.5c3.9 0 3.9-3.6 7-3.6s3.4 3.3 7 3.3" stroke="#3ddbb4" stroke-width="1.7" fill="none" stroke-linecap="round"></path>
+          </svg>
+          <span class="name">Scapes<em>HQ</em></span>
+        </a>
+        <p>Operations and CRM for landscape, hardscape and drainage contractors. Built in the field, not in a boardroom.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Product</h4>
+        <ul>
+          <li><a href="/features">Features</a></li>
+          <li><a href="/how-it-works">How it works</a></li>
+          <li><a href="/integrations">Integrations</a></li>
+          <li><a href="/pricing">Pricing</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/about">About</a></li>
+          <li><a href="/who-its-for">Who it's for</a></li>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/demo" data-cta="footer">Book a walkthrough</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Trades</h4>
+        <ul>
+          <li><a href="/who-its-for">Drainage</a></li>
+          <li><a href="/who-its-for">Hardscape</a></li>
+          <li><a href="/who-its-for">Landscape</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bar">
+      <span>&copy; 2026 ScapesHQ. All rights reserved.</span>
+      <span>Live in production with a connected business.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/nav.js"></script>
+</body>
+</html>

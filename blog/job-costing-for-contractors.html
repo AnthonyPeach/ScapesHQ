@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NSFZ2WC6');</script>
+<!-- End Google Tag Manager -->
+<!-- First-touch campaign capture (session-scoped; feeds the walkthrough form) -->
+<script>
+(function(){
+  try{
+    var ss=window.sessionStorage,p=new URLSearchParams(location.search),
+        k=['utm_source','utm_medium','utm_campaign','utm_content','utm_term'],i,v;
+    if(!ss.getItem('sq_landing')){
+      ss.setItem('sq_landing',location.pathname);
+      ss.setItem('sq_referrer',document.referrer||'direct');
+    }
+    for(i=0;i<k.length;i++){
+      v=p.get(k[i]);
+      if(v&&!ss.getItem('sq_'+k[i])) ss.setItem('sq_'+k[i],v);
+    }
+  }catch(e){}
+})();
+</script>
+<title>Job Costing Without Enterprise Software &mdash; ScapesHQ</title>
+<meta name="description" content="Track four numbers by hand on your next three jobs, compare estimated to actual, and find out where your bids are wrong. A worked example you can copy.">
+<link rel="canonical" href="https://scapeshq.com/blog/job-costing-for-contractors">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Sora:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="/assets/styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Job Costing Without Enterprise Software",
+      "description": "Track four numbers by hand on your next three jobs, compare estimated to actual, and find out where your bids are wrong. A worked example you can copy.",
+      "datePublished": "2026-09-13",
+      "dateModified": "2026-09-13",
+      "author": {
+        "@type": "Organization",
+        "name": "ScapesHQ"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "ScapesHQ"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://scapeshq.com/blog/job-costing-for-contractors"
+      },
+      "articleSection": "Running the operation"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How many jobs do I need to cost before the numbers mean anything?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Three jobs of the same type is the minimum for spotting a pattern, and six is where you can trust it. One job tells you nothing because any single job can be wrecked by rock, weather or a homeowner changing scope. Cost your repeat job types first, since that's where a pricing error repeats and compounds."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I include my own hours in crew-hours?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, if you're on site doing production work. Count yourself at the same loaded rate as a crew member. Time spent selling, measuring or doing paperwork belongs in overhead, not in the job, otherwise your sales-heavy jobs will look artificially unprofitable."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What's a realistic loaded labor rate?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It varies a lot by market and by what your workers' comp classification costs. Take a real payroll run, add employer payroll taxes, comp premium and any benefits, then divide by the hours actually worked on jobs rather than hours paid. Most contractors are surprised the number is 25 to 45 percent above the base wage."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does ScapesHQ track job actuals or time?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Time tracking, job actuals and job costing against budget are not built. ScapesHQ handles the estimate, proposal and signed record side; the actuals side stays in your own spreadsheet or notebook for now."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I raise my price if my actuals come in over?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not automatically. First raise the estimated hours in your template so future bids reflect reality, then see which jobs you still win. Sometimes the right answer is a higher price, and sometimes it's declining the job type entirely because it was never profitable at any price the market pays."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NSFZ2WC6"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<header class="site-head">
+  <div class="wrap">
+    <nav class="nav" aria-label="Main">
+      <a class="brand" href="/">
+        <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true">
+          <rect x="0.75" y="0.75" width="24.5" height="24.5" rx="7" fill="none" stroke="#3ddbb4" stroke-width="1.4"></rect>
+          <path d="M6 16.5c3.9 0 3.9-3.6 7-3.6s3.4 3.3 7 3.3" stroke="#3ddbb4" stroke-width="1.7" fill="none" stroke-linecap="round"></path>
+          <path d="M6 11c3.9 0 3.9-3.6 7-3.6s3.4 3.3 7 3.3" stroke="#3ddbb4" stroke-width="1.7" fill="none" stroke-linecap="round" opacity=".45"></path>
+        </svg>
+        <span class="name">Scapes<em>HQ</em></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <div class="nav-links" id="nav-links">
+        <a href="/features">Features</a>
+        <a href="/how-it-works">How it works</a>
+        <a href="/who-its-for">Who it's for</a>
+        <a href="/integrations">Integrations</a>
+        <a href="/pricing">Pricing</a>
+        <a href="/blog" aria-current="page">Blog</a>
+        <a href="/about">About</a>
+        <a class="btn" href="/demo" data-cta="nav">Book a walkthrough</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<article class="post">
+  <section class="page-head">
+    <div class="wrap-narrow">
+      <span class="eyebrow lbl"><i></i>Running the operation</span>
+      <h1>Job Costing Without Enterprise Software</h1>
+      <p class="lede">A notebook in the truck and four numbers per job will tell you more about your pricing than a year of guessing.</p>
+      <p class="post-meta"><time datetime="2026-09-13">September 13, 2026</time> &middot; 8 min read</p>
+    </div>
+  </section>
+
+  <section class="tight">
+    <div class="wrap-narrow article">
+<p>You bid a 148-foot French drain at 22 crew-hours. The crew was on site Tuesday, Wednesday and half of Thursday. Three guys. That's roughly 60 crew-hours, not 22.</p>
+<p>The job still made money, because the material markup carried it and you'd padded the price. But you don't know that. You just know the check cleared and the next one like it is on the calendar for the 24th.</p>
+<p>Job costing is the practice of finding out what actually happened, in numbers, and comparing it to what you said would happen when you priced the work. It doesn't require software. It requires four numbers per job and the discipline to write them down before you forget.</p>
+
+<h2>Why most contractors skip this and still survive</h2>
+<p>Job costing feels like homework for a business that's already busy. The job's done, the money's in, and going back to reconstruct hours feels like grading your own test after the semester ended.</p>
+<p>Here's what it actually costs you to skip it. Your price on a repeat job type is either right, high or low, and you have no way to tell which. If it's high, you're losing bids you could have won and you'll blame the market. If it's low, you're winning more work and making less money per job, which feels like growth right up until it isn't.</p>
+<p>The contractors who get burned worst are the ones growing fastest. A bad price on one job a month is a rounding error. The same bad price on twelve jobs a month is your entire year.</p>
+<p>You don't need to cost every job. You need to cost the jobs you do repeatedly, because those are the ones where a small error repeats.</p>
+
+<h2>The four numbers, and why these four</h2>
+<p>There are a dozen things you could track. Most of them you won't, because tracking them is annoying and the annoyance compounds until you quit. So track four.</p>
+<ol class="speclist">
+<li><span><strong>Crew-hours on site.</strong> Not calendar days. Number of people multiplied by hours they were actually working the job. Two guys for six hours is twelve crew-hours.</span></li>
+<li><span><strong>Material cost, actual.</strong> What the receipts say, not what you estimated. Include the second trip to the supply house.</span></li>
+<li><span><strong>Equipment and disposal.</strong> Rental days, fuel above normal, dump fees, delivered stone. The costs that only exist because this job existed.</span></li>
+<li><span><strong>Revenue collected.</strong> The final number on the invoice, including change orders, minus anything you ate.</span></li>
+</ol>
+<p>Everything else — overhead allocation, truck depreciation, your own salary — belongs in your hourly rate, not in the job record. If you try to allocate overhead job by job with a notebook you'll spend an hour per job and stop by March.</p>
+<p>Crew-hours is the one that matters most, and it's the one everybody guesses at. Labor is usually the largest variable cost on a drainage or hardscape job and it's the only one that doesn't produce a receipt. Material overruns announce themselves. Labor overruns hide.</p>
+
+<h2>How to capture crew-hours without a time tracking app</h2>
+<p>Your crew lead writes two numbers on a card: what time they got on site, what time they left, and how many people were there. That's it. If there's a lunch break longer than thirty minutes, note it.</p>
+<p>The card goes in a folder in the truck. Once a week you transfer the cards to a spreadsheet with one row per job. Five minutes on a Friday.</p>
+<p>Two things break this. The first is asking for too much detail — if the card asks for hours broken out by task, nobody fills it in. The second is not closing the loop, so the crew lead sees the card disappear into a void and stops caring. Tell them once what you learned from it. "That Millbrook job took us nineteen hours, I'd bid thirteen, so I'm bidding the next one at twenty." That's enough.</p>
+<p>Drive time is a judgment call. If the job is forty minutes each way and you're paying from the shop, that's 80 minutes of paid time per person per day that has to land somewhere. Put it in the job if the job is unusually far. Put it in your overhead rate if your service area is consistent. Just be consistent about which, because inconsistency is what makes the comparison useless.</p>
+
+<h2>A worked comparison: estimated versus actual on one drain</h2>
+<p>Here's the shape of the thing. Use your own numbers, not these — your loaded labor rate and your stone price are not mine.</p>
+<p>Say you bid a 148-foot French drain at $13,130. Your estimate assumed:</p>
+<div class="tablewrap"><table><thead><tr><th>Bucket</th><th>Estimated</th><th>Actual</th><th>Variance</th></tr></thead><tbody>
+<tr><td>Crew-hours</td><td>36 hrs</td><td>47 hrs</td><td>+11 hrs</td></tr>
+<tr><td>Labor cost at $42/hr loaded</td><td>$1,512</td><td>$1,974</td><td>+$462</td></tr>
+<tr><td>Material</td><td>$2,900</td><td>$3,240</td><td>+$340</td></tr>
+<tr><td>Equipment &amp; disposal</td><td>$1,450</td><td>$1,450</td><td>$0</td></tr>
+<tr><td>Total direct cost</td><td>$5,862</td><td>$6,664</td><td>+$802</td></tr>
+<tr><td>Revenue</td><td>$13,130</td><td>$13,130</td><td>$0</td></tr>
+<tr><td>Gross margin</td><td>$7,268 (55%)</td><td>$6,466 (49%)</td><td>-6 pts</td></tr>
+</tbody></table></div>
+<p>The $42 per loaded hour is a placeholder. Loaded labor — wage plus payroll tax, workers' comp, and whatever benefits you carry — commonly lands somewhere in the $38 to $55 range per hour in North American markets, and comp rates for excavation work swing that number more than wages do. Work out your own from a real payroll run before you use this table on anything.</p>
+<p>Now read the variance. Labor ran 31% over. Material ran 12% over. Equipment was dead on, because equipment is rented in whole days and you already knew how many days.</p>
+<p>Six margin points sounds survivable, and on one job it is. Run the same error across thirty jobs at this size and you've left roughly $24,000 on the table for the year. That's the number that should get your attention, not the $802.</p>
+
+<h2>What the first three jobs actually teach you</h2>
+<p>One job tells you nothing. It could have been rock, a bad crew day, a homeowner who moved the flag line twice. Three jobs of the same type start to show a pattern.</p>
+<p>Here's what to look for once you have three.</p>
+<ul class="speclist">
+<li><span><strong>A consistent labor multiplier.</strong> If all three came in between 25% and 35% over on hours, your estimating isn't random — it's biased. Multiply your gut hours by 1.3 and you're close. This is the single most valuable output of the exercise.</span></li>
+<li><span><strong>Which bucket is actually loose.</strong> Contractors assume material is where they bleed. Usually it isn't. Material is over by the cost of one extra trip. Labor is over by a third of a day.</span></li>
+<li><span><strong>Whether one job is an outlier.</strong> Two jobs at plus 10% and one at plus 80% is not an estimating problem, it's a job-selection or site-conditions problem. Find out what was different about the third. Usually it's access, depth, or a homeowner who changed scope mid-dig.</span></li>
+<li><span><strong>Where your scope language is failing.</strong> If the overrun traces to work you did that wasn't in the proposal, the fix isn't in your pricing. It's in the exclusions section, which <a href="/blog/drainage-proposal-anatomy">the proposal that gets signed the same week</a> covers in more detail than I will here.</span></li>
+</ul>
+<p>The temptation after three jobs is to raise your price. Sometimes that's right. Often the better move is to raise your estimated hours and leave the price where it is, which means you'll start declining the jobs that were never profitable at that price and keeping the ones that were.</p>
+
+<h2>Feeding it back into the estimate</h2>
+<p>Costing is only worth the trouble if the number changes the next bid. The mechanism is simple: your template carries the hours, and you update the hours.</p>
+<p>If you've built <a href="/blog/reusable-estimate-templates">reusable templates for your five most common jobs</a>, each one already has a labor line with an hours figure in it. That figure is a hypothesis. Job costing tests it. Every time you close out a job, you either confirm the hours or you move them.</p>
+<p>Move them in small steps. If three jobs ran 30% over, don't jump straight to 30%. Go to 20%, run three more, see where you land. Big corrections based on small samples are how contractors price themselves out of a market for a season and never figure out why.</p>
+<p>Per-foot rules get the same treatment. If you carry a per-foot band as a sanity check — and <a href="/blog/pricing-a-drainage-job-by-the-foot">that's a reasonable thing to carry</a> — actuals are what let you widen or narrow the band honestly instead of adjusting it by feel.</p>
+
+<h2>What ScapesHQ does not do here, plainly</h2>
+<p>This post is about a gap in our own product, so I'll be direct about it.</p>
+<p>ScapesHQ does not track time. It does not record job actuals, and it does not cost a job against its budget. Those are on the list, they are not built, and nothing in the product today will do this for you. If you connect the pieces and expect an estimated-versus-actual report to appear, it won't.</p>
+<p>What the product does hold is the estimated side — the estimate, the proposal, the options the client chose, the signed record with the scope that was agreed. That's the left-hand column of the table above, and it's worth having in one place instead of scattered across a drive.</p>
+<p>The right-hand column is yours to keep, in a spreadsheet or a notebook, until somebody builds it. A spreadsheet with one row per job and six columns will do this job well for a long time — until it doesn't, and <a href="/blog/running-a-business-on-spreadsheets">the failure points are fairly predictable</a> when you get there.</p>
+<p>Don't wait for software. The cards in the truck folder work now, and the contractor who's been keeping them for eighteen months prices better than the one with a subscription and no data.</p>
+<h2>FAQ</h2>
+<h3>How many jobs do I need to cost before the numbers mean anything?</h3>
+<p>Three jobs of the same type is the minimum for spotting a pattern, and six is where you can trust it. One job tells you nothing because any single job can be wrecked by rock, weather or a homeowner changing scope. Cost your repeat job types first, since that's where a pricing error repeats and compounds.</p>
+<h3>Should I include my own hours in crew-hours?</h3>
+<p>Yes, if you're on site doing production work. Count yourself at the same loaded rate as a crew member. Time spent selling, measuring or doing paperwork belongs in overhead, not in the job, otherwise your sales-heavy jobs will look artificially unprofitable.</p>
+<h3>What's a realistic loaded labor rate?</h3>
+<p>It varies a lot by market and by what your workers' comp classification costs. Take a real payroll run, add employer payroll taxes, comp premium and any benefits, then divide by the hours actually worked on jobs rather than hours paid. Most contractors are surprised the number is 25 to 45 percent above the base wage.</p>
+<h3>Does ScapesHQ track job actuals or time?</h3>
+<p>No. Time tracking, job actuals and job costing against budget are not built. ScapesHQ handles the estimate, proposal and signed record side; the actuals side stays in your own spreadsheet or notebook for now.</p>
+<h3>Should I raise my price if my actuals come in over?</h3>
+<p>Not automatically. First raise the estimated hours in your template so future bids reflect reality, then see which jobs you still win. Sometimes the right answer is a higher price, and sometimes it's declining the job type entirely because it was never profitable at any price the market pays.</p>
+<h2>The short version</h2>
+<p>Track four numbers on every repeat job type: crew-hours on site, actual material cost, equipment and disposal, and revenue collected. Write them on a card in the truck and transfer them to a spreadsheet once a week. After three jobs of the same type you'll see whether your labor estimate is consistently low, by how much, and which bucket is actually leaking. Then move the hours in your estimate template in small steps and test again.</p>
+<p><a href="/demo">Book a walkthrough</a> and we'll look at what your last three estimates assumed, so you know what to measure against.</p>
+    </div>
+  </section>
+</article>
+
+<section class="tight">
+  <div class="wrap-narrow">
+    <div class="panel post-cta">
+      <h3>See this run on a real job</h3>
+      <p>ScapesHQ takes a lead from a Facebook form to a signed proposal without retyping it once. Bring a job you're quoting this week.</p>
+      <a class="btn btn-lg mt-m" href="/demo" data-cta="blog_post_end">Book a walkthrough</a>
+    </div>
+  </div>
+</section>
+
+<section class="tight">
+  <div class="wrap-narrow">
+    <h2>Keep reading</h2>
+    <div class="grid-2 mt-m">
+      <a class="panel post-card" href="/blog/reusable-estimate-templates">
+        <span class="lbl teal">Pricing &amp; estimating</span>
+        <h3>How to Build Estimate Templates You Reuse on Every Job</h3>
+        <p>Stop rebuilding the same estimate from scratch. How to turn your five most common jobs into reusable templates, and what has to stay job-specific.</p>
+        <span class="post-more">Read it &rarr;</span>
+      </a>
+      <a class="panel post-card" href="/blog/running-a-business-on-spreadsheets">
+        <span class="lbl teal">Running the operation</span>
+        <h3>Running a Contracting Business on Spreadsheets</h3>
+        <p>Spreadsheets work until they don't. The five failure points where a landscape or drainage business outgrows them, and how to tell which you're on.</p>
+        <span class="post-more">Read it &rarr;</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="/">
+          <svg width="24" height="24" viewBox="0 0 26 26" aria-hidden="true">
+            <rect x="0.75" y="0.75" width="24.5" height="24.5" rx="7" fill="none" stroke="#3ddbb4" stroke-width="1.4"></rect>
+            <path d="M6 16.5c3.9 0 3.9-3.6 7-3.6s3.4 3.3 7 3.3" stroke="#3ddbb4" stroke-width="1.7" fill="none" stroke-linecap="round"></path>
+          </svg>
+          <span class="name">Scapes<em>HQ</em></span>
+        </a>
+        <p>Operations and CRM for landscape, hardscape and drainage contractors. Built in the field, not in a boardroom.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Product</h4>
+        <ul>
+          <li><a href="/features">Features</a></li>
+          <li><a href="/how-it-works">How it works</a></li>
+          <li><a href="/integrations">Integrations</a></li>
+          <li><a href="/pricing">Pricing</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/about">About</a></li>
+          <li><a href="/who-its-for">Who it's for</a></li>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/demo" data-cta="footer">Book a walkthrough</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Trades</h4>
+        <ul>
+          <li><a href="/who-its-for">Drainage</a></li>
+          <li><a href="/who-its-for">Hardscape</a></li>
+          <li><a href="/who-its-for">Landscape</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bar">
+      <span>&copy; 2026 ScapesHQ. All rights reserved.</span>
+      <span>Live in production with a connected business.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/nav.js"></script>
+</body>
+</html>
