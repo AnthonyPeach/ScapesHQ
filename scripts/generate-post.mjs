@@ -281,10 +281,11 @@ async function callClaude(prompt) {
     },
     body: JSON.stringify({
       model: MODEL,
-      // A post is roughly 1500 words of prose plus HTML markup, FAQs and JSON
-      // escaping. 8000 was not enough and truncated mid-object; the headroom
-      // costs nothing, since output is billed on what is actually produced.
-      max_tokens: 16000,
+      // Headroom, not a target. Output is billed on what is actually produced,
+      // so a high ceiling costs nothing until it is used — whereas hitting it
+      // wastes the whole response AND stops the rest of the batch. Observed
+      // range is 5k-13k per post; 16000 was not enough for one outlier.
+      max_tokens: 24000,
       messages: [{ role: 'user', content: prompt }],
     }),
   });
@@ -301,7 +302,7 @@ async function callClaude(prompt) {
   // Worth naming explicitly: a truncated response usually has no closing brace
   // at all, so the JSON check below would otherwise report it as "no JSON".
   if (data.stop_reason === 'max_tokens') {
-    die(`the model hit the ${16000} token ceiling and its JSON was cut off mid-object.\n`
+    die(`the model hit the ${24000} token ceiling and its JSON was cut off mid-object.\n`
       + `         Raise max_tokens in scripts/generate-post.mjs, or tighten the length target in HOUSE_STYLE.`);
   }
 
