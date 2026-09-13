@@ -16,6 +16,7 @@
  *   node scripts/generate-post.mjs                 write files
  *   node scripts/generate-post.mjs --dry-run       build the prompt and stop
  *   node scripts/generate-post.mjs --topic SLUG    jump the queue
+ *   node scripts/generate-post.mjs --count 10     write the next ten in one run
  *   node scripts/generate-post.mjs --fixture x.json  render a post from a local
  *       JSON file instead of calling the model — for testing the wiring, or for
  *       hand-writing a post and letting the script place it correctly
@@ -57,9 +58,12 @@ const flagValue = (name) => {
 };
 const FORCED_TOPIC = flagValue('--topic');
 const FIXTURE = flagValue('--fixture');
+const COUNT = Math.min(25, Math.max(1, parseInt(flagValue('--count') || '1', 10) || 1));
 
 const read = (p) => readFileSync(p, 'utf8');
-const die = (msg) => { console.error(`\n  error: ${msg}\n`); process.exit(1); };
+/** Anything the generator itself rejects, as opposed to a bug in it. */
+class GenError extends Error {}
+const die = (msg) => { throw new GenError(msg); };
 const log = (msg) => console.log(msg);
 
 /* ---------------------------------------------------------------- topics -- */
@@ -80,15 +84,15 @@ function parseTopics() {
   return { lines, topics };
 }
 
-function nextTopic() {
+function nextTopic(forced) {
   const { lines, topics } = parseTopics();
   if (!topics.length) die(`no topics parsed from ${P.topics} — check the line format`);
 
-  const topic = FORCED_TOPIC
-    ? topics.find((t) => t.slug === FORCED_TOPIC)
+  const topic = forced
+    ? topics.find((t) => t.slug === forced)
     : topics.find((t) => !t.done);
 
-  if (FORCED_TOPIC && !topic) die(`--topic ${FORCED_TOPIC} is not in the queue`);
+  if (forced && !topic) die(`--topic ${forced} is not in the queue`);
   if (!topic) return { lines, topic: null };
 
   if (!CLUSTERS.includes(topic.cluster)) {
@@ -548,14 +552,13 @@ function summarise(post, topic, dateISO, meta, report) {
     `- Path: \`/blog/${topic.slug}\``,
     `- Cluster: ${decode(topic.cluster)}`,
     `- Date: ${dateISO} · ${meta.words} words · ${meta.readingTime} min read`,
-    `- Model: ${MODEL}`,
     '',
     `> ${decode(post.description)}`,
     '',
   ];
 
   if (flags.length) {
-    lines.push('### Worth a look before merging', '');
+    lines.push('Worth a look before merging:', '');
     flags.forEach((f) => lines.push(`- ${f.msg}`));
     lines.push('');
   } else {
@@ -563,68 +566,58 @@ function summarise(post, topic, dateISO, meta, report) {
   }
 
   if (fixes.length) {
-    lines.push('### Auto-corrected', '');
+    lines.push('Auto-corrected:', '');
     fixes.forEach((f) => lines.push(`- ${f.msg}`));
     lines.push('');
-  }
-
-  if (flags.length) {
-    lines.push(
-      '### Review checklist',
-      '',
-      '- [ ] Every number is a range or is derived on the page',
-      '- [ ] Nothing Reserved is implied to be built',
-      '- [ ] Internal links go somewhere real',
-      '- [ ] It reads like the other posts',
-      '',
-      'This post raised flags, so it is waiting here rather than publishing.',
-      'Deploy preview is linked below once Netlify builds it. Merging publishes.',
-    );
-  } else {
-    lines.push('Nothing was flagged, so this went straight to `main` and is live.');
   }
 
   return lines.join('\n');
 }
 
-async function main() {
-  const { lines, topic } = nextTopic();
+function batchBody(results, dateISO) {
+  const totalFlags = results.reduce((n, r) => n + r.report.filter((x) => x.level === 'flag').length, 0);
+  const head = results.length === 1
+    ? []
+    : [`**${results.length} posts** generated on ${dateISO}, ${totalFlags} flag(s) across them.`, '', '---', ''];
 
-  if (!topic) {
-    log('\n  The topic queue is empty — nothing to publish.');
-    log('  Add topics to .claude/blog-topics.md and the next run will pick them up.\n');
-    if (process.env.GITHUB_OUTPUT) {
-      writeFileSync(process.env.GITHUB_OUTPUT, 'created=false\nreason=empty-queue\n', { flag: 'a' });
-    }
-    return;
-  }
+  const body = results
+    .map((r) => summarise(r.post, r.topic, dateISO, r.meta, r.report))
+    .join('\n---\n\n');
 
-  const dateISO = new Date().toLocaleDateString('en-CA', { timeZone: 'America/New_York' });
+  const tail = totalFlags
+    ? [
+        '',
+        '### Review checklist',
+        '',
+        '- [ ] Every number is a range or is derived on the page',
+        '- [ ] Nothing Reserved is implied to be built',
+        '- [ ] Internal links go somewhere real',
+        '- [ ] It reads like the other posts',
+        '',
+        'Flags were raised, so this is waiting here rather than publishing.',
+        'Deploy preview is linked below once Netlify builds it. Merging publishes.',
+      ]
+    : ['', 'Nothing was flagged, so this went straight to `main` and is live.'];
+
+  return [`Model: ${MODEL}`, ''].concat(head, body, tail).join('\n');
+}
+
+/** Generates one post and writes every file it touches. Throws GenError on a reject. */
+async function writeOne(topic, lines, chrome, dateISO) {
   const posts = existingPosts();
-  const chrome = loadChrome();
   const outPath = join(P.blogDir, `${topic.slug}.html`);
 
-  if (existsSync(outPath)) die(`blog/${topic.slug}.html already exists — the topic was published but not checked off`);
-
-  log(`\n  topic   ${topic.slug}`);
-  log(`  cluster ${decode(topic.cluster)}`);
-  log(`  date    ${dateISO}`);
-  log(`  model   ${MODEL}`);
+  if (existsSync(outPath)) {
+    die(`blog/${topic.slug}.html already exists — the topic was published but not checked off`);
+  }
 
   const prompt = buildPrompt(topic, posts, dateISO);
 
-  if (DRY_RUN) {
-    log(`\n  --dry-run: prompt is ${prompt.length} characters, ${posts.length} existing posts in context.`);
-    log(`  would write ${outPath}\n`);
-    return;
-  }
-
   let post;
   if (FIXTURE) {
-    log(`\n  reading ${FIXTURE} instead of calling the model`);
+    log(`  reading ${FIXTURE} instead of calling the model`);
     post = JSON.parse(read(resolve(FIXTURE)));
   } else {
-    log('\n  writing...');
     post = await callClaude(prompt);
   }
 
@@ -638,26 +631,91 @@ async function main() {
   writeFileSync(P.netlify, updateNetlifyToml(topic), 'utf8');
   writeFileSync(P.topics, markTopicDone(lines, topic, dateISO), 'utf8');
 
-  log(`\n  wrote blog/${topic.slug}.html  (${meta.words} words, ${meta.readingTime} min)`);
-  log('  updated blog/index.html, sitemap.xml, netlify.toml, .claude/blog-topics.md');
-
   const flags = report.filter((r) => r.level === 'flag');
-  if (flags.length) {
-    log(`\n  ${flags.length} flag(s) for review:`);
-    flags.forEach((f) => log(`    - ${f.msg}`));
+  log(`  wrote blog/${topic.slug}.html  ${meta.words} words, ${meta.readingTime} min, ${flags.length} flag(s)`);
+  flags.forEach((f) => log(`    - ${f.msg}`));
+
+  return { topic, post, meta, report };
+}
+
+function writeOutputs(pairs) {
+  if (!process.env.GITHUB_OUTPUT) return;
+  const body = Object.entries(pairs).map(([k, v]) => `${k}=${v}`).join('\n');
+  writeFileSync(process.env.GITHUB_OUTPUT, `${body}\n`, { flag: 'a' });
+}
+
+async function main() {
+  const dateISO = new Date().toLocaleDateString('en-CA', { timeZone: 'America/New_York' });
+  const chrome = loadChrome();
+
+  log(`\n  date    ${dateISO}`);
+  log(`  model   ${MODEL}`);
+  log(`  count   ${COUNT}`);
+
+  if (DRY_RUN) {
+    const { topic } = nextTopic(FORCED_TOPIC);
+    if (!topic) { log('\n  queue is empty\n'); return; }
+    const prompt = buildPrompt(topic, existingPosts(), dateISO);
+    log(`\n  --dry-run: next topic is ${topic.slug}, prompt is ${prompt.length} characters.\n`);
+    return;
   }
+
+  const results = [];
+  let failure = null;
+
+  for (let i = 0; i < COUNT; i += 1) {
+    // Re-read the queue each time: the previous iteration checked a topic off,
+    // and re-reading blog/index.html also lets post N link to post N-1.
+    const { lines, topic } = nextTopic(i === 0 ? FORCED_TOPIC : null);
+    if (!topic) {
+      log(`\n  queue emptied after ${results.length} post(s).`);
+      break;
+    }
+
+    log(`\n  [${i + 1}/${COUNT}] ${topic.slug}  (${decode(topic.cluster)})`);
+
+    try {
+      results.push(await writeOne(topic, lines, chrome, dateISO));
+    } catch (e) {
+      if (!(e instanceof GenError)) throw e;
+      // Stop rather than continue: the next topic would almost certainly fail
+      // the same way, and everything written so far is consistent and worth
+      // keeping. The failed topic stays unchecked for the next run.
+      failure = { slug: topic.slug, msg: e.message };
+      log(`\n  ! ${topic.slug} rejected: ${e.message}`);
+      break;
+    }
+  }
+
+  if (!results.length) {
+    if (failure) { console.error(`\n  error: ${failure.msg}\n`); process.exit(1); }
+    log('\n  Nothing to publish — the topic queue has no unchecked entries.');
+    log('  Add topics to .claude/blog-topics.md and the next run will pick them up.\n');
+    writeOutputs({ created: 'false', reason: 'empty-queue' });
+    return;
+  }
+
+  const totalFlags = results.reduce((n, r) => n + r.report.filter((x) => x.level === 'flag').length, 0);
+
+  log(`\n  ${results.length} post(s) written, ${totalFlags} flag(s) total.`);
+  if (failure) log(`  stopped early: ${failure.slug} was rejected (${failure.msg})`);
   log('');
 
   if (process.env.PR_BODY_FILE) {
-    writeFileSync(process.env.PR_BODY_FILE, summarise(post, topic, dateISO, meta, report), 'utf8');
+    writeFileSync(process.env.PR_BODY_FILE, batchBody(results, dateISO), 'utf8');
   }
-  if (process.env.GITHUB_OUTPUT) {
-    writeFileSync(
-      process.env.GITHUB_OUTPUT,
-      `created=true\nslug=${topic.slug}\ntitle=${decode(post.title).replace(/\n/g, ' ')}\nflags=${flags.length}\n`,
-      { flag: 'a' },
-    );
-  }
+  writeOutputs({
+    created: 'true',
+    count: results.length,
+    slug: results[0].topic.slug,
+    title: results.length === 1
+      ? decode(results[0].post.title).replace(/\n/g, ' ')
+      : `${results.length} posts`,
+    flags: totalFlags,
+  });
 }
 
-main().catch((e) => die(e.stack || e.message));
+main().catch((e) => {
+  console.error(`\n  error: ${e instanceof GenError ? e.message : e.stack || e.message}\n`);
+  process.exit(1);
+});

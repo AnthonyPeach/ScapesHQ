@@ -155,7 +155,9 @@ Two things about it are worth knowing before changing it:
   than a rule.
 
 To run it by hand: Actions → Blog post → Run workflow, optionally naming a slug
-to jump the queue. Locally, `--dry-run` builds the prompt without calling the
+to jump the queue or a `count` to write several posts in one run. A batch stops
+at the first post the generator rejects and keeps everything written before it;
+the rejected topic stays unchecked for the next run. Locally, `--dry-run` builds the prompt without calling the
 model and `--fixture post.json` renders from a local file, which is also the
 way to hand-write a post and let the script place it correctly.
 
