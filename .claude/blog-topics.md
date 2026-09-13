@@ -25,7 +25,7 @@ rather than inventing a topic.
 
 ## Queue
 
-- [ ] `pricing-a-drainage-job-by-the-foot` | Pricing &amp; estimating | Per-foot pricing as a sanity check, not a quoting method. Where the shortcut is roughly right, where it quietly loses money (depth changes, rock, restoration, access), and how to move from a per-foot instinct to a line-item bid. Should reference the 148-foot job in `how-to-price-a-french-drain-job` rather than re-costing it.
+- [x] `pricing-a-drainage-job-by-the-foot` | Pricing &amp; estimating | Per-foot pricing as a sanity check, not a quoting method. Where the shortcut is roughly right, where it quietly loses money (depth changes, rock, restoration, access), and how to move from a per-foot instinct to a line-item bid. Should reference the 148-foot job in `how-to-price-a-french-drain-job` rather than re-costing it. (published 2026-09-13)
 - [ ] `what-to-charge-for-a-site-visit` | Pricing &amp; estimating | Free vs paid estimates for drainage specifically. Why diagnostic work is different from measuring a patio, what a paid diagnostic visit buys the homeowner, how to credit it against the job, and the script for explaining the fee without losing the lead.
 - [ ] `catch-basin-vs-dry-well` | Drainage authority | When each is the right fix and when neither is. Soil percolation, outfall availability, freeze depth, maintenance burden. Honest cost ranges as ranges. Written so a homeowner can follow it but a contractor still learns the decision rule.
 - [ ] `regrading-vs-drainage-system` | Drainage authority | How to tell whether grading alone solves a wet yard before selling pipe. The tests worth doing on a site visit, the cases where regrading is genuinely enough, and why selling the smaller fix earns the bigger job later.
