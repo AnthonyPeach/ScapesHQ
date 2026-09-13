@@ -141,6 +141,10 @@ ${CLUSTERS.map((c) => `    ${c}`).join('\n')}
   product covers it.
 - Prefer subjects a contractor would search for, or ask another contractor in a
   parking lot. Avoid anything that reads like a software listicle.
+- Scope each angle to ONE argument, sized for a 1500-2200 word post. An angle
+  that asks for five failure modes AND pricing AND homeowner scripts produces a
+  3,000-word post doing three jobs. If a subject is that big, propose the
+  sharper half and leave the rest for a later topic.
 
 Return one JSON object and nothing else, no code fence:
 

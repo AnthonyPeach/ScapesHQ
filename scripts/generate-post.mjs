@@ -195,7 +195,9 @@ PRODUCT HONESTY — this is the rule that matters most
   argument. A post can mention it zero times and be a good post.
 
 SHAPE
-- 1200-1800 words in the body. Past 2000 a post is doing two jobs; split it.
+- 1500-2200 words in the body. If the angle seems to need more than that,
+  the angle is too broad: cover it properly and leave the rest out rather
+  than writing a second post onto the end of the first.
 - Sentence case for every heading, matching the existing posts. Not Title Case.
 - Four to seven <h2> sections with substantive headings — a heading should tell
   the reader what the section argues, not just name a topic.
@@ -384,7 +386,7 @@ function validate(post, topic, posts, report) {
   // soft flags — the post still builds, but a human should look
   const flag = (msg) => report.push({ level: 'flag', msg });
 
-  if (words < 1150 || words > 2050) flag(`body is ${words} words, outside the 1200-2000 target`);
+  if (words < 1150 || words > 2400) flag(`body is ${words} words, outside the 1500-2400 band`);
   if (post.title.length > 65) flag(`title is ${post.title.length} characters (target under 65)`);
   if (post.description.length < 135 || post.description.length > 160) {
     flag(`meta description is ${post.description.length} characters (target 140-158)`);
