@@ -195,7 +195,8 @@ PRODUCT HONESTY — this is the rule that matters most
   argument. A post can mention it zero times and be a good post.
 
 SHAPE
-- 1200-1700 words in the body.
+- 1200-1800 words in the body. Past 2000 a post is doing two jobs; split it.
+- Sentence case for every heading, matching the existing posts. Not Title Case.
 - Four to seven <h2> sections with substantive headings — a heading should tell
   the reader what the section argues, not just name a topic.
 - At least one list, and a <table> only where a real comparison earns it.
@@ -383,13 +384,22 @@ function validate(post, topic, posts, report) {
   // soft flags — the post still builds, but a human should look
   const flag = (msg) => report.push({ level: 'flag', msg });
 
-  if (words < 1150 || words > 1800) flag(`body is ${words} words, outside the 1200-1700 target`);
+  if (words < 1150 || words > 2050) flag(`body is ${words} words, outside the 1200-2000 target`);
   if (post.title.length > 65) flag(`title is ${post.title.length} characters (target under 65)`);
   if (post.description.length < 135 || post.description.length > 160) {
     flag(`meta description is ${post.description.length} characters (target 140-158)`);
   }
   const lower = text.toLowerCase();
-  for (const b of BANNED) if (lower.includes(b)) flag(`house style: uses "${b}"`);
+  for (const b of BANNED) {
+    let i = lower.indexOf(b);
+    while (i !== -1) {
+      // A letter or hyphen in front means a compound like "highest-leverage",
+      // which is ordinary English rather than the marketing usage being banned.
+      const before = i === 0 ? ' ' : lower[i - 1];
+      if (!/[a-z-]/.test(before)) { flag(`house style: uses "${b}"`); break; }
+      i = lower.indexOf(b, i + b.length);
+    }
+  }
 
   const demoLinks = (body.match(/href="\/demo"/g) || []).length;
   if (demoLinks > 0) flag(`body has ${demoLinks} /demo link(s) on top of the closing line — check it does not read as a pitch`);
@@ -397,8 +407,42 @@ function validate(post, topic, posts, report) {
   const internal = new Set([...body.matchAll(/href="\/blog\/([a-z0-9-]+)"/g)].map((m) => m[1]));
   if (internal.size < 2) flag(`only ${internal.size} internal blog link(s) — target is two or three`);
 
+  // A post SHOULD be able to say "it does not do invoicing" — that is the
+  // product-honesty rule working. Only flag a Reserved term that appears
+  // without a nearby denial, which is the case actually worth a human's time.
+  const DENIAL = /\b(not|isn't|aren't|doesn't|don't|won't|no longer|never|without|reserved|lacks|missing|instead of|rather than)\b/;
   for (const r of RESERVED_TRAPS) {
-    if (lower.includes(r)) flag(`mentions "${r}", which is Reserved — confirm the post does not imply it is built`);
+    let i = lower.indexOf(r);
+    while (i !== -1) {
+      // The denial has to be in the SAME sentence. A wider window borrows a
+      // "not" from an unrelated sentence nearby and waves the claim through.
+      const from = Math.max(lower.lastIndexOf('.', i), lower.lastIndexOf('!', i), lower.lastIndexOf('?', i)) + 1;
+      let to = lower.length;
+      for (const ch of ['.', '!', '?']) {
+        const k = lower.indexOf(ch, i);
+        if (k !== -1 && k < to) to = k;
+      }
+      const around = lower.slice(from, to + 1);
+      if (!DENIAL.test(around)) {
+        flag(`mentions "${r}", which is Reserved, with no denial in the same sentence — confirm the post does not imply it is built`);
+        break;
+      }
+      i = lower.indexOf(r, i + r.length);
+    }
+  }
+
+  // Headings drift into Title Case about a third of the time; every existing
+  // post is sentence case and the mix is obvious on the index page.
+  const KEEP_CAPS = /^(ScapesHQ|Google|Meta|Facebook|Jobber|Aspire|LMN|SMS|GA4|GTM|FAQ|Netlify|Slack|Postmark|Supabase|PVC|LSA|January|February|March|April|May|June|July|August|September|October|November|December|Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday)$/;
+  const titleCased = [...body.matchAll(/<h2>([^<]+)<\/h2>/g)]
+    .map((m) => m[1])
+    .filter((t) => {
+      const caps = t.split(/\s+/).slice(1)
+        .filter((w) => w.length > 3 && /^[A-Z]/.test(w) && !KEEP_CAPS.test(w.replace(/[^A-Za-z0-9]/g, '')));
+      return caps.length >= 2;
+    });
+  if (titleCased.length) {
+    flag(`${titleCased.length} heading(s) are Title Case; every other post uses sentence case — e.g. "${titleCased[0]}"`);
   }
 
   return { words, readingTime: Math.max(4, Math.round(words / 200)) };
