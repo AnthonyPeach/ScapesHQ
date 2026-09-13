@@ -123,6 +123,47 @@ and leaving nothing future-dated. Dates live in three places per post — the
 visible `<time>`, and `datePublished` / `dateModified` in the JSON-LD — plus
 `lastmod` in `sitemap.xml`. Change all four together.
 
+### Automated posts
+
+New posts are written on a schedule by `.github/workflows/blog.yml`, Tuesdays
+and Fridays at 13:00 UTC. The workflow opens a pull request and stops —
+**nothing publishes without a human merging it**, and Netlify builds a deploy
+preview on the branch so the post can be read in place first.
+
+`scripts/generate-post.mjs` does the work. It takes the first unchecked topic
+in `.claude/blog-topics.md`, asks the model for the post, then wires it into
+all four places a post has to appear: the page itself, a card on
+`blog/index.html` inserted beside its cluster siblings, a `sitemap.xml` entry,
+and a 301 in `netlify.toml`. It checks the topic off in the same commit.
+
+Two things about it are worth knowing before changing it:
+
+- **Page chrome is sliced out of a live post at run time**, not duplicated in
+  the script — `REFERENCE_POST` names which one. Edit the nav or footer on the
+  real posts and every future post inherits it. The trade is that renaming the
+  reference post, or restructuring its markup, breaks generation; the script
+  fails loudly rather than writing a broken page.
+- **Validation splits into failures and flags.** A post that would be broken or
+  dishonest — a dead internal link, a structural tag in the body, under 800
+  words — fails the run and writes nothing. Softer problems (word count off
+  target, house-style words, a Reserved capability mentioned) become flags in
+  the PR body and a `needs-review` label, because they need judgment rather
+  than a rule.
+
+To run it by hand: Actions → Blog post → Run workflow, optionally naming a slug
+to jump the queue. Locally, `--dry-run` builds the prompt without calling the
+model and `--fixture post.json` renders from a local file, which is also the
+way to hand-write a post and let the script place it correctly.
+
+Requires an `ANTHROPIC_API_KEY` repository secret — **billed to the Anthropic
+API account, separately from a Claude subscription**. `BLOG_MODEL` is an
+optional repository variable; it defaults to `claude-opus-5`.
+
+Because `publish = "."` serves the whole repository, `netlify.toml` returns 404
+for `/scripts/*`, `/.github/*` and `/.claude/*`.
+
+### Verification notes
+
 **Four posts carry claims that need checking against real data**, per the
 source's own `verify` notes:
 

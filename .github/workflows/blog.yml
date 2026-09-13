@@ -1,0 +1,107 @@
+name: Blog post
+
+# Writes the next post from .claude/blog-topics.md and opens a pull request.
+# Nothing reaches the live site until a human merges that PR — Netlify builds a
+# deploy preview on the branch so the post can be read before it publishes.
+#
+# Times are UTC. 13:00 UTC is 9am Eastern while daylight saving is in effect and
+# 8am once it ends in November; that hour of drift is deliberate — moving it
+# would mean two schedules to maintain for no benefit.
+
+on:
+  schedule:
+    - cron: '0 13 * * 2,5'   # Tuesdays and Fridays, matching the existing cadence
+  workflow_dispatch:
+    inputs:
+      topic:
+        description: 'Slug to publish, skipping the queue order (optional)'
+        required: false
+        type: string
+      dry_run:
+        description: 'Build the prompt and stop, without calling the model'
+        required: false
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: blog-post
+  cancel-in-progress: false
+
+jobs:
+  write:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Generate the post
+        id: generate
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          BLOG_MODEL: ${{ vars.BLOG_MODEL }}
+          PR_BODY_FILE: ${{ runner.temp }}/pr-body.md
+          TOPIC: ${{ inputs.topic }}
+          DRY_RUN: ${{ inputs.dry_run }}
+        run: |
+          args=()
+          if [ "$DRY_RUN" = "true" ]; then args+=(--dry-run); fi
+          if [ -n "$TOPIC" ]; then args+=(--topic "$TOPIC"); fi
+          node scripts/generate-post.mjs ${args[@]+"${args[@]}"}
+
+      - name: Open the pull request
+        if: steps.generate.outputs.created == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SLUG: ${{ steps.generate.outputs.slug }}
+          TITLE: ${{ steps.generate.outputs.title }}
+          FLAGS: ${{ steps.generate.outputs.flags }}
+        run: |
+          git config user.name  "scapeshq-blog[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          BRANCH="blog/$SLUG"
+          git checkout -b "$BRANCH"
+          git add blog/ sitemap.xml netlify.toml .claude/blog-topics.md
+          git commit -m "Add blog post: $TITLE" \
+                     -m "Generated from the topic queue. Review before merging." \
+                     -m "Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>"
+          git push --force origin "$BRANCH"
+
+          LABEL="blog"
+          gh label create "$LABEL" --color 3ddbb4 --description "Generated blog posts" 2>/dev/null || true
+          if [ "$FLAGS" != "0" ]; then
+            gh label create "needs-review" --color d4a017 --description "Automated checks raised flags" 2>/dev/null || true
+            LABEL="$LABEL,needs-review"
+          fi
+
+          gh pr create \
+            --title "Blog: $TITLE" \
+            --body-file "${{ runner.temp }}/pr-body.md" \
+            --label "$LABEL" \
+            --base main \
+            --head "$BRANCH"
+
+      - name: Summary
+        if: always()
+        # Model-written values go through the environment, never through shell
+        # interpolation — a title containing a backtick would otherwise execute.
+        env:
+          CREATED: ${{ steps.generate.outputs.created }}
+          TITLE: ${{ steps.generate.outputs.title }}
+          FLAGS: ${{ steps.generate.outputs.flags }}
+          REASON: ${{ steps.generate.outputs.reason }}
+          BODY_FILE: ${{ runner.temp }}/pr-body.md
+        run: |
+          if [ "$CREATED" = "true" ]; then
+            printf '### Draft ready: %s\n\nFlags raised: %s\n\n' "$TITLE" "$FLAGS" >> "$GITHUB_STEP_SUMMARY"
+            cat "$BODY_FILE" >> "$GITHUB_STEP_SUMMARY"
+          elif [ "$REASON" = "empty-queue" ]; then
+            printf '### Nothing to publish\n\nThe topic queue in `.claude/blog-topics.md` has no unchecked entries.\n' >> "$GITHUB_STEP_SUMMARY"
+          fi

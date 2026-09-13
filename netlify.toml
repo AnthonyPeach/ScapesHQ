@@ -21,6 +21,28 @@
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
 
+# publish = "." means the whole repository is served, so the machinery that
+# writes the blog would otherwise be fetchable at /scripts/generate-post.mjs.
+# Nothing secret lives there — the API key is a GitHub secret and never touches
+# the repo — but it is not part of the site and should not answer 200.
+[[redirects]]
+  from = "/scripts/*"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/.github/*"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/.claude/*"
+  to = "/404.html"
+  status = 404
+  force = true
+
 # Collapse the duplicate .html URLs onto the pretty paths the sitemap and the
 # rel="canonical" tags declare. force = true is required: without it a matching
 # static file wins over the redirect, which is exactly the situation here.
