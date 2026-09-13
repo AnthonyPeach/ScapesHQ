@@ -413,7 +413,7 @@ function validate(post, topic, posts, report) {
   // A post SHOULD be able to say "it does not do invoicing" — that is the
   // product-honesty rule working. Only flag a Reserved term that appears
   // without a nearby denial, which is the case actually worth a human's time.
-  const DENIAL = /\b(not|isn't|aren't|doesn't|don't|won't|no longer|never|without|reserved|lacks|missing|instead of|rather than)\b/;
+  const DENIAL = /\b(no|not|isn't|aren't|doesn't|don't|won't|never|without|reserved|lacks|missing|instead of|rather than)\b/;
   for (const r of RESERVED_TRAPS) {
     let i = lower.indexOf(r);
     while (i !== -1) {
