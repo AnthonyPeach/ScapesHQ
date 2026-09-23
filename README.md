@@ -135,9 +135,13 @@ the run and write nothing.
 
 `scripts/generate-post.mjs` does the work. It takes the first unchecked topic
 in `.claude/blog-topics.md`, asks the model for the post, then wires it into
-all four places a post has to appear: the page itself, a card on
-`blog/index.html` inserted beside its cluster siblings, a `sitemap.xml` entry,
-and a 301 in `netlify.toml`. It checks the topic off in the same commit.
+all four places a post has to appear: the page itself, a card at the **top** of
+the grid on `blog/index.html`, a `sitemap.xml` entry, and a 301 in
+`netlify.toml`. It checks the topic off in the same commit.
+
+The index reads newest-first. Because a run always dates its posts today,
+prepending keeps that order without re-sorting the page. The cluster pills above
+the grid are labels, not filters, so ordering is free to be chronological.
 
 Two things about it are worth knowing before changing it:
 

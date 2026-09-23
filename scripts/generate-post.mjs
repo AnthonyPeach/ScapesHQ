@@ -548,16 +548,19 @@ function renderPost(post, topic, chrome, posts, dateISO, meta) {
 
 /* -------------------------------------------------------- wiring it in --- */
 
-/** Inserts the card after the last existing card in the same cluster. */
+/**
+ * Inserts the card at the top of the grid. The index reads newest-first, and
+ * since a run always dates its posts today, prepending keeps that order without
+ * having to re-sort the whole page. (It used to group by cluster instead, which
+ * buried new work wherever its cluster happened to sit.)
+ */
 function updateIndex(post, topic, dateISO, meta) {
   const html = read(P.index);
   const cardRe = /^[ \t]*<a class="panel post-card" href="\/blog\/[a-z0-9-]+">[\s\S]*?<\/a>\n/gm;
   const cards = [...html.matchAll(cardRe)];
   if (!cards.length) die('found no cards to insert next to in blog/index.html');
 
-  const sameCluster = cards.filter((c) => c[0].includes(`<span class="lbl teal">${topic.cluster}</span>`));
-  const anchor = (sameCluster.length ? sameCluster : cards).at(-1);
-  const at = anchor.index + anchor[0].length;
+  const at = cards[0].index;
 
   const card = `      <a class="panel post-card" href="/blog/${topic.slug}">\n`
     + `        <span class="lbl teal">${topic.cluster}</span>\n`
