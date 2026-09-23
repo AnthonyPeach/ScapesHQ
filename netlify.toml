@@ -326,3 +326,9 @@
   to = "/blog/jobber-vs-scapeshq-for-drainage"
   status = 301
   force = true
+
+[[redirects]]
+  from = "/blog/corrugated-vs-pvc-drain-pipe.html"
+  to = "/blog/corrugated-vs-pvc-drain-pipe"
+  status = 301
+  force = true
