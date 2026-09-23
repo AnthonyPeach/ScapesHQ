@@ -332,3 +332,21 @@
   to = "/blog/corrugated-vs-pvc-drain-pipe"
   status = 301
   force = true
+
+[[redirects]]
+  from = "/blog/trencher-vs-mini-excavator.html"
+  to = "/blog/trencher-vs-mini-excavator"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/utility-locates-before-you-dig.html"
+  to = "/blog/utility-locates-before-you-dig"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/photo-documentation-of-buried-work.html"
+  to = "/blog/photo-documentation-of-buried-work"
+  status = 301
+  force = true
