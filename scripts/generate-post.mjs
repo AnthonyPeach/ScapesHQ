@@ -736,10 +736,15 @@ async function main() {
 
   if (!results.length) {
     if (failure) { console.error(`\n  error: ${failure.msg}\n`); process.exit(1); }
-    log('\n  Nothing to publish — the topic queue has no unchecked entries.');
-    log('  Add topics to .claude/blog-topics.md and the next run will pick them up.\n');
     writeOutputs({ created: 'false', reason: 'empty-queue' });
-    return;
+    // Deliberately a failure. The refill workflow exists to keep this stocked, so
+    // an empty queue means it did not run or did not work. A run that publishes
+    // nothing while reporting success hides that until somebody thinks to look —
+    // three scheduled runs passed green that way before anyone noticed.
+    console.error('\n  error: the topic queue has no unchecked entries, so nothing was published.'
+      + '\n         The weekly "Top up blog topics" workflow is supposed to prevent this;'
+      + '\n         check whether its last run failed.\n');
+    process.exit(1);
   }
 
   const totalFlags = results.reduce((n, r) => n + r.report.filter((x) => x.level === 'flag').length, 0);

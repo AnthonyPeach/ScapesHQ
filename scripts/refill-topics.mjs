@@ -158,7 +158,9 @@ async function callClaude(prompt) {
   const res = await fetch('https://api.anthropic.com/v1/messages', {
     method: 'POST',
     headers: { 'content-type': 'application/json', 'x-api-key': key, 'anthropic-version': '2023-06-01' },
-    body: JSON.stringify({ model: MODEL, max_tokens: 8000, messages: [{ role: 'user', content: prompt }] }),
+    // 24000 to match generate-post.mjs. 8000 was not enough for 16 topics with
+    // real angles on top of a 36-post catalogue, and hitting it fails the run.
+    body: JSON.stringify({ model: MODEL, max_tokens: 24000, messages: [{ role: 'user', content: prompt }] }),
   });
 
   if (!res.ok) die(`Anthropic API returned ${res.status}: ${(await res.text()).slice(0, 400)}`);
@@ -168,7 +170,10 @@ async function callClaude(prompt) {
   const u = data.usage || {};
   log(`  tokens  ${u.input_tokens ?? '?'} in, ${u.output_tokens ?? '?'} out  (stop: ${data.stop_reason})`);
 
-  if (data.stop_reason === 'max_tokens') die('the model hit the token ceiling and its JSON was cut off');
+  if (data.stop_reason === 'max_tokens') {
+    die('the model hit the 24000 token ceiling and its JSON was cut off mid-object.\n'
+      + '         Raise max_tokens in scripts/refill-topics.mjs, or lower TARGET so it asks for fewer topics.');
+  }
 
   const a = text.indexOf('{');
   const b = text.lastIndexOf('}');
