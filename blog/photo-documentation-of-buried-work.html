@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NSFZ2WC6');</script>
+<!-- End Google Tag Manager -->
+<!-- First-touch campaign capture (session-scoped; feeds the walkthrough form) -->
+<script>
+(function(){
+  try{
+    var ss=window.sessionStorage,p=new URLSearchParams(location.search),
+        k=['utm_source','utm_medium','utm_campaign','utm_content','utm_term'],i,v;
+    if(!ss.getItem('sq_landing')){
+      ss.setItem('sq_landing',location.pathname);
+      ss.setItem('sq_referrer',document.referrer||'direct');
+    }
+    for(i=0;i<k.length;i++){
+      v=p.get(k[i]);
+      if(v&&!ss.getItem('sq_'+k[i])) ss.setItem('sq_'+k[i],v);
+    }
+  }catch(e){}
+})();
+</script>
+<title>Photographing Buried Work Before You Backfill &mdash; ScapesHQ</title>
+<meta name="description" content="The six photos to take before a trench gets covered, how to triangulate a cleanout off two house corners, and a file naming scheme that survives.">
+<link rel="canonical" href="https://scapeshq.com/blog/photo-documentation-of-buried-work">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Sora:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="/assets/styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Photographing Buried Work Before You Backfill",
+      "description": "The six photos to take before a trench gets covered, how to triangulate a cleanout off two house corners, and a file naming scheme that survives.",
+      "datePublished": "2026-09-23",
+      "dateModified": "2026-09-23",
+      "author": {
+        "@type": "Organization",
+        "name": "ScapesHQ"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "ScapesHQ"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://scapeshq.com/blog/photo-documentation-of-buried-work"
+      },
+      "articleSection": "Running the operation"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How many photos should I take on a drainage job?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The six or seven core shots on the list, plus anything unusual you find in the ground. On a typical French drain that's ten to fifteen images total once you include the address shot and a couple of wides. More than about twenty and nobody will ever look through them, which defeats the point."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need to photograph every job or just the big ones?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Every job where something ends up buried. The callbacks and disputes don't correlate with job size — a $2,800 downspout tie-in generates the same argument as a $13,000 system, and takes the same eight minutes to document. Where you can ease off is on surface-only work like channel drains you can still see."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Will phone photos hold up if a dispute goes formal?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "That depends on your state, your contract and the specifics, and it's a question for your attorney rather than a blog post. What's true in practice is that most of these never get formal, because the photos end the conversation first. Strengthen your position by putting the date in the folder name, on the as-built sketch, and in the email you send the customer on completion day."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I send the photo set to the homeowner?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Send the marked-up as-built sketch and three or four of the clearest shots on the day you finish. It reads as professionalism rather than defensiveness, and it puts a timestamped copy in their inbox. Keep the full set in your own folder — you don't need to hand over every frame."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What's the easiest way to get photos off crew phones?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Set the crew phones to auto-upload their camera roll to a company cloud account, then have one person sort the week's images into address folders every Friday. Fifteen minutes. Avoid relying on anyone's personal account, because when that person leaves, so does the archive."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NSFZ2WC6"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<header class="site-head">
+  <div class="wrap">
+    <nav class="nav" aria-label="Main">
+      <a class="brand" href="/">
+        <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true">
+          <rect x="0.75" y="0.75" width="24.5" height="24.5" rx="7" fill="none" stroke="#3ddbb4" stroke-width="1.4"></rect>
+          <path d="M6 16.5c3.9 0 3.9-3.6 7-3.6s3.4 3.3 7 3.3" stroke="#3ddbb4" stroke-width="1.7" fill="none" stroke-linecap="round"></path>
+          <path d="M6 11c3.9 0 3.9-3.6 7-3.6s3.4 3.3 7 3.3" stroke="#3ddbb4" stroke-width="1.7" fill="none" stroke-linecap="round" opacity=".45"></path>
+        </svg>
+        <span class="name">Scapes<em>HQ</em></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <div class="nav-links" id="nav-links">
+        <a href="/features">Features</a>
+        <a href="/how-it-works">How it works</a>
+        <a href="/who-its-for">Who it's for</a>
+        <a href="/integrations">Integrations</a>
+        <a href="/pricing">Pricing</a>
+        <a href="/blog" aria-current="page">Blog</a>
+        <a href="/about">About</a>
+        <a class="btn" href="/demo" data-cta="nav">Book a walkthrough</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<article class="post">
+  <section class="page-head">
+    <div class="wrap-narrow">
+      <span class="eyebrow lbl"><i></i>Running the operation</span>
+      <h1>Photographing Buried Work Before You Backfill</h1>
+      <p class="lede">Eight minutes of photos before the spoil goes back in is the cheapest insurance a drainage contractor can buy, and most crews still don't take them.</p>
+      <p class="post-meta"><time datetime="2026-09-23">September 23, 2026</time> &middot; 11 min read</p>
+    </div>
+  </section>
+
+  <section class="tight">
+    <div class="wrap-narrow article">
+<p>The call comes in February, fourteen months after you left. The homeowner says the yard is wet again in the same spot, and the guy who came out to look says your pipe is too shallow and there's no stone around it.</p>
+<p>You know that's wrong. You dug that trench 22 inches at the head and 30 at the outfall, you bedded it in washed 3/4, you lapped the fabric a foot at the top. You know it because you were standing in the hole.</p>
+<p>But knowing isn't showing. If you don't have photos, the conversation is your word against a stranger's, in a yard where everything you did is under eight inches of topsoil. If you do have photos, you send four images and a sketch and the argument ends the same afternoon.</p>
+
+<h2>The arithmetic is not close, so stop treating it as optional</h2>
+<p>Put a number on both sides of this.</p>
+<p>Taking the full shot list on a French drain costs one person about eight minutes. Not eight minutes of extra time on site — eight minutes of one guy's time, mostly while the rest of the crew is doing something else. Use your loaded labor rate, whatever it actually is. Loaded cost per man-hour runs roughly $38 to $55 in most markets once you've added burden, so call it $45 for this example and swap in yours.</p>
+<p>Eight minutes at $45 an hour is 45 &divide; 60 &times; 8 = <strong>$6</strong>.</p>
+<p>Now price the other side. Suppose you have to go back and prove the install by opening 20 feet of trench:</p>
+<ul class="speclist">
+<li><span>Crew of three, half a day: 3 &times; 4 = 12 man-hours &times; $45 = <strong>$540</strong></span></li>
+<li><span>Mini excavator for the day, rented or owned and costed: <strong>$150-$350</strong>, call it $250</span></li>
+<li><span>Restoration on 20 feet of reopened trench — sod or seed, topsoil, cleanup: <strong>$150-$400</strong>, call it $250</span></li>
+<li><span>Total out of pocket: <strong>about $1,040</strong>, plus a day you weren't on a paying job</span></li>
+</ul>
+<p>That's a ratio of roughly 170 to 1 against a single dig-up. And it understates the case, because the dig-up only settles the argument if you happen to open the right 20 feet.</p>
+<p>Run it annually instead. If you do 40 dig jobs a year and photograph every one, that's 40 &times; $6 = <strong>$240 a year</strong> in labor. One avoided re-excavation covers a bit over four years of photographing everything you bury. You don't need the practice to pay off often. You need it to pay off once.</p>
+
+<h2>Six shots, taken in the order the trench gets built</h2>
+<p>The reason most crews don't document is that "take some photos" isn't an instruction anyone can follow. A shot list is. Print this, tape it inside the trailer door, and have the same person shoot it every time so the set looks consistent.</p>
+<p>Every shot needs something in frame that gives scale or a reading. A photo of a trench is a photo of dirt. A photo of a trench with a tape hooked on the bottom and the number readable is evidence.</p>
+<div class="tablewrap"><table><thead><tr><th>Shot</th><th>What's in frame</th><th>What it settles later</th></tr></thead><tbody>
+<tr><td>Open trench with depth</td><td>Tape hooked at trench bottom, run up the wall to grade, numbers readable</td><td>"Your pipe was too shallow"</td></tr>
+<tr><td>Stone bed before pipe</td><td>Bedding stone in the trench, tape laid flat showing 2-4 in under where the pipe will sit; stone close enough to see it's washed</td><td>"He laid the pipe on dirt" and "he used crusher run"</td></tr>
+<tr><td>Pipe on bed with slope</td><td>4-foot level on the pipe with a 1/2 in block under the low end, bubble centered, pipe running away from camera</td><td>"There's no fall in it"</td></tr>
+<tr><td>Fabric overlap</td><td>Tape across the lap at the top of the stone, showing 12 in or whatever you spec</td><td>Silt-in disputes, and your own warranty exclusions</td></tr>
+<tr><td>Cleanout, triangulated</td><td>Lid or riser with two tapes running to two house corners, both readings visible or written on a scrap in frame</td><td>Finding it in three years without a shovel treasure hunt</td></tr>
+<tr><td>Outfall, triangulated</td><td>Pop-up or daylight termination, same two-tape method, plus a wide shot showing where the water goes</td><td>Neighbor runoff complaints, buried-outfall callbacks</td></tr>
+<tr><td>Wide shot with the house</td><td>Whole work area, house in frame, taken from the same spot before and after</td><td>Orientation for anyone reading the set cold</td></tr>
+</tbody></table></div>
+<p>A note on the slope shot, because a bubble level lies about gentle fall. One percent is one foot per hundred, which over a 4-foot level is 0.01 &times; 48 = <strong>0.48 inches</strong>. So a half-inch block under the downhill end of a 4-foot level, with the bubble reading centered, is a photo of roughly 1% fall. Two percent is a one-inch block. If you're running a laser, shoot the receiver on the rod at both ends and photograph both readings instead — that's better evidence and it takes the same time.</p>
+<p>Add a seventh shot when the ground gives you a reason to. Rock at 18 inches, a root mass, an unmarked private line, standing groundwater filling the trench — photograph it before you deal with it. That photo is the front page of a change order, and it does more work than any paragraph you'll write. If you haven't set up a process for that, <a href="/blog/change-orders-without-losing-the-customer">the change order conversation</a> goes much better with a picture in hand.</p>
+<p>Also photograph the locate marks before the first cut, while the paint is fresh. It costs thirty seconds and it's the only record that the marks were there and where they ran, which matters a great deal if something gets nicked. That's covered in more depth in <a href="/blog/utility-locates-before-you-dig">the field procedure for locates</a>.</p>
+
+<h2>Triangulate off two house corners, not off anything that can move</h2>
+<p>A photo of a cleanout lid in the grass tells nobody where the cleanout is. Grass grows, mulch beds move, the homeowner puts in a patio. You need two measurements to two things that will still be there when you're not.</p>
+<p>House corners are the right reference. Foundation corners, specifically — not deck posts, not fence corners, not a tree. A deck comes down. A fence gets replaced three feet over. The southwest corner of the foundation is where it was.</p>
+<p>The method:</p>
+<ol class="speclist">
+<li><span>Pick two house corners that are both visible from the cleanout, ideally not on the same wall.</span></li>
+<li><span>Run a tape from corner one to the center of the lid. Write the number down.</span></li>
+<li><span>Run a tape from corner two to the same point. Write that number down.</span></li>
+<li><span>Take one photo with both tapes stretched and the lid in frame, and a second photo of the two numbers written on a scrap of cardboard held up in front of the lid.</span></li>
+</ol>
+<p>Two distances from two known points fix a location on the ground. That's the same arithmetic surveyors and utility locators use, and it works with a 100-foot tape and a helper. Do it for every cleanout, every catch basin lid, every junction, and the outfall.</p>
+<p>If the run is long and there's nothing else to reference, drop a measurement at every change of direction too. A 90 at station 60 that nobody can find is a 90 that gets cut through by the irrigation guy next spring.</p>
+
+<h2>The as-built is a sketch drawn on top of a photo, and it takes two minutes</h2>
+<p>You do not need CAD. You need the wide shot with the house in it, opened in your phone's photo editor, with the markup pen on.</p>
+<p>Draw the pipe run over the photo. Add the arrows for flow direction. Circle the cleanouts and write the two triangulation numbers next to each. Mark the outfall. Write the depth at the head and the depth at the outfall. Save it as a copy.</p>
+<p>That single marked-up image is more useful than a properly drafted plan, because it's readable by a homeowner, a plumber, a landscaper, and you in four years. It shows what's underground against something everyone can see above ground.</p>
+<p>Things worth having on the sketch:</p>
+<ul class="speclist">
+<li><span>Pipe run, with flow arrows</span></li>
+<li><span>Pipe type and diameter, written out — "4 in solid SDR-35" or "4 in dual-wall perforated, sock"</span></li>
+<li><span>Depth at the head and at the outfall</span></li>
+<li><span>Every cleanout and basin, with its two tie-in measurements</span></li>
+<li><span>Outfall type and where it discharges</span></li>
+<li><span>Anything you found and worked around — rock, a private gas line to the grill, an old clay tile</span></li>
+<li><span>Date and your company name</span></li>
+</ul>
+<p>Send it to the homeowner the day you finish. Two things happen. They feel like they bought something engineered rather than something dug, and you've now got a timestamped copy sitting in their inbox as well as your drive.</p>
+
+<h2>File naming decides whether the set exists in three years</h2>
+<p>Photos that live only in a crew phone's camera roll are not documentation. They're a pile. The phone gets dropped in a trench, the guy quits and takes it with him, the storage fills up and somebody clears "the old stuff." I've watched a contractor scroll for eleven minutes looking for a job from last April and give up.</p>
+<p>The fix is boring and it works. One folder per job, named by date and address, in a shared cloud drive that the business owns rather than an individual's personal account.</p>
+<p><code>2026-04 / 1412-Maple-Ave / french-drain-rear</code></p>
+<p>Inside the folder, rename the six or seven key shots as you go — <code>01-depth-head.jpg</code>, <code>02-stone-bed.jpg</code>, <code>05-cleanout-triangulated.jpg</code>. The rest of the day's photos can stay named whatever the phone called them. You're not building an archive, you're building a set that somebody can open cold and understand in ninety seconds.</p>
+<p>Two habits make this survive contact with a real crew:</p>
+<p><strong>Shoot the address first.</strong> The first photo in every job set is the mailbox, the house number, or the address written on a scrap of plywood. Now the set is self-identifying even if the folder gets moved.</p>
+<p><strong>Empty the phones on Friday.</strong> Whoever does your paperwork pulls the week's photos off every crew phone into the shared drive, one folder per address. Fifteen minutes a week. If you've read <a href="/blog/hiring-your-first-office-person">what to hand over to your first office person</a>, this is a good candidate for the list — it's rules-based, it's weekly, and it doesn't need judgment.</p>
+<p>Don't rely on phone metadata to prove dates. It's usually there and it's usually right, but files get copied, re-saved and stripped. Belt and braces: date in the folder name, date on the sketch, and the set emailed to the customer on completion day.</p>
+
+<h2>Where the set actually earns its keep</h2>
+<p><strong>Warranty callbacks.</strong> Most drainage callbacks aren't failures of your work — they're a new source of water, a downspout the homeowner disconnected, or a section of yard your system never covered. Your photos plus your sketch show what the system is and where it runs, which turns a defensive conversation into a diagnostic one. This is also why the photos and <a href="/blog/what-to-put-in-a-drainage-warranty">your written warranty exclusions</a> belong together: a clause that excludes water from an area outside the installed run is enforceable in practice only if you can show where the run was.</p>
+<p><strong>Disputes about what was installed.</strong> This is where the set pays for four years at once. Someone says you used the wrong stone, skipped the fabric, laid it flat. You send five photos with tapes in them. Whether photos carry weight in a formal claim depends on your state and your contract, and that's a question for your attorney, not a blog post. But the overwhelming majority of these never get that far, because the person making the accusation looks at the photos and stops.</p>
+<p><strong>The next contractor who digs.</strong> A plumber trenching a water line, a fence crew setting posts, a pool company. If the homeowner can hand them your sketch, your pipe doesn't get cut. If your pipe does get cut, the sketch establishes it was documented and locatable, which changes who pays.</p>
+<p><strong>Your own estimating.</strong> A year of trench photos with tapes in them is a record of what you actually built versus what you bid. Depth crept from 22 to 30 on half your jobs? That shows up in the photos before it shows up anywhere else, and it explains the hours. It pairs well with <a href="/blog/job-costing-for-contractors">tracking four numbers by hand on your next three jobs</a>.</p>
+
+<h2>This does not live in your CRM, and you should know that going in</h2>
+<p>Be clear about where the line is. ScapesHQ handles lead intake, the client and property records, estimates, proposals, the homeowner review page, e-signature with the evidence attached, and a permanent activity timeline of what was sent and signed. That's the paper trail for what you <em>agreed to do</em>.</p>
+<p>It is not a field photo app and it does not store your job documentation. There's no photo upload on a job, no as-built attachment, no field capture. That's not on the roadmap language — it's simply not built, and pretending otherwise would cost you a morning finding out the hard way.</p>
+<p>So the shot list lives in the phone camera roll and gets moved weekly into a shared drive folder named by address. Google Drive, Dropbox, OneDrive, a NAS in the office — pick one, make it the business's account and not a personal one, and enforce the folder name.</p>
+<p>The signed proposal says what you promised. The photo set says what you built. You want both, and right now they live in two different places. That's fine as long as the address is on both of them.</p>
+<h2>FAQ</h2>
+<h3>How many photos should I take on a drainage job?</h3>
+<p>The six or seven core shots on the list, plus anything unusual you find in the ground. On a typical French drain that's ten to fifteen images total once you include the address shot and a couple of wides. More than about twenty and nobody will ever look through them, which defeats the point.</p>
+<h3>Do I need to photograph every job or just the big ones?</h3>
+<p>Every job where something ends up buried. The callbacks and disputes don't correlate with job size — a $2,800 downspout tie-in generates the same argument as a $13,000 system, and takes the same eight minutes to document. Where you can ease off is on surface-only work like channel drains you can still see.</p>
+<h3>Will phone photos hold up if a dispute goes formal?</h3>
+<p>That depends on your state, your contract and the specifics, and it's a question for your attorney rather than a blog post. What's true in practice is that most of these never get formal, because the photos end the conversation first. Strengthen your position by putting the date in the folder name, on the as-built sketch, and in the email you send the customer on completion day.</p>
+<h3>Should I send the photo set to the homeowner?</h3>
+<p>Send the marked-up as-built sketch and three or four of the clearest shots on the day you finish. It reads as professionalism rather than defensiveness, and it puts a timestamped copy in their inbox. Keep the full set in your own folder — you don't need to hand over every frame.</p>
+<h3>What's the easiest way to get photos off crew phones?</h3>
+<p>Set the crew phones to auto-upload their camera roll to a company cloud account, then have one person sort the week's images into address folders every Friday. Fifteen minutes. Avoid relying on anyone's personal account, because when that person leaves, so does the archive.</p>
+<h2>The short version</h2>
+<p>Before backfill, take seven photos: trench depth with a tape hooked on the bottom, the stone bed before the pipe, the pipe with a level and a half-inch block showing fall, the fabric overlap with a tape across the lap, the cleanout and the outfall each triangulated off two house corners, and a wide shot with the house in it. Mark up the wide shot into an as-built sketch on your phone and send it to the customer. Store the set in a shared drive folder named by date and address, not in somebody's camera roll. Eight minutes of a crew member's time against a half-day re-excavation is a ratio of roughly 170 to 1.</p>
+<p><a href="/demo">Book a walkthrough</a> and we'll look at what your proposal and signature record already proves, and what still needs to come off a phone.</p>
+    </div>
+  </section>
+</article>
+
+<section class="tight">
+  <div class="wrap-narrow">
+    <div class="panel post-cta">
+      <h3>See this run on a real job</h3>
+      <p>ScapesHQ takes a lead from a Facebook form to a signed proposal without retyping it once. Bring a job you're quoting this week.</p>
+      <a class="btn btn-lg mt-m" href="/demo" data-cta="blog_post_end">Book a walkthrough</a>
+    </div>
+  </div>
+</section>
+
+<section class="tight">
+  <div class="wrap-narrow">
+    <h2>Keep reading</h2>
+    <div class="grid-2 mt-m">
+      <a class="panel post-card" href="/blog/what-to-put-in-a-drainage-warranty">
+        <span class="lbl teal">Proposals &amp; closing</span>
+        <h3>What to Put in a Drainage Warranty</h3>
+        <p>What to warrant, what to exclude by name, how long a drainage warranty should run, and the exact language that keeps a callback from turning into an argument.</p>
+        <span class="post-more">Read it &rarr;</span>
+      </a>
+      <a class="panel post-card" href="/blog/utility-locates-before-you-dig">
+        <span class="lbl teal">Running the operation</span>
+        <h3>Utility Locates Before You Dig: The Field Procedure</h3>
+        <p>What the 811 ticket covers, how long the marks last, the tolerance-zone hand-dig rule, and the private lines nobody marks — plus who pays if you cut one.</p>
+        <span class="post-more">Read it &rarr;</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="/">
+          <svg width="24" height="24" viewBox="0 0 26 26" aria-hidden="true">
+            <rect x="0.75" y="0.75" width="24.5" height="24.5" rx="7" fill="none" stroke="#3ddbb4" stroke-width="1.4"></rect>
+            <path d="M6 16.5c3.9 0 3.9-3.6 7-3.6s3.4 3.3 7 3.3" stroke="#3ddbb4" stroke-width="1.7" fill="none" stroke-linecap="round"></path>
+          </svg>
+          <span class="name">Scapes<em>HQ</em></span>
+        </a>
+        <p>Operations and CRM for landscape, hardscape and drainage contractors. Built in the field, not in a boardroom.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Product</h4>
+        <ul>
+          <li><a href="/features">Features</a></li>
+          <li><a href="/how-it-works">How it works</a></li>
+          <li><a href="/integrations">Integrations</a></li>
+          <li><a href="/pricing">Pricing</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/about">About</a></li>
+          <li><a href="/who-its-for">Who it's for</a></li>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/demo" data-cta="footer">Book a walkthrough</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Trades</h4>
+        <ul>
+          <li><a href="/who-its-for">Drainage</a></li>
+          <li><a href="/who-its-for">Hardscape</a></li>
+          <li><a href="/who-its-for">Landscape</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bar">
+      <span>&copy; 2026 ScapesHQ. All rights reserved.</span>
+      <span>Live in production with a connected business.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/nav.js"></script>
+</body>
+</html>
