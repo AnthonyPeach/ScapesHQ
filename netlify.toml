@@ -350,3 +350,9 @@
   to = "/blog/photo-documentation-of-buried-work"
   status = 301
   force = true
+
+[[redirects]]
+  from = "/blog/deposits-and-payment-schedules.html"
+  to = "/blog/deposits-and-payment-schedules"
+  status = 301
+  force = true
