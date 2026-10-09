@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NSFZ2WC6');</script>
+<!-- End Google Tag Manager -->
+<!-- First-touch campaign capture (session-scoped; feeds the walkthrough form) -->
+<script>
+(function(){
+  try{
+    var ss=window.sessionStorage,p=new URLSearchParams(location.search),
+        k=['utm_source','utm_medium','utm_campaign','utm_content','utm_term'],i,v;
+    if(!ss.getItem('sq_landing')){
+      ss.setItem('sq_landing',location.pathname);
+      ss.setItem('sq_referrer',document.referrer||'direct');
+    }
+    for(i=0;i<k.length;i++){
+      v=p.get(k[i]);
+      if(v&&!ss.getItem('sq_'+k[i])) ss.setItem('sq_'+k[i],v);
+    }
+  }catch(e){}
+})();
+</script>
+<title>Deposits and Payment Schedules on a Drainage Job &mdash; ScapesHQ</title>
+<meta name="description" content="Size a deposit to the money that leaves first, tie a progress payment to pipe in the ground, and collect at the walkthrough. The cash-flow math on a $13k job.">
+<link rel="canonical" href="https://scapeshq.com/blog/deposits-and-payment-schedules">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Sora:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="/assets/styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Deposits and Payment Schedules on a Drainage Job",
+      "description": "Size a deposit to the money that leaves first, tie a progress payment to pipe in the ground, and collect at the walkthrough. The cash-flow math on a $13k job.",
+      "datePublished": "2026-10-09",
+      "dateModified": "2026-10-09",
+      "author": {
+        "@type": "Organization",
+        "name": "ScapesHQ"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "ScapesHQ"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://scapeshq.com/blog/deposits-and-payment-schedules"
+      },
+      "articleSection": "Running the operation"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much deposit should I ask for on a drainage job?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Add up everything that leaves your account before the crew's first full day — imported stone, pipe, fittings, basins, equipment delivery — and make that the deposit. On a $13,000 French drain that typically lands between 25 and 30 percent, but on a grading job with little imported material it might be 12 percent. The percentage is an output, not an input."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is there a legal limit on how much deposit I can collect from a homeowner?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "In many states, yes. Common structures are a cap at one third of the contract price, or a much lower cap such as 10 percent or $1,000 whichever is less, or no cap but mandatory written contract language and a right to cancel. Check your state's contractor licensing board or consumer protection office directly — the rules change and often apply only above a dollar threshold."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What do I do if my state's deposit cap is lower than my material cost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Open a supplier account with net-30 terms so the stone invoice falls due after your first progress payment. You can also structure a payment due on delivery of materials to the site, since deposit caps generally restrict money taken before any work or delivery, not payment for material physically on the ground. Confirm that second approach locally before relying on it."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where should the progress payment be triggered on a French drain?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "At pipe and stone installed, before backfill. It's the most visible moment on the job — the customer can look into an open trench and see exactly what they bought. Send the trench photos the same day you request the payment, and avoid triggers based on dates or percentage of completion, which slip and invite argument."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does ScapesHQ handle invoicing or take the payment?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. ScapesHQ builds the proposal, holds the options and the payment schedule, and captures the signature with evidence on the record. Invoicing and payment processing are not built — the money moves through whatever you already use, and your accounting software remains the system of record for what's been paid."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NSFZ2WC6"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<header class="site-head">
+  <div class="wrap">
+    <nav class="nav" aria-label="Main">
+      <a class="brand" href="/">
+        <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true">
+          <rect x="0.75" y="0.75" width="24.5" height="24.5" rx="7" fill="none" stroke="#3ddbb4" stroke-width="1.4"></rect>
+          <path d="M6 16.5c3.9 0 3.9-3.6 7-3.6s3.4 3.3 7 3.3" stroke="#3ddbb4" stroke-width="1.7" fill="none" stroke-linecap="round"></path>
+          <path d="M6 11c3.9 0 3.9-3.6 7-3.6s3.4 3.3 7 3.3" stroke="#3ddbb4" stroke-width="1.7" fill="none" stroke-linecap="round" opacity=".45"></path>
+        </svg>
+        <span class="name">Scapes<em>HQ</em></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <div class="nav-links" id="nav-links">
+        <a href="/features">Features</a>
+        <a href="/how-it-works">How it works</a>
+        <a href="/who-its-for">Who it's for</a>
+        <a href="/integrations">Integrations</a>
+        <a href="/pricing">Pricing</a>
+        <a href="/blog" aria-current="page">Blog</a>
+        <a href="/about">About</a>
+        <a class="btn" href="/demo" data-cta="nav">Book a walkthrough</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<article class="post">
+  <section class="page-head">
+    <div class="wrap-narrow">
+      <span class="eyebrow lbl"><i></i>Running the operation</span>
+      <h1>Deposits and Payment Schedules on a Drainage Job</h1>
+      <p class="lede">On a $13,000 drain paid in full at the end, you are $7,732 in the hole before the customer writes anything.</p>
+      <p class="post-meta"><time datetime="2026-10-09">October 9, 2026</time> &middot; 11 min read</p>
+    </div>
+  </section>
+
+  <section class="tight">
+    <div class="wrap-narrow article">
+<p>Forty-two tons of washed stone landed in the driveway on a Tuesday morning. The supplier wanted payment on delivery. The rental yard charged the mini excavator to your card the same day, and payroll hit Friday whether or not the customer had looked at the finished yard yet.</p>
+<p>The customer paid three weeks later. For those three weeks you were the bank. You lent a stranger roughly $7,700 at zero percent, unsecured, on a handshake and a signed scope.</p>
+<p>That is the thing a payment schedule actually fixes. Not collections, not deadbeats — cash timing. Here is the arithmetic, and the structure that closes the gap without making you sound like you don't trust anybody.</p>
+
+<h2>The three weeks between your money and their money</h2>
+<p>Take a 150-foot French drain with two catch basins and sod restoration, sold at $13,000. Direct costs on a job like this break down roughly as follows — your supplier prices and labour burden will differ, and the full set of cost buckets is <a href="/blog/how-to-price-a-french-drain-job">priced line by line in the French drain breakdown</a>.</p>
+<p>Stone, 42 tons delivered, $1,510. Pipe, fabric, fittings, basins and cleanouts, $1,180. Spoil haul and dump fees, $340. Mini excavator, three days plus delivery, $880. Sod for restoration, $420. Crew of three, three days, nine hours each, 81 hours at $42 a loaded hour, $3,402. Most markets land somewhere in the high $30s to low $50s per loaded hour once burden is counted, so substitute yours.</p>
+<p>Total direct cost: $7,732. Now watch when each piece of that leaves, with the customer paying in full at the end.</p>
+
+<div class="tablewrap"><table><thead><tr><th>Day</th><th>What happens</th><th>Out</th><th>In</th><th>Running position</th></tr></thead><tbody>
+<tr><td>0</td><td>Proposal signed, no deposit taken</td><td>—</td><td>—</td><td>$0</td></tr>
+<tr><td>3</td><td>Stone and pipe delivered, paid on delivery</td><td>$2,690</td><td>—</td><td>-$2,690</td></tr>
+<tr><td>3</td><td>Excavator rental charged to card</td><td>$880</td><td>—</td><td>-$3,570</td></tr>
+<tr><td>5</td><td>Spoil haul and dump fees</td><td>$340</td><td>—</td><td>-$3,910</td></tr>
+<tr><td>7</td><td>Friday payroll, 81 crew hours</td><td>$3,402</td><td>—</td><td>-$7,312</td></tr>
+<tr><td>8</td><td>Sod delivered for restoration</td><td>$420</td><td>—</td><td>-$7,732</td></tr>
+<tr><td>9</td><td>Walkthrough. Customer says a check is coming</td><td>—</td><td>—</td><td>-$7,732</td></tr>
+<tr><td>16</td><td>Check arrives in the mail</td><td>—</td><td>—</td><td>-$7,732</td></tr>
+<tr><td>19</td><td>Check clears</td><td>—</td><td>$13,000</td><td>+$5,268</td></tr>
+</tbody></table></div>
+
+<p>Nineteen days from first outlay to usable cash. Deepest hole, $7,732 — about 59 percent of the contract price, carried by you.</p>
+<p>One job at a time, that's survivable if you have a cushion. Run three of these concurrently in May and you're $23,000 down at the bottom of the month. That is the number that makes contractors take a credit card advance to cover payroll in their busiest season, which is an absurd place to end up when the work itself is profitable.</p>
+
+<h2>Size the deposit to the money that leaves first</h2>
+<p>Most contractors pick a deposit percentage because somebody told them a number. Thirty percent. A third. Half. The percentage has nothing to do with the job in front of you — a job that's 70 percent labour and a job that's 60 percent imported stone have completely different cash shapes.</p>
+<p>Size the deposit to the money that leaves your account before the crew's first full day. On this job that's stone and pipe at $2,690 plus rental mobilisation at $880, which is $3,570. Round up to $3,600 and you've covered everything that has to be bought before anyone can start digging.</p>
+<p>That's 27.7 percent of the contract. Not because 27.7 is a good number, but because it's what the materials cost. On a regrading job with almost no imported material, the same method might produce a 12 percent deposit. On a job where you're bringing in 80 tons of stone and renting a tracked dumper for a week, it might produce 40 percent, which may be more than your state lets you ask for. More on that below.</p>
+<p>Deliberately leave labour out of the deposit. Labour is the one cost you control the timing of — you can stop work on Wednesday if something goes sideways. Material you've already paid for and dumped in a driveway is sunk. The deposit exists to cover sunk costs, not to pre-fund your payroll.</p>
+
+<h2>One progress payment, tied to something they can see</h2>
+<p>A deposit alone still leaves you carrying labour for a week or more. The fix is one progress payment, and the trigger matters more than the amount.</p>
+<p>Tie it to the most visible moment on a drainage job: pipe and stone in the trench, before backfill. The customer can stand at the edge of an open trench and see exactly what they're paying for. There is no argument available to them about whether the work happened, which is the whole point.</p>
+<p>Do not tie a progress payment to a date, a percentage of completion, or "commencement of work." Dates slip for weather. Percentage of completion invites debate. A trench with pipe in it is a fact.</p>
+<p>Send the photos with the request, same day. You should already be taking <a href="/blog/photo-documentation-of-buried-work">the six photos that go in the file before backfill</a> — the progress payment gives them a second job. A homeowner who gets six timestamped photos of their own yard with a short note has nothing left to wonder about.</p>
+<p>Reworking the same $13,000 job with a $3,600 deposit, $5,200 at pipe-in, and $4,200 at walkthrough:</p>
+<ul class="speclist">
+<li><span>Day 0, deposit clears: <strong>+$3,600</strong></span></li>
+<li><span>Day 3, stone, pipe and rental: <strong>+$30</strong></span></li>
+<li><span>Day 5, dump fees: <strong>-$310</strong></span></li>
+<li><span>Day 6, pipe in, photos sent, check collected in the yard: <strong>+$4,890</strong></span></li>
+<li><span>Day 7, payroll: <strong>+$1,488</strong></span></li>
+<li><span>Day 8, sod: <strong>+$1,068</strong></span></li>
+<li><span>Day 9, walkthrough, balance collected: <strong>+$5,268</strong></span></li>
+</ul>
+<p>Same job, same profit, same customer. Deepest hole goes from $7,732 to $310. You never fund more than a day of dump fees, and the whole thing closes out nine days after signing instead of nineteen.</p>
+
+<h2>What your state lets you ask for</h2>
+<p>Residential home improvement deposits are regulated in a fair number of states, and the rules are specific enough that guessing is a bad idea. The shapes you'll run into:</p>
+<ul class="speclist">
+<li><span><strong>A percentage cap.</strong> Several states cap the deposit on a residential home improvement contract at one third of the contract price. That's generous enough that the materials-plus-mobilisation method almost always fits inside it.</span></li>
+<li><span><strong>A low percentage with a dollar ceiling.</strong> California is the well-known example — home improvement contracts there have long been limited to 10 percent of the contract price or $1,000, whichever is less. On a $13,000 job that caps you at $1,000, well under the $3,570 that leaves before day one.</span></li>
+<li><span><strong>No cap, but mandatory contract language.</strong> Many states don't limit the amount but do require a written contract with specified terms, a three-day right to cancel, and sometimes licence or bond numbers printed on the document. Taking a deposit on a contract that's missing the required language can make the contract unenforceable.</span></li>
+</ul>
+<p>These rules change, often apply only to work above a dollar threshold, and sometimes only to residential and not commercial. Verify against your own state's contractor licensing board or consumer protection office rather than against this post. If you work across a state line, you're following two sets of rules.</p>
+<p>If you're in a capped state and the cap doesn't cover your materials, you have three real moves. Open a supplier account with net-30 terms so the stone bill lands after your progress payment, which is the cleanest fix and costs nothing but paperwork. Bill a materials-delivered payment the day the stone hits the site — caps generally apply to money taken <em>before work or delivery</em>, not to payment for material actually on the ground, but confirm that locally. Or stage the contract so each phase is small enough that the capped deposit covers it.</p>
+
+<h2>Final payment happens in the yard, not in the mail</h2>
+<p>The walkthrough is the single best moment you will ever have to collect. The customer is standing in a fixed yard, the sod is down, the crew is loading up, and they feel good about you. Every day after that, the feeling fades and the invoice becomes paperwork.</p>
+<p>So do the walkthrough with the balance in mind. Walk the line, show the cleanout caps and the emitter, hand over the warranty document, and then ask for the check. Not as an afterthought from the truck — as the last step of the job.</p>
+<p>If you take cards, bring the reader. A 3 percent processing fee on a $4,200 balance is about $126, and that's cheap against two weeks of float and a follow-up call. Decide in advance whether you eat that or pass it on, and say which in the proposal so it isn't a surprise at the tailgate.</p>
+<p>If something is genuinely unfinished — sod on back order, a grate the supplier shorted you — hold back a named amount against the named item, in writing, that day. "$400 held until the second grate is set, expected Thursday." A specific holdback with a specific trigger gets paid. An open-ended "we'll settle up when everything's done" does not.</p>
+
+<h2>The payment terms paragraph, written out</h2>
+<p>None of this works if it first comes up when you're asking for money. It has to be on the proposal the customer signed, in language a homeowner reads once and understands. Something close to this:</p>
+<blockquote><p>Payment schedule. $3,600 due at signing. This covers stone, pipe, fittings and equipment mobilisation, which are ordered within two business days of signing. $5,200 due when drain pipe and stone are installed, before backfill — photographs of the open trench will be sent to you the same day. $4,200 due at the final walkthrough. Payment by check or bank transfer; card payments add a 3 percent processing fee. Scheduling begins once the deposit clears. If you cancel before material is ordered, the deposit is refunded in full. After material is ordered, the deposit covers delivered material and any restocking charges.</p></blockquote>
+<p>Three numbers, three triggers, one sentence about cancellation. Nobody needs a page of terms to understand that. Put the dollar amounts in, not just the percentages — homeowners read dollars and skim percentages.</p>
+<p>Getting that agreed in writing, with a signature and a record of when it was viewed and signed, is the part ScapesHQ handles: the proposal, the options, the e-signature, the evidence sitting on the record afterwards. It does not invoice and does not take payments — no card processing, no payment tracking, no ledger of what's been paid. The money moves through whatever you already use, and your accounting software stays the place that knows who owes what. What the signed proposal does is make sure the schedule was agreed before the stone was ordered, which is where most payment arguments actually start.</p>
+<p>One more thing to write down before you dig: how a mid-job surprise gets paid for. Rock at 20 inches or an unmarked irrigation main changes the price, and the change needs <a href="/blog/change-orders-without-losing-the-customer">its own signature and its own payment trigger</a> rather than getting rolled into the final balance where it becomes a fight at the walkthrough.</p>
+
+<h2>The customer who wants to pay everything at the end</h2>
+<p>It comes up, usually from someone who got burned by a contractor who took a deposit and vanished. It is a reasonable fear and arguing with it loses you the job.</p>
+<p>Say something close to this:</p>
+<blockquote><p>I understand the concern — there are guys who take a deposit and don't come back. Here's how the schedule is built so that can't happen to you. The deposit is $3,600. That's the stone, the pipe and the machine, and I can show you the supplier ticket the day it's delivered. The next payment isn't until the pipe is actually in the ground and you've seen photos of it. And the last payment is at the walkthrough, after you've looked at everything. At no point are you paying for work you can't see. What I can't do is buy $3,600 of material for a job and carry it for a month — that's not a trust thing, that's just how a small company stays solvent.</p></blockquote>
+<p>That works on most people, because it reframes the schedule as protection for them rather than security for you. Offering the supplier ticket is the part that lands — it turns the deposit from a payment into a receipt.</p>
+<p>Two firm rules behind the friendly script. Never take a deposit and then let the job sit for six weeks; that's the behaviour that created their fear in the first place. And if someone still refuses any deposit on a job with real material cost, let it go. A customer who won't pay for stone before it arrives is telling you something about how the final payment conversation is going to go, and you'll have spent $7,700 to find out.</p>
+<h2>FAQ</h2>
+<h3>How much deposit should I ask for on a drainage job?</h3>
+<p>Add up everything that leaves your account before the crew's first full day — imported stone, pipe, fittings, basins, equipment delivery — and make that the deposit. On a $13,000 French drain that typically lands between 25 and 30 percent, but on a grading job with little imported material it might be 12 percent. The percentage is an output, not an input.</p>
+<h3>Is there a legal limit on how much deposit I can collect from a homeowner?</h3>
+<p>In many states, yes. Common structures are a cap at one third of the contract price, or a much lower cap such as 10 percent or $1,000 whichever is less, or no cap but mandatory written contract language and a right to cancel. Check your state's contractor licensing board or consumer protection office directly — the rules change and often apply only above a dollar threshold.</p>
+<h3>What do I do if my state's deposit cap is lower than my material cost?</h3>
+<p>Open a supplier account with net-30 terms so the stone invoice falls due after your first progress payment. You can also structure a payment due on delivery of materials to the site, since deposit caps generally restrict money taken before any work or delivery, not payment for material physically on the ground. Confirm that second approach locally before relying on it.</p>
+<h3>Where should the progress payment be triggered on a French drain?</h3>
+<p>At pipe and stone installed, before backfill. It's the most visible moment on the job — the customer can look into an open trench and see exactly what they bought. Send the trench photos the same day you request the payment, and avoid triggers based on dates or percentage of completion, which slip and invite argument.</p>
+<h3>Does ScapesHQ handle invoicing or take the payment?</h3>
+<p>No. ScapesHQ builds the proposal, holds the options and the payment schedule, and captures the signature with evidence on the record. Invoicing and payment processing are not built — the money moves through whatever you already use, and your accounting software remains the system of record for what's been paid.</p>
+<h2>The short version</h2>
+<p>Size your deposit to the material and mobilisation that leaves your account before day one, not to a flat percentage — on a $13,000 drain that's usually $3,000 to $3,800. Add one progress payment triggered by pipe in the trench before backfill, with photos sent the same day, and collect the balance in the yard at the walkthrough rather than by mail. Done that way, the deepest you ever go into your own pocket on the job is a few hundred dollars instead of $7,700. Check your state's residential deposit cap before you set the first number.</p>
+<p><a href="/demo">Book a walkthrough</a> and we'll look at how your current proposal states its payment schedule, and whether a homeowner could read it two different ways.</p>
+    </div>
+  </section>
+</article>
+
+<section class="tight">
+  <div class="wrap-narrow">
+    <div class="panel post-cta">
+      <h3>See this run on a real job</h3>
+      <p>ScapesHQ takes a lead from a Facebook form to a signed proposal without retyping it once. Bring a job you're quoting this week.</p>
+      <a class="btn btn-lg mt-m" href="/demo" data-cta="blog_post_end">Book a walkthrough</a>
+    </div>
+  </div>
+</section>
+
+<section class="tight">
+  <div class="wrap-narrow">
+    <h2>Keep reading</h2>
+    <div class="grid-2 mt-m">
+      <a class="panel post-card" href="/blog/how-to-price-a-french-drain-job">
+        <span class="lbl teal">Pricing &amp; estimating</span>
+        <h3>How to Price a French Drain Job: A Contractor's Breakdown</h3>
+        <p>Every cost bucket in a French drain bid, a real 148-foot job priced line by line, and the math that keeps a $13,130 job profitable. Written for contractors.</p>
+        <span class="post-more">Read it &rarr;</span>
+      </a>
+      <a class="panel post-card" href="/blog/change-orders-without-losing-the-customer">
+        <span class="lbl teal">Pricing &amp; estimating</span>
+        <h3>Change Orders Without Losing the Customer</h3>
+        <p>Rock, an unmarked line, a neighbour's runoff. How to stop work, document the surprise, price the change from your own numbers, and get it signed in the yard.</p>
+        <span class="post-more">Read it &rarr;</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="/">
+          <svg width="24" height="24" viewBox="0 0 26 26" aria-hidden="true">
+            <rect x="0.75" y="0.75" width="24.5" height="24.5" rx="7" fill="none" stroke="#3ddbb4" stroke-width="1.4"></rect>
+            <path d="M6 16.5c3.9 0 3.9-3.6 7-3.6s3.4 3.3 7 3.3" stroke="#3ddbb4" stroke-width="1.7" fill="none" stroke-linecap="round"></path>
+          </svg>
+          <span class="name">Scapes<em>HQ</em></span>
+        </a>
+        <p>Operations and CRM for landscape, hardscape and drainage contractors. Built in the field, not in a boardroom.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Product</h4>
+        <ul>
+          <li><a href="/features">Features</a></li>
+          <li><a href="/how-it-works">How it works</a></li>
+          <li><a href="/integrations">Integrations</a></li>
+          <li><a href="/pricing">Pricing</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/about">About</a></li>
+          <li><a href="/who-its-for">Who it's for</a></li>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/demo" data-cta="footer">Book a walkthrough</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Trades</h4>
+        <ul>
+          <li><a href="/who-its-for">Drainage</a></li>
+          <li><a href="/who-its-for">Hardscape</a></li>
+          <li><a href="/who-its-for">Landscape</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bar">
+      <span>&copy; 2026 ScapesHQ. All rights reserved.</span>
+      <span>Live in production with a connected business.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/nav.js"></script>
+</body>
+</html>
